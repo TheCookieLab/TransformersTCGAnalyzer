@@ -28,19 +28,33 @@ public class DeckTest {
 
     @Test
     public void testDeckBuilderCreatesCorrectDeck() {
+        int expectedNumberOfOrangeCards = 14;
         int expectedNumberOfWhiteCards = 10;
-        int expectedDeckSize = 40;
+        int expectedNumberOfBlueCards = 16;
+        int expectedDeckSize = expectedNumberOfOrangeCards + expectedNumberOfWhiteCards + expectedNumberOfBlueCards;
 
         Deck deck = new Deck.DeckBuilder(40)
                 .withNumberOfWhiteCards(expectedNumberOfWhiteCards)
+                .withNumberOfBlueCards(expectedNumberOfBlueCards)
+                .withNumberOfOrangeCards(expectedNumberOfOrangeCards)
                 .build();
 
         Long actualNumberOfWhiteCards = deck.battleCards.stream().filter((battleCard) -> {
             return battleCard.pips.contains(Pip.WHITE);
         }).count();
 
+        Long actualNumberOfOrangeCards = deck.battleCards.stream().filter((battleCard) -> {
+            return battleCard.pips.contains(Pip.ORANGE);
+        }).count();
+
+        Long actualNumberOfBlueCards = deck.battleCards.stream().filter((battleCard) -> {
+            return battleCard.pips.contains(Pip.BLUE);
+        }).count();
+
         assertEquals(expectedDeckSize, deck.battleCards.size());
         assertEquals(expectedNumberOfWhiteCards, actualNumberOfWhiteCards.intValue());
+        assertEquals(expectedNumberOfOrangeCards, actualNumberOfOrangeCards.intValue());
+        assertEquals(expectedNumberOfBlueCards, actualNumberOfBlueCards.intValue());
     }
 
     @Test

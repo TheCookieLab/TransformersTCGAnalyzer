@@ -3,7 +3,6 @@ package com.cf.tcg.model;
 import com.google.gson.Gson;
 import java.util.Collections;
 import java.util.Stack;
-import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -14,8 +13,8 @@ public class Deck {
     public final Stack<BattleCard> battleCards;
     private final Stack<BattleCard> scrapPile;
 
-    public Deck(int whiteCards, int numTotalCards) {
-        this(initializeDeck(whiteCards, numTotalCards));
+    public Deck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {
+        this(initializeDeck(numWhiteCards, numBlueCards, numOrangeCards, numTotalCards));
     }
 
     public Deck() {
@@ -28,7 +27,6 @@ public class Deck {
     }
 
     public BattleCard draw() {
-        LogManager.getLogger().debug("Deck currently has {} cards", this.battleCards.size());
         return this.battleCards.pop();
     }
 
@@ -45,11 +43,19 @@ public class Deck {
         this.shuffle();
     }
 
-    private static Stack<BattleCard> initializeDeck(int numWhiteCards, int numTotalCards) {
+    private static Stack<BattleCard> initializeDeck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {        
         Stack<BattleCard> deck = new Stack<>();
 
         for (int i = 0; i < numWhiteCards; i++) {
             deck.push(new BattleCard(Pip.WHITE));
+        }
+        
+        for (int i = 0; i < numBlueCards; i++) {
+            deck.push(new BattleCard(Pip.BLUE));
+        }
+        
+        for (int i = 0; i < numOrangeCards; i++) {
+            deck.push(new BattleCard(Pip.ORANGE));
         }
 
         for (int i = deck.size(); i < numTotalCards; i++) {
@@ -68,6 +74,8 @@ public class Deck {
     public static class DeckBuilder {
 
         private int numWhiteCards;
+        private int numBlueCards;
+        private int numOrangeCards;
         private int numTotalCards;
 
         public DeckBuilder(int numTotalCards) {
@@ -79,8 +87,18 @@ public class Deck {
             return this;
         }
 
+        public DeckBuilder withNumberOfOrangeCards(int numOrangeCards) {
+            this.numOrangeCards = numOrangeCards;
+            return this;
+        }
+
+        public DeckBuilder withNumberOfBlueCards(int numBlueCards) {
+            this.numBlueCards = numBlueCards;
+            return this;
+        }
+
         public Deck build() {
-            Deck deck = new Deck(numWhiteCards, numTotalCards);
+            Deck deck = new Deck(numWhiteCards, numBlueCards, numOrangeCards, numTotalCards);
             return deck;
         }
     }

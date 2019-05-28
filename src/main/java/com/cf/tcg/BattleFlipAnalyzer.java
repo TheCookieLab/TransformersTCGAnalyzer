@@ -1,12 +1,13 @@
 package com.cf.tcg;
 
-import com.cf.tcg.model.Pip;
 import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
+import com.cf.tcg.model.Pip;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.IntStream;
 import org.apache.logging.log4j.LogManager;
 
 /**
@@ -16,7 +17,7 @@ import org.apache.logging.log4j.LogManager;
 public class BattleFlipAnalyzer {
 
     public static int NUM_OF_DESIRED_WHITE_CARDS = 2;
-    public static int NUMBER_OF_ITERATIONS = 1000;
+    public static int NUMBER_OF_ITERATIONS = 100;
     public static int MAX_NUM_CARDS_TO_FLIP = 4;
     public static int DECK_MIN_WHITE_CARDS = 10;
     public static int DECK_MAX_WHITE_CARDS = 20;
@@ -27,8 +28,32 @@ public class BattleFlipAnalyzer {
     }
 
     public void run() {
-        Map<String, ScenarioResult> results = battleFlipForWhitePips();        
-        LogManager.getLogger().info(results);
+        Map<String, ScenarioResult> results = battleFlipForWhitePips();
+        this.report(results);
+    }
+
+    private void report(Map<String, ScenarioResult> results) {
+        LogManager.getLogger().info("Raw Results: {}", results);
+
+        for (int i = 0; i <= 2; i++) {
+            final int desiredFlips = i;
+            results.entrySet().stream().filter((result) -> {
+                ScenarioResult scenarioResult = result.getValue();
+                scenarioResult.flipResults.stream().filter((flipResult) -> {
+                    return flipResult.getTotalNumberOfPipsFlipped(Pip.WHITE) == desiredFlips;
+                });
+                
+                return false;
+            });
+
+            LogManager.getLogger().info("Chances of Flipping {} White Pips: {}", i, results);
+        }
+
+        LogManager.getLogger().info("Raw Results: {}", results);
+
+//        s.flipResults.stream().filter((flipResult) -> {
+//                    return flipResult.getTotalNumberOfPipsFlipped(Pip.WHITE) == i;
+//                });
     }
 
     private Map<String, ScenarioResult> battleFlipForWhitePips() {
@@ -57,16 +82,18 @@ public class BattleFlipAnalyzer {
 
         ScenarioResult result = new ScenarioResult(deck, scenario.desiredPip);
 
-        for (int i = 1; i <= NUMBER_OF_ITERATIONS; i++) {
+        IntStream.rangeClosed(1, NUMBER_OF_ITERATIONS).forEach((iteration) -> {
             FlipResult flipResult = new FlipResult();
 
             for (int j = 0; j < scenario.drawScenario.cardsToDraw; j++) {
-                flipResult.addFlippedCard(deck.draw());
+                BattleCard battleCard = deck.draw();
+                flipResult.addFlippedCard(battleCard);
+                deck.scrap(battleCard);
             }
 
             result.addFlipResult(flipResult);
             deck.reset();
-        }
+        });
 
         return result;
     }
