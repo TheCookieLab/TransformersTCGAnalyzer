@@ -8,8 +8,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
 import static org.junit.Assert.*;
 
 /**
@@ -68,7 +66,7 @@ public class DeckTest {
                 .build();
 
         BattleCard battleCard = deck.drawCard();
-        deck.scrap(battleCard);
+        deck.scrapCard(battleCard);
 
         assertEquals(expectedDeckSize - 1, deck.getRemainingDeckCount());
     }
@@ -79,7 +77,7 @@ public class DeckTest {
         Deck deck = new Deck.DeckBuilder(expectedDeckSize)
                 .build();
 
-        deck.shuffle();
+        deck.shuffleDeck();
 
         assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
     }
@@ -90,8 +88,8 @@ public class DeckTest {
         Deck deck = new Deck.DeckBuilder(expectedDeckSize)
                 .build();
 
-        deck.scrap(deck.drawCard());
-        deck.scrap(deck.drawCard());
+        deck.scrapCard(deck.drawCard());
+        deck.scrapCard(deck.drawCard());
 
         deck.reshuffleScrapIntoDeck();
 
@@ -107,23 +105,23 @@ public class DeckTest {
         assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
         BattleCard card1 = deck.drawCard();
         assertNotNull(card1);
-        deck.scrap(card1);
+        deck.scrapCard(card1);
 
         assertEquals(expectedDeckSize-1, deck.getRemainingDeckCount());
         BattleCard card2 = deck.drawCard();
         assertNotNull(card2);
-        deck.scrap(card2);
+        deck.scrapCard(card2);
 
         assertEquals(expectedDeckSize-2, deck.getRemainingDeckCount());
         BattleCard card3 = deck.drawCard();
         assertNotNull(card3);
-        deck.scrap(card3);
+        deck.scrapCard(card3);
         assertEquals(3, deck.getScrapPileCount());
 
         assertEquals(0, deck.getRemainingDeckCount());
         BattleCard card4 = deck.drawCard();
         assertNotNull(card4);
-        deck.scrap(card4);
+        deck.scrapCard(card4);
         assertEquals(1, deck.getScrapPileCount());
     }
 

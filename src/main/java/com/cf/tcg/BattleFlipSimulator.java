@@ -27,16 +27,18 @@ public class BattleFlipSimulator {
         List<FlipResult> results = new ArrayList<>();
 
         for (int i = 0; i < this.iterations; i++) {
+            results.add(this.getFlipResult(2));
 
+            if (resetDeckOnEachFlip) {
+                this.deck.resetDeck();
+            }
         }
 
         return results;
     }
 
-    public FlipResult getFlipResult() {
-        FlipResult result = new FlipResult();
-
-
+    public FlipResult getFlipResult(int flipCount) {
+        FlipResult result = deck.flipCards(flipCount, true);
 
         return result;
     }

@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 public class Deck {
 
-    public final Stack<BattleCard> battleCards;
+    private final Stack<BattleCard> battleCards;
     private final Stack<BattleCard> scrapPile;
     private FlipResult currentlyFlippedCards;
 
@@ -42,7 +42,7 @@ public class Deck {
     }
 
     public FlipResult flipCards(int count, boolean whitePipsFlipTwoMore) {
-        clearFlippedCards();
+        scrapFlippedCards();
 
         for (int i = 0; i < count; i++) {
             this.currentlyFlippedCards.addFlippedCard(drawCard());
@@ -56,18 +56,23 @@ public class Deck {
         return this.currentlyFlippedCards;
     }
 
-    public void scrap(BattleCard battleCard) {
+    public void scrapCard(BattleCard battleCard) {
         this.scrapPile.push(battleCard);
     }
 
-    public void shuffle() {
+    public void shuffleDeck() {
         Collections.shuffle(battleCards);
     }
 
     public void reshuffleScrapIntoDeck() {
         this.battleCards.addAll(scrapPile);
         this.scrapPile.clear();
-        this.shuffle();
+        this.shuffleDeck();
+    }
+
+    public void resetDeck() {
+        this.scrapFlippedCards();
+        this.reshuffleScrapIntoDeck();
     }
 
     public int getRemainingDeckCount() {
@@ -78,7 +83,7 @@ public class Deck {
         return this.scrapPile.size();
     }
 
-    private void clearFlippedCards() {
+    private void scrapFlippedCards() {
         if (currentlyFlippedCards.getTotalNumberOfCardsFlipped() > 0) {
             this.scrapPile.addAll(this.currentlyFlippedCards.flippedCards);
             this.currentlyFlippedCards = new FlipResult();
