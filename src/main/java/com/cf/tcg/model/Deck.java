@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 public class Deck {
 
-    private final Stack<BattleCard> battleCards;
+    public final Stack<BattleCard> battleCards;
     private final Stack<BattleCard> scrapPile;
     private FlipResult currentlyFlippedCards;
 
@@ -37,18 +37,32 @@ public class Deck {
         return this.battleCards.pop();
     }
 
+    public BattleCard peekCard() {
+        if (this.battleCards.size() == 0) {
+            this.reshuffleScrapIntoDeck();
+        }
+        return this.battleCards.peek();
+    }
+
+    public void scrapCardsFromTopOfDeck(int count) {
+        for (int i = 0; i < count; i++) {
+            BattleCard card = this.drawCard();
+            this.scrapCard(card);
+        }
+    }
+
     public FlipResult flipCards(int count) {
         return this.flipCards(count, false);
     }
 
-    public FlipResult flipCards(int count, boolean whitePipsFlipTwoMore) {
-        scrapFlippedCards();
+    public FlipResult flipCards(int count, boolean firstWhitePipFlips2More) {
+        this.scrapFlippedCards();
 
         for (int i = 0; i < count; i++) {
             this.currentlyFlippedCards.addFlippedCard(drawCard());
         }
 
-        if (whitePipsFlipTwoMore && this.currentlyFlippedCards.getTotalNumberOfPipsFlipped(Pip.WHITE) > 0) {
+        if (firstWhitePipFlips2More && this.currentlyFlippedCards.getTotalNumberOfPipsFlipped(Pip.WHITE) > 0) {
             this.currentlyFlippedCards.addFlippedCard(drawCard());
             this.currentlyFlippedCards.addFlippedCard(drawCard());
         }

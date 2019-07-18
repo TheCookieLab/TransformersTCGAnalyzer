@@ -41,6 +41,18 @@ public class FlipResult {
         return count;
     }
 
+    public Integer getTotalAttackBonus() {
+        return this.getTotalNumberOfPipsFlipped(Pip.ORANGE);
+    }
+
+    public Integer getTotalDefenseBonus() {
+        return this.getTotalNumberOfPipsFlipped(Pip.BLUE);
+    }
+
+    public Integer getTotalPierceBonus() {
+        return this.getTotalNumberOfPipsFlipped(Pip.BLACK);
+    }
+
     public Integer getTotalNumberOfCardsFlipped() {
         return this.flippedCards.size();
     }

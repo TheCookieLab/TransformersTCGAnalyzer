@@ -148,7 +148,32 @@ public class DeckTest {
         assertEquals(finalFlipCount, flippedCards.getTotalNumberOfCardsFlipped().intValue());
         assertEquals(1, deck.getRemainingDeckCount());
         assertEquals(0, deck.getScrapPileCount());
+    }
 
+    @Test
+    public void testScrappingFromTopOfDeck() {
+        int expectedDeckSize = 3;
+        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+                .build();
 
+        deck.scrapCardsFromTopOfDeck(1);
+        assertEquals(2, deck.getRemainingDeckCount());
+        assertEquals(1, deck.getScrapPileCount());
+
+        deck.scrapCardsFromTopOfDeck(1);
+        assertEquals(1, deck.getRemainingDeckCount());
+        assertEquals(2, deck.getScrapPileCount());
+
+        deck.scrapCardsFromTopOfDeck(1);
+        assertEquals(0, deck.getRemainingDeckCount());
+        assertEquals(3, deck.getScrapPileCount());
+
+        deck.scrapCardsFromTopOfDeck(1);
+        assertEquals(2, deck.getRemainingDeckCount());
+        assertEquals(1, deck.getScrapPileCount());
+
+        deck.scrapCardsFromTopOfDeck(3);
+        assertEquals(2, deck.getRemainingDeckCount());
+        assertEquals(1, deck.getScrapPileCount());
     }
 }
