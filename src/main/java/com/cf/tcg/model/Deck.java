@@ -1,7 +1,10 @@
 package com.cf.tcg.model;
 
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -12,6 +15,7 @@ public class Deck {
 
     public final Stack<BattleCard> battleCards;
     private final Stack<BattleCard> scrapPile;
+    private final List<BattleCard> currentlyFlippedCards;
 
     public Deck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {
         this(initializeDeck(numWhiteCards, numBlueCards, numOrangeCards, numTotalCards));
@@ -24,10 +28,24 @@ public class Deck {
     public Deck(Stack<BattleCard> battleCards) {
         this.battleCards = battleCards;
         this.scrapPile = new Stack<>();
+        this.currentlyFlippedCards = new ArrayList<>();
     }
 
     public BattleCard draw() {
+        if (this.battleCards.size() == 0) {
+            this.reshuffleScrapIntoDeck();
+        }
         return this.battleCards.pop();
+    }
+
+    public List<BattleCard> flipCards(int count) {
+        clearFlippedCards();
+
+        for (int i = 0; i < count; i++) {
+            this.currentlyFlippedCards.add(draw());
+        }
+
+        return this.currentlyFlippedCards;
     }
 
     public void scrap(BattleCard battleCard) {
@@ -38,9 +56,25 @@ public class Deck {
         Collections.shuffle(battleCards);
     }
 
-    public void reset() {
+    public void reshuffleScrapIntoDeck() {
         this.battleCards.addAll(scrapPile);
+        this.scrapPile.clear();
         this.shuffle();
+    }
+
+    public int getRemainingDeckCount() {
+        return this.battleCards.size();
+    }
+
+    public int getScrapPileCount() {
+        return this.scrapPile.size();
+    }
+
+    private void clearFlippedCards() {
+        if (currentlyFlippedCards.size() > 0) {
+            this.scrapPile.addAll(this.currentlyFlippedCards);
+            this.currentlyFlippedCards.clear();
+        }
     }
 
     private static Stack<BattleCard> initializeDeck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {        

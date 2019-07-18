@@ -92,7 +92,7 @@ public class BattleFlipAnalyzer {
             }
 
             result.addFlipResult(flipResult);
-            deck.reset();
+            deck.reshuffleScrapIntoDeck();
         });
 
         return result;

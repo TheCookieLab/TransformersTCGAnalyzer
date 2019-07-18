@@ -3,12 +3,13 @@ package com.cf.tcg.model;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
-import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 /**
- *
  * @author David
  */
 public class DeckTest {
@@ -66,7 +67,7 @@ public class DeckTest {
         BattleCard battleCard = deck.draw();
         deck.scrap(battleCard);
 
-        assertEquals(expectedDeckSize - 1, deck.battleCards.size());
+        assertEquals(expectedDeckSize - 1, deck.getRemainingDeckCount());
     }
 
     @Test
@@ -77,7 +78,7 @@ public class DeckTest {
 
         deck.shuffle();
 
-        assertEquals(expectedDeckSize, deck.battleCards.size());
+        assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
     }
 
     @Test
@@ -89,8 +90,37 @@ public class DeckTest {
         deck.scrap(deck.draw());
         deck.scrap(deck.draw());
 
-        deck.reset();
+        deck.reshuffleScrapIntoDeck();
 
-        assertEquals(expectedDeckSize, deck.battleCards.size());
+        assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
+    }
+
+    @Test
+    public void testDrawingWhenNoCardsLeftReshufflesDeck() {
+        int expectedDeckSize = 3;
+        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+                .build();
+
+        assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
+        BattleCard card1 = deck.draw();
+        assertNotNull(card1);
+        deck.scrap(card1);
+
+        assertEquals(expectedDeckSize-1, deck.getRemainingDeckCount());
+        BattleCard card2 = deck.draw();
+        assertNotNull(card2);
+        deck.scrap(card2);
+
+        assertEquals(expectedDeckSize-2, deck.getRemainingDeckCount());
+        BattleCard card3 = deck.draw();
+        assertNotNull(card3);
+        deck.scrap(card3);
+        assertEquals(3, deck.getScrapPileCount());
+
+        assertEquals(0, deck.getRemainingDeckCount());
+        BattleCard card4 = deck.draw();
+        assertNotNull(card4);
+        deck.scrap(card4);
+        assertEquals(1, deck.getScrapPileCount());
     }
 }
