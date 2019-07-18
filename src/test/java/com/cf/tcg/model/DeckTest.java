@@ -1,11 +1,14 @@
 package com.cf.tcg.model;
 
+import com.cf.tcg.FlipResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -64,7 +67,7 @@ public class DeckTest {
         Deck deck = new Deck.DeckBuilder(expectedDeckSize)
                 .build();
 
-        BattleCard battleCard = deck.draw();
+        BattleCard battleCard = deck.drawCard();
         deck.scrap(battleCard);
 
         assertEquals(expectedDeckSize - 1, deck.getRemainingDeckCount());
@@ -87,8 +90,8 @@ public class DeckTest {
         Deck deck = new Deck.DeckBuilder(expectedDeckSize)
                 .build();
 
-        deck.scrap(deck.draw());
-        deck.scrap(deck.draw());
+        deck.scrap(deck.drawCard());
+        deck.scrap(deck.drawCard());
 
         deck.reshuffleScrapIntoDeck();
 
@@ -102,25 +105,52 @@ public class DeckTest {
                 .build();
 
         assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
-        BattleCard card1 = deck.draw();
+        BattleCard card1 = deck.drawCard();
         assertNotNull(card1);
         deck.scrap(card1);
 
         assertEquals(expectedDeckSize-1, deck.getRemainingDeckCount());
-        BattleCard card2 = deck.draw();
+        BattleCard card2 = deck.drawCard();
         assertNotNull(card2);
         deck.scrap(card2);
 
         assertEquals(expectedDeckSize-2, deck.getRemainingDeckCount());
-        BattleCard card3 = deck.draw();
+        BattleCard card3 = deck.drawCard();
         assertNotNull(card3);
         deck.scrap(card3);
         assertEquals(3, deck.getScrapPileCount());
 
         assertEquals(0, deck.getRemainingDeckCount());
-        BattleCard card4 = deck.draw();
+        BattleCard card4 = deck.drawCard();
         assertNotNull(card4);
         deck.scrap(card4);
         assertEquals(1, deck.getScrapPileCount());
+    }
+
+    @Test
+    public void testFlippingCards() {
+        int expectedDeckSize = 3;
+        int cardsToFlip = 1;
+        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+                .build();
+
+        FlipResult flippedCards = deck.flipCards(cardsToFlip);
+        assertEquals(cardsToFlip, flippedCards.getTotalNumberOfCardsFlipped().intValue());
+        assertEquals(expectedDeckSize - cardsToFlip, deck.getRemainingDeckCount());
+        assertEquals(0, deck.getScrapPileCount());
+
+        int nextFlipCount = 1;
+        flippedCards = deck.flipCards(nextFlipCount);
+        assertEquals(nextFlipCount, flippedCards.getTotalNumberOfCardsFlipped().intValue());
+        assertEquals(expectedDeckSize - cardsToFlip - nextFlipCount, deck.getRemainingDeckCount());
+        assertEquals(1, deck.getScrapPileCount());
+
+        int finalFlipCount = 2;
+        flippedCards = deck.flipCards(finalFlipCount);
+        assertEquals(finalFlipCount, flippedCards.getTotalNumberOfCardsFlipped().intValue());
+        assertEquals(1, deck.getRemainingDeckCount());
+        assertEquals(0, deck.getScrapPileCount());
+
+
     }
 }

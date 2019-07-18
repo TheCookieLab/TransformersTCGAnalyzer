@@ -86,7 +86,7 @@ public class BattleFlipAnalyzer {
             FlipResult flipResult = new FlipResult();
 
             for (int j = 0; j < scenario.drawScenario.cardsToDraw; j++) {
-                BattleCard battleCard = deck.draw();
+                BattleCard battleCard = deck.drawCard();
                 flipResult.addFlippedCard(battleCard);
                 deck.scrap(battleCard);
             }

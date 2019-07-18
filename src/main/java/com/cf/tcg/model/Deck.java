@@ -1,10 +1,9 @@
 package com.cf.tcg.model;
 
+import com.cf.tcg.FlipResult;
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Stack;
 
 /**
@@ -15,7 +14,7 @@ public class Deck {
 
     public final Stack<BattleCard> battleCards;
     private final Stack<BattleCard> scrapPile;
-    private final List<BattleCard> currentlyFlippedCards;
+    private FlipResult currentlyFlippedCards;
 
     public Deck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {
         this(initializeDeck(numWhiteCards, numBlueCards, numOrangeCards, numTotalCards));
@@ -28,21 +27,30 @@ public class Deck {
     public Deck(Stack<BattleCard> battleCards) {
         this.battleCards = battleCards;
         this.scrapPile = new Stack<>();
-        this.currentlyFlippedCards = new ArrayList<>();
+        this.currentlyFlippedCards = new FlipResult();
     }
 
-    public BattleCard draw() {
+    public BattleCard drawCard() {
         if (this.battleCards.size() == 0) {
             this.reshuffleScrapIntoDeck();
         }
         return this.battleCards.pop();
     }
 
-    public List<BattleCard> flipCards(int count) {
+    public FlipResult flipCards(int count) {
+        return this.flipCards(count, false);
+    }
+
+    public FlipResult flipCards(int count, boolean whitePipsFlipTwoMore) {
         clearFlippedCards();
 
         for (int i = 0; i < count; i++) {
-            this.currentlyFlippedCards.add(draw());
+            this.currentlyFlippedCards.addFlippedCard(drawCard());
+        }
+
+        if (whitePipsFlipTwoMore && this.currentlyFlippedCards.getTotalNumberOfPipsFlipped(Pip.WHITE) > 0) {
+            this.currentlyFlippedCards.addFlippedCard(drawCard());
+            this.currentlyFlippedCards.addFlippedCard(drawCard());
         }
 
         return this.currentlyFlippedCards;
@@ -71,9 +79,9 @@ public class Deck {
     }
 
     private void clearFlippedCards() {
-        if (currentlyFlippedCards.size() > 0) {
-            this.scrapPile.addAll(this.currentlyFlippedCards);
-            this.currentlyFlippedCards.clear();
+        if (currentlyFlippedCards.getTotalNumberOfCardsFlipped() > 0) {
+            this.scrapPile.addAll(this.currentlyFlippedCards.flippedCards);
+            this.currentlyFlippedCards = new FlipResult();
         }
     }
 
