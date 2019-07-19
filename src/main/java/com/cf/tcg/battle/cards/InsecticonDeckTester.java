@@ -1,6 +1,5 @@
 package com.cf.tcg.battle.cards;
 
-import com.cf.tcg.BattleFlipAnalyzer;
 import com.cf.tcg.BattleFlipSimulator;
 import com.cf.tcg.FlipResult;
 import com.cf.tcg.FlipResultInterpreter;
@@ -39,29 +38,32 @@ public class InsecticonDeckTester {
         Stack<BattleCard> battleCards = new Stack<>();
 
         // 6 Double Orange
-        battleCards.push(DOUBLE_ORANGE);
-        battleCards.push(DOUBLE_ORANGE);
-        battleCards.push(DOUBLE_ORANGE);
-        battleCards.push(DOUBLE_ORANGE);
-        battleCards.push(DOUBLE_ORANGE);
-        battleCards.push(DOUBLE_ORANGE);
+        int numDoubleOrange = 6;
+        for (int i = 0; i < numDoubleOrange; i++) {
+            battleCards.push(DOUBLE_ORANGE);
+        }
 
         // 3 White
-        battleCards.push(SINGLE_WHITE);
-        battleCards.push(SINGLE_WHITE);
-        battleCards.push(SINGLE_WHITE);
+        int numWhite = 3;
+        for (int i = 0; i < numWhite; i++) {
+            battleCards.push(SINGLE_WHITE);
+        }
 
         // 3 Blank
-        battleCards.push(BLANK);
-        battleCards.push(BLANK);
-        battleCards.push(BLANK);
+        int numBlank = 3;
+        for (int i = 0; i < numBlank; i++) {
+            battleCards.push(BLANK);
+        }
 
         // 2 Orange-Green
-        battleCards.push(ORANGE_GREEN);
-        battleCards.push(ORANGE_GREEN);
+        int numOrangeGreen = 2;
+        for (int i = 0; i < numOrangeGreen; i++) {
+            battleCards.push(ORANGE_GREEN);
+        }
 
         // 26 Single Orange
-        for (int i = 0; i < 26; i++) {
+        int numSingleOrange = 26;
+        for (int i = 0; i < numSingleOrange; i++) {
             battleCards.push(SINGLE_ORANGE);
         }
 

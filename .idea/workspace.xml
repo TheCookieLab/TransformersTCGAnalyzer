@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/BattleCardTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/cards/InsecticonDeckTesterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResultInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
+            <state relative-caret-position="60">
               <caret line="8" column="34" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -33,16 +31,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="264">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -62,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipSimulator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResult.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -76,6 +77,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/BattleCardTypes.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/cards/InsecticonDeckBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipSimulator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java" />
       </list>
     </option>
@@ -88,10 +90,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4847" />
-    <option name="y" value="161" />
-    <option name="width" value="2049" />
-    <option name="height" value="1165" />
+    <option name="x" value="210" />
+    <option name="y" value="145" />
+    <option name="width" value="1260" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -142,6 +144,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tcg" type="462c0819:PsiDirectoryNode" />
               <item name="cards" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tcg" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
@@ -329,10 +340,9 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4847" y="161" width="2049" height="1165" extended-state="0" />
-    <editor active="true" />
+    <frame x="210" y="145" width="1260" height="738" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25460887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26026273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -342,7 +352,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32991612" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29135802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998136" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -397,32 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#2007#2008#0" expanded="true" />
-            <element signature="e#2054#2055#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2135#2136#0" expanded="true" />
-            <element signature="e#2441#2442#0" expanded="true" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2525#2526#0" expanded="true" />
-            <element signature="e#2569#2570#0" expanded="true" />
-            <element signature="e#3589#3590#0" expanded="true" />
-            <element signature="e#3635#3636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/FlipInterpreterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -459,19 +443,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        <state relative-caret-position="255">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResultInterpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
+        <state relative-caret-position="60">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -479,15 +473,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
         </state>
       </provider>
     </entry>

@@ -19,7 +19,7 @@ public class BattleFlipSimulator {
     }
 
     public BattleFlipSimulator(Deck deck) {
-        this(deck, 1000, false);
+        this(deck, 10_000, false);
     }
 
 
