@@ -3,7 +3,6 @@ package com.cf.tcg;
 import com.cf.tcg.model.Pip;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 public class FlipResultInterpreter {
@@ -35,6 +34,10 @@ public class FlipResultInterpreter {
 
     public double getAverageDamageBonus() {
         return this.orangePipStats.getMean();
+    }
+
+    public double getDamageBonusVariance() {
+        return this.orangePipStats.getVariance();
     }
 
     public double getAverageArmorBonus() {

@@ -1,6 +1,7 @@
 package com.cf.tcg.model;
 
 import com.cf.tcg.FlipResult;
+import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
@@ -35,11 +36,13 @@ public class DeckTest {
         int expectedNumberOfBlueCards = 16;
         int expectedDeckSize = expectedNumberOfOrangeCards + expectedNumberOfWhiteCards + expectedNumberOfBlueCards;
 
-        Deck deck = new Deck.DeckBuilder(40)
-                .withNumberOfWhiteCards(expectedNumberOfWhiteCards)
-                .withNumberOfBlueCards(expectedNumberOfBlueCards)
-                .withNumberOfOrangeCards(expectedNumberOfOrangeCards)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedNumberOfOrangeCards)
+                .withSingleWhiteCards(expectedNumberOfWhiteCards)
+                .withSingleBlueCards(expectedNumberOfBlueCards)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         Long actualNumberOfWhiteCards = deck.battleCards.stream().filter((battleCard) -> {
             return battleCard.pips.contains(Pip.WHITE);
@@ -62,8 +65,11 @@ public class DeckTest {
     @Test
     public void testScrap() {
         int expectedDeckSize = 40;
-        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedDeckSize)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         BattleCard battleCard = deck.drawCard();
         deck.scrapCard(battleCard);
@@ -74,8 +80,11 @@ public class DeckTest {
     @Test
     public void testReshuffle() {
         int expectedDeckSize = 40;
-        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedDeckSize)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         deck.shuffleDeck();
 
@@ -85,8 +94,11 @@ public class DeckTest {
     @Test
     public void testReset() {
         int expectedDeckSize = 40;
-        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedDeckSize)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         deck.scrapCard(deck.drawCard());
         deck.scrapCard(deck.drawCard());
@@ -99,20 +111,23 @@ public class DeckTest {
     @Test
     public void testDrawingWhenNoCardsLeftReshufflesDeck() {
         int expectedDeckSize = 3;
-        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedDeckSize)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         assertEquals(expectedDeckSize, deck.getRemainingDeckCount());
         BattleCard card1 = deck.drawCard();
         assertNotNull(card1);
         deck.scrapCard(card1);
 
-        assertEquals(expectedDeckSize-1, deck.getRemainingDeckCount());
+        assertEquals(expectedDeckSize - 1, deck.getRemainingDeckCount());
         BattleCard card2 = deck.drawCard();
         assertNotNull(card2);
         deck.scrapCard(card2);
 
-        assertEquals(expectedDeckSize-2, deck.getRemainingDeckCount());
+        assertEquals(expectedDeckSize - 2, deck.getRemainingDeckCount());
         BattleCard card3 = deck.drawCard();
         assertNotNull(card3);
         deck.scrapCard(card3);
@@ -129,8 +144,11 @@ public class DeckTest {
     public void testFlippingCards() {
         int expectedDeckSize = 3;
         int cardsToFlip = 1;
-        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedDeckSize)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         FlipResult flippedCards = deck.flipCards(cardsToFlip);
         assertEquals(cardsToFlip, flippedCards.getTotalNumberOfCardsFlipped().intValue());
@@ -153,8 +171,11 @@ public class DeckTest {
     @Test
     public void testScrappingFromTopOfDeck() {
         int expectedDeckSize = 3;
-        Deck deck = new Deck.DeckBuilder(expectedDeckSize)
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withSingleOrangeCards(expectedDeckSize)
                 .build();
+
+        Deck deck = new Deck(deckComp);
 
         deck.scrapCardsFromTopOfDeck(1);
         assertEquals(2, deck.getRemainingDeckCount());

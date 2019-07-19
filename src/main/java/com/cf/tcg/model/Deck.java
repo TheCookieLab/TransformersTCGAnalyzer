@@ -1,12 +1,11 @@
 package com.cf.tcg.model;
 
 import com.cf.tcg.FlipResult;
+import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 
 import java.util.Collections;
-import java.util.List;
 import java.util.Stack;
-import java.util.stream.Collectors;
 
 /**
  *
@@ -18,10 +17,6 @@ public class Deck {
     private final Stack<BattleCard> scrapPile;
     private FlipResult currentlyFlippedCards;
 
-    public Deck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {
-        this(initializeDeck(numWhiteCards, numBlueCards, numOrangeCards, numTotalCards));
-    }
-
     public Deck() {
         this(new Stack<>());
     }
@@ -32,15 +27,79 @@ public class Deck {
         this.currentlyFlippedCards = new FlipResult();
     }
 
+    public Deck(DeckComposition deckComposition) {
+        this.battleCards = new Stack<>();
+        this.scrapPile = new Stack<>();
+        this.currentlyFlippedCards = new FlipResult();
+
+        for (int i = 0; i < deckComposition.blank; i++) {
+            battleCards.push(BattleCard.BLANK);
+        }
+
+        for (int i = 0; i < deckComposition.doubleOrange; i++) {
+            battleCards.push(BattleCard.DOUBLE_ORANGE);
+        }
+
+        for (int i = 0; i < deckComposition.singleOrange; i++) {
+            battleCards.push(BattleCard.SINGLE_ORANGE);
+        }
+
+        for (int i = 0; i < deckComposition.doubleBlue; i++) {
+            battleCards.push(BattleCard.DOUBLE_BLUE);
+        }
+
+        for (int i = 0; i < deckComposition.singleBlue; i++) {
+            battleCards.push(BattleCard.SINGLE_BLUE);
+        }
+
+        for (int i = 0; i < deckComposition.doubleBlack; i++) {
+            battleCards.push(BattleCard.DOUBLE_BLACK);
+        }
+
+        for (int i = 0; i < deckComposition.singleBlack; i++) {
+            battleCards.push(BattleCard.SINGLE_BLACK);
+        }
+
+        for (int i = 0; i < deckComposition.white; i++) {
+            battleCards.push(BattleCard.SINGLE_WHITE);
+        }
+
+        for (int i = 0; i < deckComposition.whiteGreen; i++) {
+            battleCards.push(BattleCard.WHITE_GREEN);
+        }
+
+        for (int i = 0; i < deckComposition.whiteOrangeBlue; i++) {
+            battleCards.push(BattleCard.BLUE_ORANGE_WHITE);
+        }
+
+        for (int i = 0; i < deckComposition.green; i++) {
+            battleCards.push(BattleCard.SINGLE_GREEN);
+        }
+
+        for (int i = 0; i < deckComposition.blueOrange; i++) {
+            battleCards.push(BattleCard.BLUE_ORANGE);
+        }
+
+        for (int i = 0; i < deckComposition.blueBlack; i++) {
+            battleCards.push(BattleCard.BLACK_BLUE);
+        }
+
+        for (int i = 0; i < deckComposition.orangeBlack; i++) {
+            battleCards.push(BattleCard.BLACK_ORANGE);
+        }
+
+        Collections.shuffle(battleCards);
+    }
+
     public BattleCard drawCard() {
-        if (this.battleCards.size() == 0) {
+        if (this.battleCards.isEmpty()) {
             this.reshuffleScrapIntoDeck();
         }
         return this.battleCards.pop();
     }
 
     public BattleCard peekCard() {
-        if (this.battleCards.size() == 0) {
+        if (this.battleCards.isEmpty()) {
             this.reshuffleScrapIntoDeck();
         }
         return this.battleCards.peek();
@@ -106,17 +165,17 @@ public class Deck {
         }
     }
 
-    private static Stack<BattleCard> initializeDeck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {        
+    private static Stack<BattleCard> initializeDeck(int numWhiteCards, int numBlueCards, int numOrangeCards, int numTotalCards) {
         Stack<BattleCard> deck = new Stack<>();
 
         for (int i = 0; i < numWhiteCards; i++) {
             deck.push(new BattleCard(Pip.WHITE));
         }
-        
+
         for (int i = 0; i < numBlueCards; i++) {
             deck.push(new BattleCard(Pip.BLUE));
         }
-        
+
         for (int i = 0; i < numOrangeCards; i++) {
             deck.push(new BattleCard(Pip.ORANGE));
         }
@@ -131,38 +190,7 @@ public class Deck {
 
     @Override
     public String toString() {
-        return new Gson().toJson(this);
-    }
-
-    public static class DeckBuilder {
-
-        private int numWhiteCards;
-        private int numBlueCards;
-        private int numOrangeCards;
-        private int numTotalCards;
-
-        public DeckBuilder(int numTotalCards) {
-            this.numTotalCards = numTotalCards;
-        }
-
-        public DeckBuilder withNumberOfWhiteCards(int numWhiteCards) {
-            this.numWhiteCards = numWhiteCards;
-            return this;
-        }
-
-        public DeckBuilder withNumberOfOrangeCards(int numOrangeCards) {
-            this.numOrangeCards = numOrangeCards;
-            return this;
-        }
-
-        public DeckBuilder withNumberOfBlueCards(int numBlueCards) {
-            this.numBlueCards = numBlueCards;
-            return this;
-        }
-
-        public Deck build() {
-            Deck deck = new Deck(numWhiteCards, numBlueCards, numOrangeCards, numTotalCards);
-            return deck;
-        }
+        DeckComposition deckComp = new DeckComposition(this);
+        return new Gson().toJson(deckComp);
     }
 }
