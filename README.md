@@ -16,10 +16,10 @@ This software is currently under heavy construction so things are not guaranteed
 Deck deck = buildDeck();
 BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
 List<FlipResult> flipResults = simulator.simulate();
-        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
+FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
-        LOG.info("Deck: {}", deck);
-        LOG.info("Average Damage Bonus: {}", interpreter.getAverageDamageBonus());
-        LOG.info("Damage Bonus Variance: {}", interpreter.getDamageBonusVariance());
+LOG.info("Deck: {}", deck);
+LOG.info("Average Damage Bonus: {}", interpreter.getAverageDamageBonus());
+LOG.info("Damage Bonus Variance: {}", interpreter.getDamageBonusVariance());
 ```
 
