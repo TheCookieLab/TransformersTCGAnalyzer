@@ -1,6 +1,5 @@
 package com.cf.tcg.model.meta;
 
-import com.cf.tcg.battle.cards.InsecticonDeckTester;
 import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
 import java.util.Stack;
@@ -55,10 +54,14 @@ public class DeckCompositionTest {
 
     @Test
     public void hello() {
-        Deck deck = InsecticonDeckTester.buildDeck();
+        Deck deck = this.buildDeck();
 
         DeckComposition deckStats = new DeckComposition(deck);
+        
         assertEquals(6, deckStats.doubleOrange.intValue());
+        assertEquals(5, deckStats.white.intValue());
+        assertEquals(2, deckStats.orangeGreen.intValue());
+        assertEquals(40, deckStats.totalCards.intValue());
         
         LogManager.getLogger().info(deckStats);
     }

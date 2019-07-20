@@ -16,9 +16,11 @@ public class DeckComposition {
     public final Integer blank;
     public final Integer doubleOrange;
     public final Integer singleOrange;
+    public final Integer orangeGreen;
 
     public final Integer doubleBlue;
     public final Integer singleBlue;
+    public final Integer blueGreen;
 
     public final Integer doubleBlack;
     public final Integer singleBlack;
@@ -38,9 +40,11 @@ public class DeckComposition {
     public DeckComposition(Deck deck) {
         this.doubleOrange = this.getCountMatchingPips(deck, BattleCard.DOUBLE_ORANGE.pips);
         this.singleOrange = this.getCountMatchingPips(deck, BattleCard.SINGLE_ORANGE.pips);
+        this.orangeGreen = this.getCountMatchingPips(deck, BattleCard.ORANGE_GREEN.pips);
 
         this.doubleBlue = this.getCountMatchingPips(deck, BattleCard.DOUBLE_BLUE.pips);
         this.singleBlue = this.getCountMatchingPips(deck, BattleCard.SINGLE_BLUE.pips);
+        this.blueGreen = this.getCountMatchingPips(deck, BattleCard.BLUE_GREEN.pips);
 
         this.doubleBlack = this.getCountMatchingPips(deck, BattleCard.DOUBLE_BLACK.pips);
         this.singleBlack = this.getCountMatchingPips(deck, BattleCard.SINGLE_BLACK.pips);
@@ -59,12 +63,14 @@ public class DeckComposition {
         this.totalCards = deck.battleCards.size();
     }
 
-    private DeckComposition(Integer blank, Integer doubleOrange, Integer singleOrange, Integer doubleBlue, Integer singleBlue, Integer doubleBlack, Integer singleBlack, Integer white, Integer whiteGreen, Integer whiteOrangeBlue, Integer green, Integer blueOrange, Integer blueBlack, Integer orangeBlack, Integer totalCards) {
+    private DeckComposition(Integer blank, Integer doubleOrange, Integer singleOrange, Integer orangeGreen, Integer doubleBlue, Integer singleBlue, Integer blueGreen, Integer doubleBlack, Integer singleBlack, Integer white, Integer whiteGreen, Integer whiteOrangeBlue, Integer green, Integer blueOrange, Integer blueBlack, Integer orangeBlack, Integer totalCards) {
         this.blank = blank;
         this.doubleOrange = doubleOrange;
         this.singleOrange = singleOrange;
+        this.orangeGreen = orangeGreen;
         this.doubleBlue = doubleBlue;
         this.singleBlue = singleBlue;
+        this.blueGreen = blueGreen;
         this.doubleBlack = doubleBlack;
         this.singleBlack = singleBlack;
         this.white = white;
@@ -107,9 +113,11 @@ public class DeckComposition {
         private int blank;
         private int doubleOrange;
         private int singleOrange;
+        private int orangeGreen;
 
         private int doubleBlue;
         private int singleBlue;
+        private int blueGreen;
 
         private int doubleBlack;
         private int singleBlack;
@@ -149,6 +157,16 @@ public class DeckComposition {
 
         public DeckCompositionBuilder withSingleBlueCards(int singleBlue) {
             this.singleBlue = singleBlue;
+            return this;
+        }
+
+        public DeckCompositionBuilder withBlueGreenCards(int blueGreen) {
+            this.blueGreen = blueGreen;
+            return this;
+        }
+
+        public DeckCompositionBuilder withOrangeGreen(int orangeGreen) {
+            this.orangeGreen = orangeGreen;
             return this;
         }
 
@@ -198,8 +216,8 @@ public class DeckComposition {
         }
 
         public DeckComposition build() {
-            int totalCards = blank + doubleOrange + singleOrange + doubleBlue + singleBlue + doubleBlack + singleBlack + white + whiteGreen + whiteOrangeBlue + green + blueOrange + blueBlack + orangeBlack;
-            DeckComposition deckComposition = new DeckComposition(blank, doubleOrange, singleOrange, doubleBlue, singleBlue, doubleBlack, singleBlack, white, whiteGreen, whiteOrangeBlue, green, blueOrange, blueBlack, orangeBlack, totalCards);
+            int totalCards = blank + doubleOrange + singleOrange + orangeGreen + doubleBlue + singleBlue + blueGreen + doubleBlack + singleBlack + white + whiteGreen + whiteOrangeBlue + green + blueOrange + blueBlack + orangeBlack;
+            DeckComposition deckComposition = new DeckComposition(blank, doubleOrange, singleOrange, orangeGreen, doubleBlue, singleBlue, blueGreen, doubleBlack, singleBlack, white, whiteGreen, whiteOrangeBlue, green, blueOrange, blueBlack, orangeBlack, totalCards);
             return deckComposition;
         }
     }
