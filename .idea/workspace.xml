@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/BalancedPipDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+            <state relative-caret-position="111">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -83,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="235">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1114#1115#0" expanded="true" />
@@ -488,7 +481,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34545454" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34545454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -695,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -721,13 +707,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="235">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1114#1115#0" expanded="true" />
             <element signature="e#1138#1139#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>
