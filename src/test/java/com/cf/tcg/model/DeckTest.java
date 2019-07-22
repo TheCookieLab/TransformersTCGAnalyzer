@@ -1,13 +1,16 @@
 package com.cf.tcg.model;
 
 import com.cf.tcg.battle.FlipResult;
+import com.cf.tcg.battle.focus.FocusRule;
+import com.cf.tcg.battle.focus.ScrapSinglePipsFocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Stack;
 
 import static org.junit.Assert.*;
 
@@ -196,5 +199,54 @@ public class DeckTest {
         deck.scrapCardsFromTopOfDeck(3);
         assertEquals(2, deck.getRemainingDeckCount());
         assertEquals(1, deck.getScrapPileCount());
+    }
+
+    @Test
+    public void testPeeking() {
+        Stack<BattleCard> battleCards = new Stack<>();
+        battleCards.push(BattleCard.SINGLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_WHITE);
+        battleCards.push(BattleCard.SINGLE_BLUE); // Top of Deck
+
+        Deck deck = new Deck(battleCards);
+
+        BattleCard battleCard = deck.peekCard();
+        assertEquals(BattleCard.SINGLE_BLUE, battleCard);
+
+        BattleCard battleCard2 = deck.peekCard();
+        assertEquals(BattleCard.SINGLE_BLUE, battleCard2);
+    }
+
+    @Test
+    public void testFocusScrapsTopCard() {
+        Stack<BattleCard> battleCards = new Stack<>();
+
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_ORANGE); // Top of Deck
+
+        Deck deck = new Deck(battleCards);
+        FocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+
+        deck.focus(1, focusRule);
+        assertEquals(3, deck.getRemainingDeckCount());
+    }
+
+    @Test
+    public void testFocusNScrapsAllMatching() {
+        Stack<BattleCard> battleCards = new Stack<>();
+
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_ORANGE); // Top of Deck
+
+        Deck deck = new Deck(battleCards);
+        FocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+
+        deck.focus(4, focusRule);
+        assertEquals(3, deck.getRemainingDeckCount());
     }
 }

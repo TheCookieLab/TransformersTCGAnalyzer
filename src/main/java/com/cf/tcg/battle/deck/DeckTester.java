@@ -62,6 +62,7 @@ public interface DeckTester {
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
 
+
     public Logger getLogger();
 
     public Deck buildDeck();

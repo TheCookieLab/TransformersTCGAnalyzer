@@ -1,10 +1,14 @@
 package com.cf.tcg.model;
 
 import com.cf.tcg.battle.FlipResult;
+import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -119,6 +123,26 @@ public class Deck {
             this.scrapCard(card);
         }
     }
+
+    public void planCard(BattleCard battleCard) {
+        this.battleCards.push(battleCard);
+    }
+
+    public void focus(int focus, FocusRule focusRule) {
+        List<BattleCard> inFocus = new ArrayList<>();
+
+        for (int i = 0; i < focus; i++) {
+            BattleCard battleCard = this.drawCard();
+            if (focusRule.shouldScrap(battleCard)) {
+                this.scrapCard(battleCard);
+            } else {
+                inFocus.add(battleCard);
+            }
+        }
+
+        this.battleCards.addAll(inFocus);
+    }
+
 
     public FlipResult flipCards(int count) {
         return this.flipCards(count, false);

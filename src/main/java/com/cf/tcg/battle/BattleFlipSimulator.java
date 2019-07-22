@@ -49,7 +49,7 @@ public class BattleFlipSimulator {
 
             if (focusRule.shouldScrap(topCard)) {
                 deck.scrapCardsFromTopOfDeck(1);
-                LogManager.getLogger().debug("Scrapped {} due to Focus", topCard);
+                LogManager.getLogger().debug("Focus scrapped {}", topCard);
             }
         }
 

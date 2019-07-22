@@ -35,4 +35,9 @@ public class MonoOrangeDeckTester implements DeckTester {
     public Logger getLogger() {
         return LOG;
     }
+
+    @Override
+    public int getBold() {
+        return 2;
+    }
 }
