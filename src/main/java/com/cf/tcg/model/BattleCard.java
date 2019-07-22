@@ -27,6 +27,17 @@ public class BattleCard {
         this(null, Arrays.asList(pips));
     }
 
+    public Integer getPipCount(Pip pip) {
+        int count = 0;
+        for (Pip p : this.pips) {
+            if (p == pip) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
     @Override
     public String toString() {
         return new Gson().toJson(this);

@@ -1,4 +1,4 @@
-package com.cf.tcg;
+package com.cf.tcg.battle;
 
 import com.cf.tcg.model.Pip;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
@@ -65,10 +65,6 @@ public class FlipResultInterpreter {
 
     public double getAveragePierceBonus() {
         return this.blackPipStats.getMean();
-    }
-
-    public double getDamagePerformance() {
-        return this.getAverageDamageBonus() / this.getChanceOfFlippingMoreThanOneWhite();
     }
 
     public Integer getFlipResultCount() {

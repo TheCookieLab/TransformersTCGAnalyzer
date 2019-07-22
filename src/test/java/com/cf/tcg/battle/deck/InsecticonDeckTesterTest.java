@@ -1,6 +1,6 @@
-package com.cf.tcg.battle.cards;
+package com.cf.tcg.battle.deck;
 
-import static com.cf.tcg.battle.cards.InsecticonDeckTester.buildDeck;
+import com.cf.tcg.battle.deck.InsecticonDeckTester;
 import com.cf.tcg.model.Deck;
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ public class InsecticonDeckTesterTest {
         Integer blank = 3;
         Integer singleOrange = 28;
 
-        Deck deck = buildDeck(doubleOrange, OrangeGreen, singleWhite, blank, singleOrange);
+        Deck deck = InsecticonDeckTester.buildDeck(doubleOrange, OrangeGreen, singleWhite, blank, singleOrange);
         assertEquals(40, deck.getRemainingDeckCount());
     }
 }

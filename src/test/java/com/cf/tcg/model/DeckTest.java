@@ -1,6 +1,6 @@
 package com.cf.tcg.model;
 
-import com.cf.tcg.FlipResult;
+import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

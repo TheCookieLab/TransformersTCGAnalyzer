@@ -1,6 +1,6 @@
 package com.cf.tcg.model;
 
-import com.cf.tcg.FlipResult;
+import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 

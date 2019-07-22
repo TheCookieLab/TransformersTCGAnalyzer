@@ -1,5 +1,5 @@
 
-package com.cf.tcg;
+package com.cf.tcg.battle;
 
 import org.junit.After;
 import org.junit.Before;

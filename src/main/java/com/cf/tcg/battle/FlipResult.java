@@ -1,4 +1,4 @@
-package com.cf.tcg;
+package com.cf.tcg.battle;
 
 import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Pip;
