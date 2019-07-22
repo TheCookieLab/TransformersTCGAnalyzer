@@ -1,19 +1,18 @@
 package com.cf.tcg.battle.deck;
 
-import com.cf.tcg.battle.focus.FocusRule;
-import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;
+import com.cf.tcg.battle.focus.*;
 import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class MixedPipDeckTester implements DeckTester {
+public class BalancedPipDeckTester implements DeckTester {
 
     public final Logger LOG = LogManager.getLogger();
 
     public static void main(String[] args) {
-        new MixedPipDeckTester().runAttackSimulation();
-        new MixedPipDeckTester().runDefenseSimulation();
+        new BalancedPipDeckTester().runAttackSimulation();
+        new BalancedPipDeckTester().runDefenseSimulation();
     }
 
     @Override
@@ -25,13 +24,10 @@ public class MixedPipDeckTester implements DeckTester {
     public Deck buildDeck() {
         Integer doubleOrange = 6;
         Integer doubleBlue = 6;
-        Integer orangeGreen = 3;
-        Integer blueGreen = 3;
-        Integer singleWhite = 2;
-        Integer singleOrange = 4;
-        Integer singleBlue = 9;
+        Integer singleWhite = 16;
+        Integer singleOrange = 3;
+        Integer singleBlue = 3;
         Integer blueOrange = 6;
-        Integer whiteOrangeBlue = 1;
 
         DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
                 .withDoubleOrangeCards(doubleOrange)
@@ -39,10 +35,7 @@ public class MixedPipDeckTester implements DeckTester {
                 .withSingleOrangeCards(singleOrange)
                 .withSingleBlueCards(singleBlue)
                 .withSingleWhiteCards(singleWhite)
-                .withOrangeGreenCards(orangeGreen)
-                .withBlueGreenCards(blueGreen)
                 .withBlueOrangeCards(blueOrange)
-                .withWhiteOrangeBlueCards(whiteOrangeBlue)
                 .build();
 
         return new Deck(deckComp);
@@ -50,16 +43,14 @@ public class MixedPipDeckTester implements DeckTester {
 
     @Override
     public FocusRule getFocusRule() {
-        return new ScrapOffColorFocusRule(1);
+        return new NoOpFocusRule();
     }
 
     public int getBold() {
         return 2;
     }
 
-    ;
-
     public int getTough() {
-        return 3;
+        return 2;
     }
 }

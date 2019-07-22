@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/BalancedPipDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/FocusRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/FocusRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/NoOpFocusRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/NoOpFocusRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorFocusRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorFocusRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsKeepWhiteFocusRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsKeepWhiteFocusRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,18 +23,48 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Pip.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="1725">
               <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3521#3522#0" expanded="true" />
-                <element signature="e#3559#3560#0" expanded="true" />
+                <element signature="e#4149#4150#0" expanded="true" />
                 <element signature="e#4200#4201#0" expanded="true" />
+                <element signature="e#4792#4793#0" expanded="true" />
                 <element signature="e#4839#4840#0" expanded="true" />
+                <element signature="e#4872#4873#0" expanded="true" />
                 <element signature="e#4920#4921#0" expanded="true" />
+                <element signature="e#5226#5227#0" expanded="true" />
                 <element signature="e#5272#5273#0" expanded="true" />
+                <element signature="e#5310#5311#0" expanded="true" />
                 <element signature="e#5354#5355#0" expanded="true" />
               </folding>
             </state>
@@ -47,10 +72,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="246" column="60" selection-start-line="246" selection-start-column="60" selection-end-line="246" selection-end-column="60" />
+            <state relative-caret-position="454">
+              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+            <state relative-caret-position="345">
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1114#1115#0" expanded="true" />
@@ -73,62 +98,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+            <state relative-caret-position="135">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/BattleFlipSimulator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#677#678#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorFocusRule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,15 +143,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/InsecticonDeckTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FocusRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/deck/InsecticonDeckTesterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/InsecticonDeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/BattleFlipSimulator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/FocusRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/NoOpFocusRule.java" />
@@ -184,6 +156,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsKeepWhiteFocusRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/BalancedPipDeckTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" />
       </list>
     </option>
   </component>
@@ -195,10 +172,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4975" />
-    <option name="y" value="118" />
-    <option name="width" value="2032" />
-    <option name="height" value="1138" />
+    <option name="x" value="-4917" />
+    <option name="y" value="154" />
+    <option name="width" value="2152" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -339,8 +316,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,6 +331,7 @@
       <recent name="com.cf.tcg.battle" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cf.tcg.battle.deck" />
       <recent name="com.cf.tcg.battle.focus" />
     </key>
   </component>
@@ -370,6 +348,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.MonoOrangeDeckTester">
+    <configuration name="BalancedPipDeckTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.deck.BalancedPipDeckTester" />
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.tcg.battle.deck.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MixedPipDeckTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.deck.MixedPipDeckTester" />
       <module name="TransformersTCGAnalyzer" />
@@ -396,21 +387,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DeckTest.testFocusNScrapsAllMatching" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
@@ -427,7 +403,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testFocusScrapsTopCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeckTest.testFocusNScrapsAllMatching2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -437,7 +413,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
       <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testFocusScrapsTopCard" />
+      <option name="METHOD_NAME" value="testFocusNScrapsAllMatching2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -446,10 +422,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MonoOrangeDeckTester" />
-        <item itemvalue="JUnit.DeckTest.testFocusNScrapsAllMatching" />
-        <item itemvalue="JUnit.DeckTest" />
         <item itemvalue="Application.MixedPipDeckTester" />
-        <item itemvalue="JUnit.DeckTest.testFocusScrapsTopCard" />
+        <item itemvalue="Application.BalancedPipDeckTester" />
+        <item itemvalue="JUnit.DeckTest.testFocusNScrapsAllMatching2" />
+        <item itemvalue="JUnit.DeckTest.testFocusNScrapsAllMatching" />
       </list>
     </recent_temporary>
   </component>
@@ -467,18 +443,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ScrapSinglePipsFocusRuleTest_scrapsBlueOrangeWhiteWhenAttacking - 2019.07.22 at 08h 38m 58s.xml">
-      <configuration name="ScrapSinglePipsFocusRuleTest.scrapsBlueOrangeWhiteWhenAttacking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ScrapSinglePipsFocusRuleTest - 2019.07.22 at 08h 42m 24s.xml">
-      <configuration name="ScrapSinglePipsFocusRuleTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ScrapSinglePipsFocusRuleTest - 2019.07.22 at 08h 42m 46s.xml">
-      <configuration name="ScrapSinglePipsFocusRuleTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testPeeking - 2019.07.22 at 09h 56m 16s.xml">
-      <configuration name="DeckTest.testPeeking" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DeckTest_testPeeking - 2019.07.22 at 09h 56m 21s.xml">
       <configuration name="DeckTest.testPeeking" configurationId="JUnit" />
     </history-entry>
@@ -497,12 +461,24 @@
     <history-entry file="DeckTest_testFocusNScrapsAllMatching - 2019.07.22 at 10h 14m 19s.xml">
       <configuration name="DeckTest.testFocusNScrapsAllMatching" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DeckTest - 2019.07.22 at 10h 34m 31s.xml">
+      <configuration name="DeckTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeckTest_testFocusNScrapsAllMatching - 2019.07.22 at 10h 35m 46s.xml">
+      <configuration name="DeckTest.testFocusNScrapsAllMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeckTest_testFocusNScrapsAllMatching2 - 2019.07.22 at 10h 50m 53s.xml">
+      <configuration name="DeckTest.testFocusNScrapsAllMatching2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DeckTest_testFocusNScrapsAllMatching2 - 2019.07.22 at 10h 51m 48s.xml">
+      <configuration name="DeckTest.testFocusNScrapsAllMatching2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4975" y="118" width="2032" height="1138" extended-state="0" />
+    <frame x="-4917" y="154" width="2152" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22361809" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21327014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -512,7 +488,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29445508" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34545454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -532,13 +508,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/Scenario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/Scenario.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -553,23 +523,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/BattleCardTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/BattleCardTypes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipAnalyzer.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/FlipInterpreterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -588,17 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding>
-            <element signature="e#2508#2509#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,38 +570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1865#1866#0" expanded="true" />
-            <element signature="e#1889#1890#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
           <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="246" column="60" selection-start-line="246" selection-start-column="60" selection-end-line="246" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -705,28 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/BattleFlipSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -739,34 +633,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="60">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="255" column="54" selection-start-line="255" selection-start-column="54" selection-end-line="255" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Pip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="1725">
           <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3559#3560#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
             <element signature="e#4200#4201#0" expanded="true" />
+            <element signature="e#4792#4793#0" expanded="true" />
             <element signature="e#4839#4840#0" expanded="true" />
+            <element signature="e#4872#4873#0" expanded="true" />
             <element signature="e#4920#4921#0" expanded="true" />
+            <element signature="e#5226#5227#0" expanded="true" />
             <element signature="e#5272#5273#0" expanded="true" />
+            <element signature="e#5310#5311#0" expanded="true" />
             <element signature="e#5354#5355#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/BalancedPipDeckTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        <state relative-caret-position="345">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1114#1115#0" expanded="true" />

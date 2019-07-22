@@ -2,6 +2,7 @@ package com.cf.tcg.model;
 
 import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.battle.focus.FocusRule;
+import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;
 import com.cf.tcg.battle.focus.ScrapSinglePipsFocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
@@ -249,5 +250,24 @@ public class DeckTest {
 
         deck.focus(focusRule);
         assertEquals(3, deck.getRemainingDeckCount());
+    }
+
+    @Test
+    public void testFocusNScrapsNonOrangeWhenAttacking() {
+        Stack<BattleCard> battleCards = new Stack<>();
+
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.SINGLE_ORANGE); // Top of Deck
+
+        Deck deck = new Deck(battleCards);
+        FocusRule focusRule = new ScrapOffColorFocusRule(2);
+        focusRule.setAttacking();
+
+        deck.focus(focusRule);
+        FlipResult flipResult = deck.flipCards(2, true);
+        assertEquals(3, flipResult.getTotalAttackBonus().intValue());
     }
 }

@@ -52,8 +52,8 @@ public class FlipResultInterpreter {
         return this.orangePipStats.getMean();
     }
 
-    public double getChanceDamageBonusIsLessThan(double n) {
-        return this.orangeDistribution.cumulativeProbability(1);
+    public double getChanceDamageBonusIsLessThanOrEqualTo(double n) {
+        return this.orangeDistribution.cumulativeProbability(n);
     }
     
     public double getChanceDamageBonusGreaterThan(double n) {
@@ -64,12 +64,20 @@ public class FlipResultInterpreter {
         return this.whiteDistribution.probability(1, 100);
     }
 
+    public double getChanceOfTriggeringMetroplexBotAbility() {
+        double chanceOfFlippingMoreThanOneWhite = this.getChanceOfFlippingMoreThanOneWhite();
+        double chanceOfFlippingMoreThanOneBlue = this.blueDistribution.probability(1, 100);
+        double chanceOfFlippingMoreThanOneOrange = this.orangeDistribution.probability(1, 100);
+
+        return chanceOfFlippingMoreThanOneWhite * chanceOfFlippingMoreThanOneBlue * chanceOfFlippingMoreThanOneOrange;
+    }
+
     public double getAverageArmorBonus() {
         return this.bluePipStats.getMean();
     }
 
-    public double getChanceArmorBonusIsLessThan(double n) {
-        return this.blueDistribution.cumulativeProbability(1);
+    public double getChanceArmorBonusIsLessThanOrEqualTo(double n) {
+        return this.blueDistribution.cumulativeProbability(n);
     }
 
     public double getChanceArmorBonusGreaterThan(double n) {

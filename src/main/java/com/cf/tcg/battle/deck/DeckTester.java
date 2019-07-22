@@ -6,7 +6,6 @@ import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.battle.FlipResultInterpreter;
 import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.battle.focus.NoOpFocusRule;
-import com.cf.tcg.battle.focus.ScrapSinglePipsFocusRule;
 import com.cf.tcg.model.Deck;
 
 import java.text.NumberFormat;
@@ -36,9 +35,12 @@ public interface DeckTester {
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
 
         getLogger().info("Average Damage Bonus: {}", interpreter.getAverageDamageBonus());
-        getLogger().info("Chance of adding less than 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusIsLessThan(2)));
+        getLogger().info("Chance of adding less than or equal to 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusIsLessThanOrEqualTo(2)));
         getLogger().info("Chance of adding more than 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusGreaterThan(2)));
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
+
+        getLogger().info("Average Pierce Bonus: {}", interpreter.getAveragePierceBonus());
+        getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
     }
 
     public default void runDefenseSimulation() {
@@ -57,7 +59,7 @@ public interface DeckTester {
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
 
         getLogger().info("Average Armor Bonus: {}", interpreter.getAverageArmorBonus());
-        getLogger().info("Chance of adding less than 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusIsLessThan(2)));
+        getLogger().info("Chance of adding less than or equal to 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusIsLessThanOrEqualTo(2)));
         getLogger().info("Chance of adding more than 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusGreaterThan(2)));
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
