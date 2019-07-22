@@ -76,6 +76,14 @@ public class Deck {
             battleCards.push(BattleCard.SINGLE_GREEN);
         }
 
+        for (int i = 0; i < deckComposition.blueGreen; i++) {
+            battleCards.push(BattleCard.BLUE_GREEN);
+        }
+
+        for (int i = 0; i < deckComposition.orangeGreen; i++) {
+            battleCards.push(BattleCard.ORANGE_GREEN);
+        }
+
         for (int i = 0; i < deckComposition.blueOrange; i++) {
             battleCards.push(BattleCard.BLUE_ORANGE);
         }

@@ -17,6 +17,8 @@ public class FlipResultInterpreter {
     private final EmpiricalDistribution orangeDistribution;
 
     private final DescriptiveStatistics bluePipStats;
+    private final EmpiricalDistribution blueDistribution;
+
     private final DescriptiveStatistics blackPipStats;
     private final DescriptiveStatistics greenPipStats;
 
@@ -41,6 +43,9 @@ public class FlipResultInterpreter {
 
         this.orangeDistribution = new EmpiricalDistribution();
         this.orangeDistribution.load(this.orangePipStats.getSortedValues());
+
+        this.blueDistribution = new EmpiricalDistribution();
+        this.blueDistribution.load(this.bluePipStats.getSortedValues());
     }
 
     public double getAverageDamageBonus() {
@@ -61,6 +66,14 @@ public class FlipResultInterpreter {
 
     public double getAverageArmorBonus() {
         return this.bluePipStats.getMean();
+    }
+
+    public double getChanceArmorBonusIsLessThan(double n) {
+        return this.blueDistribution.cumulativeProbability(1);
+    }
+
+    public double getChanceArmorBonusGreaterThan(double n) {
+        return this.blueDistribution.probability(n, n+100);
     }
 
     public double getAveragePierceBonus() {
