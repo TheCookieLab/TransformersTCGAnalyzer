@@ -6,9 +6,10 @@ import com.cf.tcg.model.Pip;
 public class ScrapSinglePipsFocusRule implements FocusRule {
 
     private boolean isAttacking;
+    private final int focus;
 
-    public ScrapSinglePipsFocusRule(boolean isAttacking) {
-        this.isAttacking = isAttacking;
+    public ScrapSinglePipsFocusRule(int focus) {
+        this.focus = focus;
     }
 
     public void setAttacking() {
@@ -17,6 +18,11 @@ public class ScrapSinglePipsFocusRule implements FocusRule {
 
     public void setDefending() {
         this.isAttacking = false;
+    }
+
+    @Override
+    public int getFocus() {
+        return focus;
     }
 
     @Override

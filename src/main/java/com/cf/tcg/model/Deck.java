@@ -5,7 +5,6 @@ import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -128,10 +127,10 @@ public class Deck {
         this.battleCards.push(battleCard);
     }
 
-    public void focus(int focus, FocusRule focusRule) {
+    public void focus(FocusRule focusRule) {
         List<BattleCard> inFocus = new ArrayList<>();
 
-        for (int i = 0; i < focus; i++) {
+        for (int i = 0; i < focusRule.getFocus(); i++) {
             BattleCard battleCard = this.drawCard();
             if (focusRule.shouldScrap(battleCard)) {
                 this.scrapCard(battleCard);

@@ -227,9 +227,9 @@ public class DeckTest {
         battleCards.push(BattleCard.SINGLE_ORANGE); // Top of Deck
 
         Deck deck = new Deck(battleCards);
-        FocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+        FocusRule focusRule = new ScrapSinglePipsFocusRule(1);
 
-        deck.focus(1, focusRule);
+        deck.focus(focusRule);
         assertEquals(3, deck.getRemainingDeckCount());
     }
 
@@ -244,9 +244,10 @@ public class DeckTest {
         battleCards.push(BattleCard.SINGLE_ORANGE); // Top of Deck
 
         Deck deck = new Deck(battleCards);
-        FocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+        FocusRule focusRule = new ScrapSinglePipsFocusRule(4);
+        focusRule.setAttacking();
 
-        deck.focus(4, focusRule);
+        deck.focus(focusRule);
         assertEquals(3, deck.getRemainingDeckCount());
     }
 }

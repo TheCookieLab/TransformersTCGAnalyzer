@@ -38,6 +38,6 @@ public class MonoOrangeDeckTester implements DeckTester {
 
     @Override
     public int getBold() {
-        return 2;
+        return 0;
     }
 }

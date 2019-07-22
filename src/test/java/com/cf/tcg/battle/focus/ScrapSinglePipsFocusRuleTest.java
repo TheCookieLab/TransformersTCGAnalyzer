@@ -16,7 +16,8 @@ public class ScrapSinglePipsFocusRuleTest {
     public void scrapsSingleOrangeWhenAttacking() {
         BattleCard battleCard = BattleCard.SINGLE_ORANGE;
 
-        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(1);
+        focusRule.setAttacking();
 
         assertTrue(focusRule.shouldScrap(battleCard));
     }
@@ -25,7 +26,8 @@ public class ScrapSinglePipsFocusRuleTest {
     public void keepsDoubleOrangeWhenAttacking() {
         BattleCard battleCard = BattleCard.DOUBLE_ORANGE;
 
-        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(1);
+        focusRule.setAttacking();
 
         assertFalse(focusRule.shouldScrap(battleCard));
     }
@@ -34,7 +36,8 @@ public class ScrapSinglePipsFocusRuleTest {
     public void scrapsDoubleBlueWhenAttacking() {
         BattleCard battleCard = BattleCard.DOUBLE_BLUE;
 
-        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(1);
+        focusRule.setAttacking();
 
         assertTrue(focusRule.shouldScrap(battleCard));
     }
@@ -43,7 +46,8 @@ public class ScrapSinglePipsFocusRuleTest {
     public void scrapsBlueOrangeWhiteWhenAttacking() {
         BattleCard battleCard = BattleCard.BLUE_ORANGE_WHITE;
 
-        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(true);
+        ScrapSinglePipsFocusRule focusRule = new ScrapSinglePipsFocusRule(1);
+        focusRule.setAttacking();
 
         assertTrue(focusRule.shouldScrap(battleCard));
     }

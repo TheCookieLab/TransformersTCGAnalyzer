@@ -6,4 +6,5 @@ public interface FocusRule {
     public boolean shouldScrap(BattleCard battleCard);
     public void setAttacking();
     public void setDefending();
+    public int getFocus();
 }

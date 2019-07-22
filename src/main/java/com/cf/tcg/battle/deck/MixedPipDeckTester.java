@@ -28,8 +28,8 @@ public class MixedPipDeckTester implements DeckTester {
         Integer orangeGreen = 3;
         Integer blueGreen = 3;
         Integer singleWhite = 2;
-        Integer singleOrange = 3;
-        Integer singleBlue = 10;
+        Integer singleOrange = 4;
+        Integer singleBlue = 9;
         Integer blueOrange = 6;
         Integer whiteOrangeBlue = 1;
 
@@ -50,7 +50,7 @@ public class MixedPipDeckTester implements DeckTester {
 
     @Override
     public FocusRule getFocusRule() {
-        return new ScrapOffColorFocusRule(true);
+        return new ScrapOffColorFocusRule(1);
     }
 
     public int getBold() {

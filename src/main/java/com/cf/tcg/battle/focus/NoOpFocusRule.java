@@ -16,6 +16,11 @@ public class NoOpFocusRule implements FocusRule {
     }
 
     @Override
+    public int getFocus() {
+        return 0;
+    }
+
+    @Override
     public boolean shouldScrap(BattleCard battleCard) {
         return false;
     }
