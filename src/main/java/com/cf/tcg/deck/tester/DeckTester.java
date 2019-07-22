@@ -22,7 +22,6 @@ public interface DeckTester {
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         getLogger().info("Average Damage Bonus: {}", interpreter.getAverageDamageBonus());
-        getLogger().info("Damage Bonus Variance: {}", interpreter.getDamageBonusVariance());
     }
     
     public Logger getLogger();

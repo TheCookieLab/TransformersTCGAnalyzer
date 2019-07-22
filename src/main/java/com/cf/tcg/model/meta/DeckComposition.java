@@ -165,7 +165,7 @@ public class DeckComposition {
             return this;
         }
 
-        public DeckCompositionBuilder withOrangeGreen(int orangeGreen) {
+        public DeckCompositionBuilder withOrangeGreenCards(int orangeGreen) {
             this.orangeGreen = orangeGreen;
             return this;
         }

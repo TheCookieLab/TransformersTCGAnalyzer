@@ -4,13 +4,18 @@ import com.cf.tcg.model.Pip;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import java.util.List;
+import org.apache.commons.math3.random.EmpiricalDistribution;
 
 public class FlipResultInterpreter {
 
     public final List<FlipResult> flipResults;
 
     private final DescriptiveStatistics whitePipStats;
+    private final EmpiricalDistribution whiteDistribution;
+
     private final DescriptiveStatistics orangePipStats;
+    private final EmpiricalDistribution orangeDistribution;
+
     private final DescriptiveStatistics bluePipStats;
     private final DescriptiveStatistics blackPipStats;
     private final DescriptiveStatistics greenPipStats;
@@ -30,14 +35,28 @@ public class FlipResultInterpreter {
             this.blackPipStats.addValue(flipResult.getTotalNumberOfPipsFlipped(Pip.BLACK).doubleValue());
             this.greenPipStats.addValue(flipResult.getTotalNumberOfPipsFlipped(Pip.GREEN).doubleValue());
         }
+
+        this.whiteDistribution = new EmpiricalDistribution();
+        this.whiteDistribution.load(this.whitePipStats.getSortedValues());
+
+        this.orangeDistribution = new EmpiricalDistribution();
+        this.orangeDistribution.load(this.orangePipStats.getSortedValues());
     }
 
     public double getAverageDamageBonus() {
         return this.orangePipStats.getMean();
     }
 
-    public double getDamageBonusVariance() {
-        return this.orangePipStats.getVariance();
+    public double getChanceDamageBonusIsLessThan(double n) {
+        return this.orangeDistribution.cumulativeProbability(1);
+    }
+    
+    public double getChanceDamageBonusGreaterThan(double n) {
+        return this.orangeDistribution.probability(n, n+100);
+    }
+
+    public double getChanceOfFlippingMoreThanOneWhite() {
+        return this.whiteDistribution.probability(1, 100);
     }
 
     public double getAverageArmorBonus() {
@@ -46,6 +65,10 @@ public class FlipResultInterpreter {
 
     public double getAveragePierceBonus() {
         return this.blackPipStats.getMean();
+    }
+
+    public double getDamagePerformance() {
+        return this.getAverageDamageBonus() / this.getChanceOfFlippingMoreThanOneWhite();
     }
 
     public Integer getFlipResultCount() {

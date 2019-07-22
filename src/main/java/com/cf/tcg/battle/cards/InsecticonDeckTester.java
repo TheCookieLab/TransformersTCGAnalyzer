@@ -3,13 +3,12 @@ package com.cf.tcg.battle.cards;
 import com.cf.tcg.BattleFlipSimulator;
 import com.cf.tcg.FlipResult;
 import com.cf.tcg.FlipResultInterpreter;
-import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
+import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
-import java.util.Stack;
 
 public class InsecticonDeckTester {
 
@@ -20,48 +19,36 @@ public class InsecticonDeckTester {
     }
 
     public void run() {
-        Deck deck = buildDeck();
-        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
+        Integer doubleOrange = 6;
+        Integer OrangeGreen = 2;
+        Integer singleWhite = 3;
+        Integer blank = 3;
+        Integer singleOrange = 28;
 
+        Deck deck = buildDeck(doubleOrange, OrangeGreen, singleWhite, blank, singleOrange);
+        LOG.info("Deck: {}", deck);
+        
+        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
         List<FlipResult> flipResults = simulator.simulate();
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
-
-        LOG.info("Deck: {}", deck);
+        
         LOG.info("Average Damage Bonus: {}", interpreter.getAverageDamageBonus());
-        LOG.info("Damage Bonus Variance: {}", interpreter.getDamageBonusVariance());
+        LOG.info("Chance of adding less than 2 damage: {}", interpreter.getChanceDamageBonusIsLessThan(2));
+        LOG.info("Chance of adding more than 2 damage: {}", interpreter.getChanceDamageBonusGreaterThan(2));
+        LOG.info("Chance of flipping more than 1 white: {}", interpreter.getChanceOfFlippingMoreThanOneWhite());
+        LOG.info("Composite Damage Score: {}", interpreter.getDamagePerformance());
     }
 
-    public static Deck buildDeck() {
-        Stack<BattleCard> battleCards = new Stack<>();
+    public static Deck buildDeck(Integer doubleOrange, Integer OrangeGreen, Integer singleWhite, Integer blank, Integer singleOrange) {
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withDoubleOrangeCards(doubleOrange)
+                .withSingleOrangeCards(singleOrange)
+                .withOrangeGreenCards(OrangeGreen)
+                .withSingleWhiteCards(singleWhite)
+                .withBlankCards(blank)
+                .build();
 
-        int totalCards = 40;
-        int numDoubleOrange = 6;
-        int numOrangeGreen = 2;
-        int numWhite = 5;
-        int numBlank = 3;
-
-        for (int i = 0; i < numDoubleOrange; i++) {
-            battleCards.push(BattleCard.DOUBLE_ORANGE);
-        }
-
-        for (int i = 0; i < numWhite; i++) {
-            battleCards.push(BattleCard.SINGLE_WHITE);
-        }
-
-        for (int i = 0; i < numBlank; i++) {
-            battleCards.push(BattleCard.BLANK);
-        }
-
-        for (int i = 0; i < numOrangeGreen; i++) {
-            battleCards.push(BattleCard.ORANGE_GREEN);
-        }
-
-        int numSingleOrange = totalCards - numDoubleOrange - numOrangeGreen - numWhite - numBlank;
-        for (int i = 0; i < numSingleOrange; i++) {
-            battleCards.push(BattleCard.SINGLE_ORANGE);
-        }
-
-        Deck deck = new Deck(battleCards);
+        Deck deck = new Deck(deckComp);
         deck.shuffleDeck();
 
         return deck;

@@ -13,7 +13,16 @@ Looking to answer all these questions and more!
 This software is currently under heavy construction so things are not guaranteed to work as you'd expect (or at all). That said, using this client will be as simple as defining your deck, instantiating a BattleFlipSimulator, simulating, and interpreting the results!
 
 ```java
-Deck deck = buildDeck();
+DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+                .withDoubleOrangeCards(6)
+                .withOrangeGreen(2)
+                .withSingleWhiteCards(3)
+                .withBlankCards(3)
+                .withSingleOrangeCards(28)
+                .build();
+        
+Deck deck = new Deck(deckComp);
+
 BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
 List<FlipResult> flipResults = simulator.simulate();
 FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
