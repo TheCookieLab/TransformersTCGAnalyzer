@@ -7,6 +7,7 @@ import com.cf.tcg.battle.FlipResultInterpreter;
 import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.battle.focus.NoOpFocusRule;
 import com.cf.tcg.model.Deck;
+import com.cf.tcg.model.Pip;
 
 import java.text.NumberFormat;
 import java.util.List;
@@ -21,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 public interface DeckTester {
     public default void runAttackSimulation() {
         Deck deck = buildDeck();
-        getLogger().info("Deck: {}", deck);
+        getLogger().info("Running Offensive Stats for Deck: {}", deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
@@ -40,12 +41,11 @@ public interface DeckTester {
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
 
         getLogger().info("Average Pierce Bonus: {}", interpreter.getAveragePierceBonus());
-        getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
     }
 
     public default void runDefenseSimulation() {
         Deck deck = buildDeck();
-        getLogger().info("Deck: {}", deck);
+        getLogger().info("Running Defensive Stats for Deck: {}", deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
@@ -63,7 +63,40 @@ public interface DeckTester {
         getLogger().info("Chance of adding more than 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusGreaterThan(2)));
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
+    
+    public default void getChancesOfFlippingPips(Pip...pips) {
+        Deck deck = buildDeck();
+        getLogger().info("Running chances of flipping {} with deck: {}", pips, deck);
+        deck.shuffleDeck();
 
+        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
+
+        FocusRule focusRule = getFocusRule();
+        focusRule.setAttacking();
+
+        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
+        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
+
+        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        getLogger().info("Chance of flipping {}: {}", pips, numberFormat.format(interpreter.getChanceOfFlippingPips(pips)));
+    }
+    
+    public default void runMetroplexAbilityOdds() {
+        Deck deck = buildDeck();
+        getLogger().info("Running chances of triggering Metroplex Bot-mode ability for Deck: {}", deck);
+        deck.shuffleDeck();
+
+        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
+
+        FocusRule focusRule = getFocusRule();
+        focusRule.setAttacking();
+
+        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
+        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
+
+        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
+    }
 
     public Logger getLogger();
 

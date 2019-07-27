@@ -63,6 +63,18 @@ public class FlipResultInterpreter {
     public double getChanceOfFlippingMoreThanOneWhite() {
         return this.whiteDistribution.probability(1, 100);
     }
+    
+    public double getChanceOfFlippingPips(Pip...pips) {
+        double occurrence = 0;
+        
+        for (FlipResult flipResult : this.flipResults) {
+            if (flipResult.containsPips(pips)) {
+                occurrence++;
+            }
+        }
+        
+        return occurrence / this.flipResults.size();
+    }
 
     public double getChanceOfTriggeringMetroplexBotAbility() {
         double chanceOfFlippingMoreThanOneWhite = this.getChanceOfFlippingMoreThanOneWhite();
