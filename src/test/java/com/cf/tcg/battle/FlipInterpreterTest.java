@@ -45,7 +45,7 @@ public class FlipInterpreterTest {
     }
 
     @Test
-    public void getChanceOfFlippingPipsArePositive() {
+    public void getChanceOfFlippingPipsIsPositive1() {
         List<FlipResult> flipResults = new ArrayList<>();
         flipResults.add(new FlipResult(new BattleCard(Pip.ORANGE)));
         flipResults.add(new FlipResult(new BattleCard(Pip.ORANGE), new BattleCard(Pip.BLUE)));
@@ -70,5 +70,19 @@ public class FlipInterpreterTest {
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         assertEquals(0.0, interpreter.getChanceOfFlippingPips(Pip.ORANGE, Pip.ORANGE), 0.001);
+    }
+    
+    @Test
+    public void getChanceOfFlippingPipsIsPositive2() {
+        List<FlipResult> flipResults = new ArrayList<>();
+        flipResults.add(new FlipResult(new BattleCard(Pip.ORANGE, Pip.ORANGE, Pip.BLUE, Pip.BLUE, Pip.WHITE, Pip.WHITE)));
+        flipResults.add(new FlipResult(new BattleCard(Pip.WHITE), new BattleCard(Pip.WHITE), new BattleCard(Pip.ORANGE), new BattleCard(Pip.ORANGE), new BattleCard(Pip.BLUE), new BattleCard(Pip.BLUE)));
+        flipResults.add(new FlipResult(new BattleCard(Pip.BLUE, Pip.BLUE)));
+        flipResults.add(new FlipResult(new BattleCard(Pip.WHITE)));
+        flipResults.add(new FlipResult(new BattleCard(Pip.ORANGE)));
+
+        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
+
+        assertEquals(0.4, interpreter.getChanceOfFlippingPips(Pip.ORANGE, Pip.ORANGE, Pip.BLUE, Pip.BLUE, Pip.WHITE, Pip.WHITE), 0.001);
     }
 }

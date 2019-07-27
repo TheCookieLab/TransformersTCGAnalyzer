@@ -56,5 +56,15 @@ public class FlipResultTest {
         assertTrue(subject.containsPips(Pip.BLACK, Pip.ORANGE));
         assertFalse(subject.containsPips(Pip.BLACK, Pip.BLACK, Pip.BLACK));
     }
+    
+    @Test
+    public void containsPipsNegativeTests() {
+        BattleCard battleCard1 = new BattleCard(Pip.BLACK, Pip.BLUE, Pip.WHITE);
+
+        FlipResult subject = new FlipResult(battleCard1);
+        
+        assertFalse(subject.containsPips(Pip.BLACK, Pip.ORANGE));
+        assertFalse(subject.containsPips(Pip.BLACK, Pip.BLUE, Pip.WHITE, Pip.GREEN));
+    }
 
 }
