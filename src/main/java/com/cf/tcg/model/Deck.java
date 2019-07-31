@@ -99,6 +99,10 @@ public class Deck {
             battleCards.push(BattleCard.BLACK_ORANGE);
         }
 
+        for (BattleCard battleCard : deckComposition.battleCards) {
+            battleCards.push(battleCard);
+        }
+
         Collections.shuffle(battleCards);
     }
 

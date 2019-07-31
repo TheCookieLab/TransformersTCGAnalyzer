@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
+    <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/DrawSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/Hand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/DrawSimulatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/BlurLionizerProwlDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,98 +18,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Pip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4149#4150#0" expanded="true" />
-                <element signature="e#4200#4201#0" expanded="true" />
-                <element signature="e#4792#4793#0" expanded="true" />
-                <element signature="e#4839#4840#0" expanded="true" />
-                <element signature="e#4872#4873#0" expanded="true" />
-                <element signature="e#4920#4921#0" expanded="true" />
-                <element signature="e#5226#5227#0" expanded="true" />
-                <element signature="e#5272#5273#0" expanded="true" />
-                <element signature="e#5310#5311#0" expanded="true" />
-                <element signature="e#5354#5355#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="35" />
-              <folding>
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -116,47 +30,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResult.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/FlipResultInterpreter.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/BattleFlipAnalyzerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/FlipInterpreterTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/FlipInterpreterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/MonoOrangeDeckBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/InsecticonDeckBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/BattleCardTypes.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/cards/InsecticonDeckBuilderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipSimulator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/InsecticonDeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/DeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/InsecticonDeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/deck/InsecticonDeckTesterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/InsecticonDeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/BattleFlipSimulator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/FocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/NoOpFocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorFocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsKeepWhiteFocusRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/BalancedPipDeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -164,154 +37,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-4917" />
-    <option name="y" value="154" />
-    <option name="width" value="2152" />
-    <option name="height" value="1027" />
-  </component>
+  <component name="ProjectId" id="1OmFKTefWnNvoVEhNDTBfhmHKbn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="battle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="battle" type="462c0819:PsiDirectoryNode" />
-              <item name="deck" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="battle" type="462c0819:PsiDirectoryNode" />
-              <item name="focus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="battle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="battle" type="462c0819:PsiDirectoryNode" />
-              <item name="focus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TransformersTCGAnalyzer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TransformersTCGAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -324,6 +52,7 @@
       <recent name="com.cf.tcg.battle" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="deck.testers" />
       <recent name="com.cf.tcg.battle.deck" />
       <recent name="com.cf.tcg.battle.focus" />
     </key>
@@ -340,33 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MonoOrangeDeckTester">
-    <configuration name="BalancedPipDeckTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.deck.BalancedPipDeckTester" />
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MixedPipDeckTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.deck.MixedPipDeckTester" />
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.DrawSimulatorTest">
     <configuration name="MonoOrangeDeckTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.deck.MonoOrangeDeckTester" />
       <module name="TransformersTCGAnalyzer" />
@@ -380,33 +83,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testFocusNScrapsAllMatching" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlurLionizerProwlDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testFocusNScrapsAllMatching" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.BlurLionizerProwlDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlurLionizerProwlDeckTester.getAttackStats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="deck.testers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.BlurLionizerProwlDeckTester" />
+      <option name="METHOD_NAME" value="getAttackStats" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testFocusNScrapsAllMatching2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DrawSimulatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="PATTERN" value="com.cf.tcg.battle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testFocusNScrapsAllMatching2" />
+      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.DrawSimulatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DrawSimulatorTest.testSimulateReturnsCorrectHandResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.tcg.battle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.DrawSimulatorTest" />
+      <option name="METHOD_NAME" value="testSimulateReturnsCorrectHandResults" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -414,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DrawSimulatorTest" />
+        <item itemvalue="JUnit.DrawSimulatorTest.testSimulateReturnsCorrectHandResults" />
+        <item itemvalue="JUnit.BlurLionizerProwlDeckTester" />
+        <item itemvalue="JUnit.BlurLionizerProwlDeckTester.getAttackStats" />
         <item itemvalue="Application.MonoOrangeDeckTester" />
-        <item itemvalue="Application.MixedPipDeckTester" />
-        <item itemvalue="Application.BalancedPipDeckTester" />
-        <item itemvalue="JUnit.DeckTest.testFocusNScrapsAllMatching2" />
-        <item itemvalue="JUnit.DeckTest.testFocusNScrapsAllMatching" />
       </list>
     </recent_temporary>
   </component>
@@ -435,294 +168,17 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="DeckTest_testPeeking - 2019.07.22 at 09h 56m 21s.xml">
-      <configuration name="DeckTest.testPeeking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testPeeking - 2019.07.22 at 09h 56m 40s.xml">
-      <configuration name="DeckTest.testPeeking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusScrapsTopCard - 2019.07.22 at 10h 13m 14s.xml">
-      <configuration name="DeckTest.testFocusScrapsTopCard" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusScrapsTopCard - 2019.07.22 at 10h 13m 28s.xml">
-      <configuration name="DeckTest.testFocusScrapsTopCard" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusNScrapsAllMatching - 2019.07.22 at 10h 13m 59s.xml">
-      <configuration name="DeckTest.testFocusNScrapsAllMatching" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusNScrapsAllMatching - 2019.07.22 at 10h 14m 19s.xml">
-      <configuration name="DeckTest.testFocusNScrapsAllMatching" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest - 2019.07.22 at 10h 34m 31s.xml">
-      <configuration name="DeckTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusNScrapsAllMatching - 2019.07.22 at 10h 35m 46s.xml">
-      <configuration name="DeckTest.testFocusNScrapsAllMatching" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusNScrapsAllMatching2 - 2019.07.22 at 10h 50m 53s.xml">
-      <configuration name="DeckTest.testFocusNScrapsAllMatching2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeckTest_testFocusNScrapsAllMatching2 - 2019.07.22 at 10h 51m 48s.xml">
-      <configuration name="DeckTest.testFocusNScrapsAllMatching2" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-4917" y="154" width="2152" height="1027" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21327014" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34545454" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39961758" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3298279" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/Scenario.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/ScenarioResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/cards/BattleCardTypes.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/BattleFlipAnalyzer.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/FlipInterpreterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="47" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="32" selection-start-line="32" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/deck/MonoOrangeDeckTesterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3092">
-          <caret line="217" column="31" selection-start-line="217" selection-start-column="31" selection-end-line="217" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRuleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/FocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/NoOpFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsKeepWhiteFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/BattleFlipSimulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapOffColorKeepWhitesFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="255" column="54" selection-start-line="255" selection-start-column="54" selection-end-line="255" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Pip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4149#4150#0" expanded="true" />
-            <element signature="e#4200#4201#0" expanded="true" />
-            <element signature="e#4792#4793#0" expanded="true" />
-            <element signature="e#4839#4840#0" expanded="true" />
-            <element signature="e#4872#4873#0" expanded="true" />
-            <element signature="e#4920#4921#0" expanded="true" />
-            <element signature="e#5226#5227#0" expanded="true" />
-            <element signature="e#5272#5273#0" expanded="true" />
-            <element signature="e#5310#5311#0" expanded="true" />
-            <element signature="e#5354#5355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSinglePipsFocusRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="78" column="56" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MixedPipDeckTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/BalancedPipDeckTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/MonoOrangeDeckTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

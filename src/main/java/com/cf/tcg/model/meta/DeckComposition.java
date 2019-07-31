@@ -4,11 +4,12 @@ import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.Pip;
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- *
  * @author David
  */
 public class DeckComposition {
@@ -36,6 +37,7 @@ public class DeckComposition {
     public final Integer orangeBlack;
 
     public final Integer totalCards;
+    public final transient List<BattleCard> battleCards;
 
     public DeckComposition(Deck deck) {
         this.doubleOrange = this.getCountMatchingPips(deck, BattleCard.DOUBLE_ORANGE.pips);
@@ -60,10 +62,16 @@ public class DeckComposition {
 
         this.whiteOrangeBlue = this.getCountMatchingPips(deck, BattleCard.BLUE_ORANGE_WHITE.pips);
         this.blank = this.getCountMatchingPips(deck, BattleCard.BLANK.pips);
+
         this.totalCards = deck.battleCards.size();
+        this.battleCards = new ArrayList<>(deck.battleCards);
     }
 
-    private DeckComposition(Integer blank, Integer doubleOrange, Integer singleOrange, Integer orangeGreen, Integer doubleBlue, Integer singleBlue, Integer blueGreen, Integer doubleBlack, Integer singleBlack, Integer white, Integer whiteGreen, Integer whiteOrangeBlue, Integer green, Integer blueOrange, Integer blueBlack, Integer orangeBlack, Integer totalCards) {
+    private DeckComposition(Integer blank, Integer doubleOrange, Integer singleOrange, Integer orangeGreen,
+                            Integer doubleBlue, Integer singleBlue, Integer blueGreen, Integer doubleBlack,
+                            Integer singleBlack, Integer white, Integer whiteGreen, Integer whiteOrangeBlue,
+                            Integer green, Integer blueOrange, Integer blueBlack, Integer orangeBlack,
+                            Integer totalCards, List<BattleCard> battleCards) {
         this.blank = blank;
         this.doubleOrange = doubleOrange;
         this.singleOrange = singleOrange;
@@ -81,6 +89,7 @@ public class DeckComposition {
         this.blueBlack = blueBlack;
         this.orangeBlack = orangeBlack;
         this.totalCards = totalCards;
+        this.battleCards = battleCards;
     }
 
     private Integer getCountMatchingPips(Deck deck, List<Pip> pips) {
@@ -131,6 +140,8 @@ public class DeckComposition {
         private int blueOrange;
         private int blueBlack;
         private int orangeBlack;
+
+        private List<BattleCard> battleCards;
 
         public DeckCompositionBuilder() {
         }
@@ -215,9 +226,26 @@ public class DeckComposition {
             return this;
         }
 
+        public DeckCompositionBuilder withBattleCards(BattleCard... battleCards) {
+            this.battleCards = Arrays.asList(battleCards);
+            return this;
+        }
+
         public DeckComposition build() {
-            int totalCards = blank + doubleOrange + singleOrange + orangeGreen + doubleBlue + singleBlue + blueGreen + doubleBlack + singleBlack + white + whiteGreen + whiteOrangeBlue + green + blueOrange + blueBlack + orangeBlack;
-            DeckComposition deckComposition = new DeckComposition(blank, doubleOrange, singleOrange, orangeGreen, doubleBlue, singleBlue, blueGreen, doubleBlack, singleBlack, white, whiteGreen, whiteOrangeBlue, green, blueOrange, blueBlack, orangeBlack, totalCards);
+            int totalCards = blank + doubleOrange + singleOrange
+                    + orangeGreen + doubleBlue + singleBlue
+                    + blueGreen + doubleBlack + singleBlack
+                    + white + whiteGreen + whiteOrangeBlue
+                    + green + blueOrange + blueBlack
+                    + orangeBlack;
+
+            DeckComposition deckComposition = new DeckComposition(blank, doubleOrange, singleOrange,
+                    orangeGreen, doubleBlue, singleBlue,
+                    blueGreen, doubleBlack, singleBlack,
+                    white, whiteGreen, whiteOrangeBlue,
+                    green, blueOrange, blueBlack,
+                    orangeBlack, totalCards, battleCards);
+
             return deckComposition;
         }
     }
