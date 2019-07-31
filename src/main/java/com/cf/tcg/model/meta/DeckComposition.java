@@ -141,7 +141,7 @@ public class DeckComposition {
         private int blueBlack;
         private int orangeBlack;
 
-        private List<BattleCard> battleCards;
+        private List<BattleCard> battleCards = new ArrayList<>();
 
         public DeckCompositionBuilder() {
         }
@@ -237,7 +237,7 @@ public class DeckComposition {
                     + blueGreen + doubleBlack + singleBlack
                     + white + whiteGreen + whiteOrangeBlue
                     + green + blueOrange + blueBlack
-                    + orangeBlack;
+                    + orangeBlack + battleCards.size();
 
             DeckComposition deckComposition = new DeckComposition(blank, doubleOrange, singleOrange,
                     orangeGreen, doubleBlue, singleBlue,
