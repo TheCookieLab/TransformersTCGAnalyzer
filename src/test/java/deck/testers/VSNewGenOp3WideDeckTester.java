@@ -66,7 +66,7 @@ public class VSNewGenOp3WideDeckTester implements DeckTester {
 
     @Override
     public int getBold() {
-        return 1;
+        return 3;
     }
 
     @Override

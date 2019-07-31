@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 public interface DeckTester {
     public default void runAttackSimulation() {
         Deck deck = buildDeck();
-        getLogger().info("Running Offensive Stats for Deck: {}", deck);
+        getLogger().info("Running Offensive Stats for deck: {}", deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
@@ -46,7 +46,7 @@ public interface DeckTester {
 
     public default void runDefenseSimulation() {
         Deck deck = buildDeck();
-        getLogger().info("Running Defensive Stats for Deck: {}", deck);
+        getLogger().info("Running Defensive Stats for deck: {}", deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
@@ -85,7 +85,24 @@ public interface DeckTester {
     
     public default void runMetroplexAbilityOdds() {
         Deck deck = buildDeck();
-        getLogger().info("Running chances of triggering Metroplex Bot-mode ability for Deck: {}", deck);
+        getLogger().info("Running chances of triggering Metroplex Bot-mode ability for deck: {}", deck);
+        deck.shuffleDeck();
+
+        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
+
+        FocusRule focusRule = getFocusRule();
+        focusRule.setAttacking();
+
+        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
+        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
+
+        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
+    }
+    
+    public default void runInitialDrawOdds() {
+        Deck deck = buildDeck();
+        getLogger().info("Running chances of drawing each card in deck: {}", deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
