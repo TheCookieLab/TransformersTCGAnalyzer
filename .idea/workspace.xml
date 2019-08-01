@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/meta/DeckCompositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/meta/DeckCompositionTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BalancedPipDeckTester">
+  <component name="RunManager" selected="JUnit.DeckTest">
     <configuration name="BalancedPipDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
@@ -78,21 +77,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
       <option name="MAIN_CLASS_NAME" value="deck.testers.BalancedPipDeckTester" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeckCompositionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.meta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model.meta" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.meta.DeckCompositionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testFocusNScrapsNonOrangeWhenAttacking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeckTest.testGetDecklist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -123,13 +107,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
       <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testFocusNScrapsNonOrangeWhenAttacking" />
+      <option name="METHOD_NAME" value="testGetDecklist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testReset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeckTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +123,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
       <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testReset" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.testToStringStaysConsistentAfterDrawAndScrap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
+      <option name="METHOD_NAME" value="testToStringStaysConsistentAfterDrawAndScrap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BalancedPipDeckTester" />
         <item itemvalue="JUnit.DeckTest" />
-        <item itemvalue="JUnit.DeckTest.testFocusNScrapsNonOrangeWhenAttacking" />
-        <item itemvalue="JUnit.DeckCompositionTest" />
-        <item itemvalue="JUnit.DeckTest.testReset" />
+        <item itemvalue="JUnit.DeckTest.testGetDecklist" />
+        <item itemvalue="JUnit.DeckTest.testToStringStaysConsistentAfterDrawAndScrap" />
+        <item itemvalue="JUnit.DeckTest.testToString" />
+        <item itemvalue="JUnit.BalancedPipDeckTester" />
       </list>
     </recent_temporary>
   </component>
@@ -182,15 +182,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java</url>
-          <line>269</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="deck.peekCard()" language="JAVA" />

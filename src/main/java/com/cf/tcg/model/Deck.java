@@ -5,7 +5,6 @@ import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 
-import javax.print.event.PrintJobAttributeListener;
 import java.util.*;
 
 /**
@@ -22,8 +21,8 @@ public class Deck {
         this(new LinkedList<>());
     }
 
-    public Deck(LinkedList<BattleCard> battleCards) {
-        this.battleCards = battleCards;
+    public Deck(List<BattleCard> battleCards) {
+        this.battleCards = new LinkedList<>(battleCards);
         this.scrapPile = new LinkedList<>();
         this.currentlyFlippedCards = new FlipResult();
     }
@@ -200,8 +199,8 @@ public class Deck {
         }
     }
 
-    private List<BattleCard> getAllCards() {
-        List<BattleCard> allBattleCards = new ArrayList<>();
+    private List<BattleCard> collectAllCards() {
+        LinkedList<BattleCard> allBattleCards = new LinkedList<>();
 
         allBattleCards.addAll(this.scrapPile);
         allBattleCards.addAll(this.battleCards);
@@ -211,17 +210,23 @@ public class Deck {
     }
 
     public Map<BattleCard, Integer> getDecklist() {
-        List<BattleCard> allBattleCards = this.getAllCards();
+        List<BattleCard> allBattleCards = this.collectAllCards();
+        Map<BattleCard, Integer> results = new HashMap<>();
 
-        return new HashMap<>();
+        for (BattleCard battleCard : allBattleCards) {
+            Integer count = results.getOrDefault(battleCard, 0);
+            results.put(battleCard, count++);
+        }
+
+        return results;
     }
 
     @Override
     public String toString() {
-        List<BattleCard> allBattleCards = this.getAllCards();
-        Deck tempDeck = new Deck(battleCards);
+        List<BattleCard> allBattleCards = this.collectAllCards();
+        Deck tempDeck = new Deck(allBattleCards);
 
-        DeckComposition deckComp = new DeckComposition(this);
+        DeckComposition deckComp = new DeckComposition(tempDeck);
         return new Gson().toJson(deckComp);
     }
 }

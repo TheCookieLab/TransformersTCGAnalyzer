@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Stack;
 
 import static org.junit.Assert.*;
@@ -270,5 +271,43 @@ public class DeckTest {
         deck.focus(focusRule);
         FlipResult flipResult = deck.flipCards(2, true);
         assertEquals(3, flipResult.getTotalAttackBonus().intValue());
+    }
+
+    @Test
+    public void testToStringStaysConsistentAfterDrawScrapAndFlip() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.SINGLE_ORANGE); // Top of Deck
+
+        Deck deck = new Deck(battleCards);
+
+        String expected = "{\"doubleOrange\":2,\"singleOrange\":1,\"singleBlue\":2,\"totalCards\":5}";
+        assertEquals(expected, deck.toString());
+
+        BattleCard battleCard = deck.drawCard();
+        deck.scrapCard(battleCard);
+
+        FlipResult flipResult = deck.flipCards(2);
+        assertEquals(expected, deck.toString());
+    }
+
+    @Test
+    public void testGetDecklistGroupsSameCardsTogether() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.SINGLE_ORANGE);
+
+        Deck deck = new Deck(battleCards);
+
+        Map<BattleCard, Integer> decklist = deck.getDecklist();
+        assertEquals(3, decklist.size());
     }
 }
