@@ -5,10 +5,8 @@ import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
+import javax.print.event.PrintJobAttributeListener;
+import java.util.*;
 
 /**
  *
@@ -200,9 +198,27 @@ public class Deck {
         }
     }
 
+    private List<BattleCard> getAllCards() {
+        List<BattleCard> allBattleCards = new ArrayList<>();
+
+        allBattleCards.addAll(this.scrapPile);
+        allBattleCards.addAll(this.battleCards);
+        allBattleCards.addAll(this.currentlyFlippedCards.flippedCards);
+
+        return allBattleCards;
+    }
+
+    public Map<BattleCard, Integer> getDecklist() {
+        List<BattleCard> allBattleCards = this.getAllCards();
+
+        return new HashMap<>();
+    }
+
     @Override
     public String toString() {
-        
+        List<BattleCard> allBattleCards = this.getAllCards();
+        Deck tempDeck = new Deck(battleCards)
+
         DeckComposition deckComp = new DeckComposition(this);
         return new Gson().toJson(deckComp);
     }

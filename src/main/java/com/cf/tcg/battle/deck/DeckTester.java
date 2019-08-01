@@ -1,9 +1,7 @@
 
 package com.cf.tcg.battle.deck;
 
-import com.cf.tcg.battle.BattleFlipSimulator;
-import com.cf.tcg.battle.FlipResult;
-import com.cf.tcg.battle.FlipResultInterpreter;
+import com.cf.tcg.battle.*;
 import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.battle.focus.NoOpFocusRule;
 import com.cf.tcg.model.Deck;
@@ -100,21 +98,15 @@ public interface DeckTester {
         getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
     }
     
-    public default void runInitialDrawOdds() {
+    public default void runInitialDrawOdds(int numberOfTurns) {
         Deck deck = buildDeck();
         getLogger().info("Running chances of drawing each card in deck: {}", deck);
         deck.shuffleDeck();
 
-        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
+        DrawSimulator simulator = new DrawSimulator(deck);
 
-        FocusRule focusRule = getFocusRule();
-        focusRule.setAttacking();
+        List<Hand> hands = simulator.simulate(numberOfTurns);
 
-        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
-        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
-
-        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
-        getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
     }
 
     public Logger getLogger();
