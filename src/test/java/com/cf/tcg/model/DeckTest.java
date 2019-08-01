@@ -11,6 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 import static org.junit.Assert.*;
@@ -204,7 +205,7 @@ public class DeckTest {
 
     @Test
     public void testPeeking() {
-        Stack<BattleCard> battleCards = new Stack<>();
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
         battleCards.push(BattleCard.SINGLE_ORANGE);
         battleCards.push(BattleCard.SINGLE_WHITE);
         battleCards.push(BattleCard.SINGLE_BLUE); // Top of Deck
@@ -220,7 +221,7 @@ public class DeckTest {
 
     @Test
     public void testFocusScrapsTopCard() {
-        Stack<BattleCard> battleCards = new Stack<>();
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
 
         battleCards.push(BattleCard.DOUBLE_ORANGE);
         battleCards.push(BattleCard.SINGLE_BLUE);
@@ -236,7 +237,7 @@ public class DeckTest {
 
     @Test
     public void testFocusNScrapsAllMatching() {
-        Stack<BattleCard> battleCards = new Stack<>();
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
 
         battleCards.push(BattleCard.SINGLE_BLUE);
         battleCards.push(BattleCard.DOUBLE_ORANGE);
@@ -254,7 +255,7 @@ public class DeckTest {
 
     @Test
     public void testFocusNScrapsNonOrangeWhenAttacking() {
-        Stack<BattleCard> battleCards = new Stack<>();
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
 
         battleCards.push(BattleCard.SINGLE_BLUE);
         battleCards.push(BattleCard.DOUBLE_ORANGE);

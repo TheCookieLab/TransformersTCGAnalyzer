@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/meta/DeckCompositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/meta/DeckCompositionTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,21 +67,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DrawSimulatorTest">
-    <configuration name="MonoOrangeDeckTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.deck.MonoOrangeDeckTester" />
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BlurLionizerProwlDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BalancedPipDeckTester">
+    <configuration name="BalancedPipDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -90,54 +77,69 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.BlurLionizerProwlDeckTester" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.BalancedPipDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BlurLionizerProwlDeckTester.getAttackStats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeckCompositionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="deck.testers.*" />
+          <option name="PATTERN" value="com.cf.tcg.model.meta.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.BlurLionizerProwlDeckTester" />
-      <option name="METHOD_NAME" value="getAttackStats" />
+      <option name="PACKAGE_NAME" value="com.cf.tcg.model.meta" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.meta.DeckCompositionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.testFocusNScrapsNonOrangeWhenAttacking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
+      <option name="METHOD_NAME" value="testFocusNScrapsNonOrangeWhenAttacking" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawSimulatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeckTest.testReset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.*" />
+          <option name="PATTERN" value="com.cf.tcg.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.DrawSimulatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DrawSimulatorTest.testSimulateReturnsCorrectHandResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.DrawSimulatorTest" />
-      <option name="METHOD_NAME" value="testSimulateReturnsCorrectHandResults" />
+      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
+      <option name="METHOD_NAME" value="testReset" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DrawSimulatorTest" />
-        <item itemvalue="JUnit.DrawSimulatorTest.testSimulateReturnsCorrectHandResults" />
-        <item itemvalue="JUnit.BlurLionizerProwlDeckTester" />
-        <item itemvalue="JUnit.BlurLionizerProwlDeckTester.getAttackStats" />
-        <item itemvalue="Application.MonoOrangeDeckTester" />
+        <item itemvalue="JUnit.BalancedPipDeckTester" />
+        <item itemvalue="JUnit.DeckTest" />
+        <item itemvalue="JUnit.DeckTest.testFocusNScrapsNonOrangeWhenAttacking" />
+        <item itemvalue="JUnit.DeckCompositionTest" />
+        <item itemvalue="JUnit.DeckTest.testReset" />
       </list>
     </recent_temporary>
   </component>
@@ -178,5 +180,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java</url>
+          <line>269</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="deck.peekCard()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

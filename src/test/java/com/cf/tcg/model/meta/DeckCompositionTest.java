@@ -2,6 +2,8 @@ package com.cf.tcg.model.meta;
 
 import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
+
+import java.util.LinkedList;
 import java.util.Stack;
 import org.apache.logging.log4j.LogManager;
 import static org.junit.Assert.assertEquals;
@@ -17,7 +19,7 @@ public class DeckCompositionTest {
     }
     
     public Deck buildDeck() {
-        Stack<BattleCard> battleCards = new Stack<>();
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
 
         int totalCards = 40;
         int numDoubleOrange = 6;

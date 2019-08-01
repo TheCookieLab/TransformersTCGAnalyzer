@@ -14,23 +14,23 @@ import java.util.*;
  */
 public class Deck {
 
-    public final Stack<BattleCard> battleCards;
-    private final Stack<BattleCard> scrapPile;
+    public final LinkedList<BattleCard> battleCards;
+    private final LinkedList<BattleCard> scrapPile;
     private FlipResult currentlyFlippedCards;
 
     public Deck() {
-        this(new Stack<>());
+        this(new LinkedList<>());
     }
 
-    public Deck(Stack<BattleCard> battleCards) {
+    public Deck(LinkedList<BattleCard> battleCards) {
         this.battleCards = battleCards;
-        this.scrapPile = new Stack<>();
+        this.scrapPile = new LinkedList<>();
         this.currentlyFlippedCards = new FlipResult();
     }
 
     public Deck(DeckComposition deckComposition) {
-        this.battleCards = new Stack<>();
-        this.scrapPile = new Stack<>();
+        this.battleCards = new LinkedList<>();
+        this.scrapPile = new LinkedList<>();
         this.currentlyFlippedCards = new FlipResult();
 
         for (int i = 0; i < deckComposition.blank; i++) {
@@ -141,7 +141,9 @@ public class Deck {
             }
         }
 
-        this.battleCards.addAll(inFocus);
+        for (BattleCard battleCard : inFocus) {
+            this.battleCards.addFirst(battleCard);
+        }
     }
 
 
@@ -217,7 +219,7 @@ public class Deck {
     @Override
     public String toString() {
         List<BattleCard> allBattleCards = this.getAllCards();
-        Deck tempDeck = new Deck(battleCards)
+        Deck tempDeck = new Deck(battleCards);
 
         DeckComposition deckComp = new DeckComposition(this);
         return new Gson().toJson(deckComp);
