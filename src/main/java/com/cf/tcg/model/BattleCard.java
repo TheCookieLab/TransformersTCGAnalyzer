@@ -46,7 +46,7 @@ public class BattleCard {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.name);
+
         hash = 89 * hash + Objects.hashCode(this.pips);
         return hash;
     }
@@ -63,12 +63,15 @@ public class BattleCard {
             return false;
         }
         final BattleCard other = (BattleCard) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
+
         if (!Objects.equals(this.pips, other.pips)) {
             return false;
         }
+
+        if (this.name != null && other.name != null && !Objects.equals(this.name, other.name)) {
+            return false;
+        }
+
         return true;
     }
 

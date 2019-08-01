@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandResultInterpreterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/BattleCardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/DeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
@@ -48,6 +52,7 @@
       <recent name="com.cf.tcg.battle" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cf.tcg.model" />
       <recent name="com.cf.tcg.battle" />
       <recent name="deck.testers" />
       <recent name="com.cf.tcg.battle.deck" />
@@ -66,23 +71,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DeckTest">
-    <configuration name="BalancedPipDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HandResultInterpreterTest.testChanceOfHavingCardIs100">
+    <configuration name="BattleCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="deck.testers.*" />
+          <option name="PATTERN" value="com.cf.tcg.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.BalancedPipDeckTester" />
+      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.BattleCardTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BattleCardTest.testMapGetOperationsFindsCardsWithoutNameButMatchingPips" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -91,55 +96,55 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.BattleCardTest" />
+      <option name="METHOD_NAME" value="testMapGetOperationsFindsCardsWithoutNameButMatchingPips" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HandResultInterpreterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cf.tcg.battle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandResultInterpreterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testGetDecklist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HandResultInterpreterTest.testChanceOfHavingCardIs100" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="PATTERN" value="com.cf.tcg.battle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testGetDecklist" />
+      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandResultInterpreterTest" />
+      <option name="METHOD_NAME" value="testChanceOfHavingCardIs100" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HandResultInterpreterTest.testSimulateReturnsCorrectHandResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="PATTERN" value="com.cf.tcg.battle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testToString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeckTest.testToStringStaysConsistentAfterDrawAndScrap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.DeckTest" />
-      <option name="METHOD_NAME" value="testToStringStaysConsistentAfterDrawAndScrap" />
+      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandResultInterpreterTest" />
+      <option name="METHOD_NAME" value="testSimulateReturnsCorrectHandResults" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeckTest" />
-        <item itemvalue="JUnit.DeckTest.testGetDecklist" />
-        <item itemvalue="JUnit.DeckTest.testToStringStaysConsistentAfterDrawAndScrap" />
-        <item itemvalue="JUnit.DeckTest.testToString" />
-        <item itemvalue="JUnit.BalancedPipDeckTester" />
+        <item itemvalue="JUnit.HandResultInterpreterTest.testChanceOfHavingCardIs100" />
+        <item itemvalue="JUnit.BattleCardTest.testMapGetOperationsFindsCardsWithoutNameButMatchingPips" />
+        <item itemvalue="JUnit.BattleCardTest" />
+        <item itemvalue="JUnit.HandResultInterpreterTest.testSimulateReturnsCorrectHandResults" />
+        <item itemvalue="JUnit.HandResultInterpreterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -180,12 +185,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="deck.peekCard()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

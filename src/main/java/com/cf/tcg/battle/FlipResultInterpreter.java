@@ -100,7 +100,7 @@ public class FlipResultInterpreter {
         return this.blackPipStats.getMean();
     }
 
-    public Integer getFlipResultCount() {
+    public Integer getCount() {
         return this.flipResults.size();
     }
 }
