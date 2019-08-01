@@ -1,52 +1,56 @@
 package com.cf.tcg.battle;
 
-import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-/**
- *
- * @author David
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class DrawSimulator {
+    public final Deck deck;
+    public final int iterations;
 
-    private final BattleFlipSimulator battleFlipSimulator;
-    private final Deck deck;
+
+    public DrawSimulator(Deck deck, int iterations) {
+        this.deck = deck;
+        this.iterations = iterations;
+    }
 
     public DrawSimulator(Deck deck) {
-        this.deck = deck;
-        this.battleFlipSimulator = new BattleFlipSimulator(deck);
+        this(deck, 10_000);
     }
 
-    public Map<BattleCard, Double> getInitialDrawOdds() {
-        return this.getInitialDrawOdds(10_000);
+    public List<Hand> simulate() {
+        return this.simulate(1);
     }
 
-    public Map<BattleCard, Double> getInitialDrawOdds(int iterations) {
-        Map<BattleCard, Long> results = new HashMap<>();
+    public List<Hand> simulate(int numberOfTurns) {
+        List<Hand> results = new ArrayList<>();
+        
+        this.deck.shuffleDeck();
 
-        for (int i = 0; i < iterations; i++) {
-            Map<BattleCard, Long> drawnCards = this.drawCards(4).getDrawnCardsAsMap();
-            results = Stream.of(results, drawnCards).flatMap(m -> m.entrySet().stream())
-                    .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (x, y) -> x + y));
+        for (int i = 0; i < this.iterations; i++) {
+            Hand hand = new Hand();
 
-            this.deck.resetDeck();
+            hand.addCards(this.getInitialDraw().flippedCards);
+
+            for (int j = 0; j < numberOfTurns; j++) {
+                hand.addCards(this.deck.flipCards(1).flippedCards); // Draw for turn
+                this.deck.flipCards(2, true); // Attack
+                this.deck.flipCards(2, true); // Defense
+            }
+
+            results.add(hand);
         }
 
-        return new HashMap<>();
+        return results;
     }
 
-    private DrawResult drawCards(int count) {
-        DrawResult drawnCards = new DrawResult();
-
-        for (int i = 0; i < count; i++) {
-            drawnCards.addDrawnCard(this.deck.drawCard());
-        }
-
-        return drawnCards;
+    public FlipResult getInitialDraw() {
+        return this.drawCards(3);
     }
+
+    public FlipResult drawCards(int count) {
+        return this.deck.flipCards(count);
+    }
+
 }
