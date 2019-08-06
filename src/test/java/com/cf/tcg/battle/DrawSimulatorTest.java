@@ -3,13 +3,25 @@ package com.cf.tcg.battle;
 import com.cf.tcg.model.Deck;
 import deck.testers.BlurLionizerProwlDeckTester;
 import org.apache.logging.log4j.LogManager;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
+
+
+import static org.junit.Assert.assertEquals;
 
 public class DrawSimulatorTest {
-
     public DrawSimulatorTest() {
+    }
+
+    @Before
+    public void setUp() {
+    }
+
+    @After
+    public void tearDown() {
     }
 
     @Test
@@ -28,5 +40,6 @@ public class DrawSimulatorTest {
             LogManager.getLogger().debug(hand);
         }
     }
+
 
 }

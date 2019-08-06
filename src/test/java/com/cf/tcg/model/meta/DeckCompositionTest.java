@@ -4,9 +4,10 @@ import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 
 import java.util.LinkedList;
+import java.util.Stack;
 import org.apache.logging.log4j.LogManager;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 /**
  *
@@ -16,7 +17,7 @@ public class DeckCompositionTest {
 
     public DeckCompositionTest() {
     }
-
+    
     public Deck buildDeck() {
         LinkedList<BattleCard> battleCards = new LinkedList<>();
 
@@ -58,12 +59,12 @@ public class DeckCompositionTest {
         Deck deck = this.buildDeck();
 
         DeckComposition deckStats = new DeckComposition(deck);
-
+        
         assertEquals(6, deckStats.doubleOrange.intValue());
         assertEquals(5, deckStats.white.intValue());
         assertEquals(2, deckStats.orangeGreen.intValue());
         assertEquals(40, deckStats.totalCards.intValue());
-
+        
         LogManager.getLogger().info(deckStats);
     }
 }
