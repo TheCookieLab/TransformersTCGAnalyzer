@@ -3,7 +3,6 @@ package com.cf.tcg.battle;
 import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
 import deck.testers.BlurLionizerProwlDeckTester;
-import org.apache.logging.log4j.LogManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +37,7 @@ public class HandResultInterpreterTest {
         assertEquals(hands.size(), interpreter.getCount().intValue());
 
         Double chanceOfHavingForceFieldInOpeningHand = interpreter.getChanceOfHavingCard(BattleCard.FORCE_FIELD);
-        assertEquals(0.27, chanceOfHavingForceFieldInOpeningHand, 0.1);
+        assertEquals(0.276, chanceOfHavingForceFieldInOpeningHand, 0.1);
     }
 
     @Test

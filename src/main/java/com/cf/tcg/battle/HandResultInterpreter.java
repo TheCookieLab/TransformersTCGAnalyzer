@@ -2,9 +2,6 @@ package com.cf.tcg.battle;
 
 import com.cf.tcg.model.BattleCard;
 import com.cf.tcg.model.Deck;
-import com.cf.tcg.model.Pip;
-import org.apache.commons.math3.random.EmpiricalDistribution;
-import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +27,17 @@ public class HandResultInterpreter {
         return occurrenceMap.getOrDefault(battleCard, 0d) / this.getCount();
     }
 
+    public Double getChanceOfHavingCards(BattleCard... battleCards) {
+        int count = 0;
+
+        for (Hand hand : this.hands) {
+            if (hand.containsBattleCards(battleCards)) {
+                count++;
+            }
+        }
+
+        return count / this.getCount().doubleValue();
+    }
 
     private Map<BattleCard, Double> getOccurrenceMap() {
         if (this.battleCardOccurrences == null || this.battleCardOccurrences.isEmpty()) {
@@ -43,7 +51,6 @@ public class HandResultInterpreter {
 
         return this.battleCardOccurrences;
     }
-
 
     public Integer getCount() {
         return this.hands.size();

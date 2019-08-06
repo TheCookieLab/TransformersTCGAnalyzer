@@ -47,6 +47,16 @@ public class Hand {
     public boolean containsBattleCard(BattleCard battleCard) {
         return this.getNumberOf(battleCard) > 0;
     }
+    
+    public boolean containsBattleCards(BattleCard... battleCards) {
+        for (BattleCard battleCard : battleCards) {
+            if (this.containsBattleCard(battleCard) == false) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
 
     public Integer getCount() {
         return this.cardsInHand.size();
