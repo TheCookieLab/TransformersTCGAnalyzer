@@ -2,11 +2,9 @@ package com.cf.tcg.battle;
 
 import com.cf.tcg.model.battle.card.BattleCard;
 import java.util.LinkedList;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Ignore;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -15,14 +13,6 @@ import org.junit.Ignore;
 public class HandTest {
 
     public HandTest() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test

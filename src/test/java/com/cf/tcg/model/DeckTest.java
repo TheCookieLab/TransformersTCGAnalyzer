@@ -8,15 +8,11 @@ import com.cf.tcg.battle.focus.ScrapSinglePipsFocusRule;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.Stack;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author David
@@ -26,14 +22,6 @@ public class DeckTest {
     public final static Logger LOG = LogManager.getLogger();
 
     public DeckTest() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test

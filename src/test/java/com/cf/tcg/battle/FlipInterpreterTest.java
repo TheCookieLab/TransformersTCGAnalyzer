@@ -2,14 +2,10 @@ package com.cf.tcg.battle;
 
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Pip;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -18,14 +14,6 @@ import static org.junit.Assert.*;
 public class FlipInterpreterTest {
 
     public FlipInterpreterTest() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test
@@ -57,7 +45,7 @@ public class FlipInterpreterTest {
 
         assertEquals(0.4, interpreter.getChanceOfFlippingPips(Pip.BLUE, Pip.ORANGE), 0.001);
     }
-    
+
     @Test
     public void getChanceOfFlippingPipsIsZero() {
         List<FlipResult> flipResults = new ArrayList<>();
@@ -71,7 +59,7 @@ public class FlipInterpreterTest {
 
         assertEquals(0.0, interpreter.getChanceOfFlippingPips(Pip.ORANGE, Pip.ORANGE), 0.001);
     }
-    
+
     @Test
     public void getChanceOfFlippingPipsIsPositive2() {
         List<FlipResult> flipResults = new ArrayList<>();
