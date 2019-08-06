@@ -22,9 +22,18 @@ public class HandResultInterpreter {
     }
 
     public Double getChanceOfHavingCard(BattleCard battleCard) {
-        Map<BattleCard, Double> occurrenceMap = this.getOccurrenceMap();
+//        Map<BattleCard, Double> occurrenceMap = this.getOccurrenceMap();
+//
+//        return occurrenceMap.getOrDefault(battleCard, 0d) / this.getCount();
+        int count = 0;
 
-        return occurrenceMap.getOrDefault(battleCard, 0d) / this.getCount();
+        for (Hand hand : this.hands) {
+            if (hand.contains(battleCard)) {
+                count++;
+            }
+        }
+
+        return count / this.getCount().doubleValue();
     }
 
     public Double getChanceOfHavingAllCards(BattleCard... battleCards) {

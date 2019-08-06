@@ -35,12 +35,7 @@ public class HandTest {
         assertTrue(hand.contains(BattleCard.SINGLE_WHITE));
     }
 
-    @Ignore
     @Test
-    /**
-     * *
-     * // TODO: Refactor Issue #1
-     */
     public void testContainsSpecificCardDoesNotMatchGeneric() {
         LinkedList<BattleCard> battleCards = new LinkedList<>();
         battleCards.push(BattleCard.SINGLE_WHITE);

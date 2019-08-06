@@ -1,21 +1,10 @@
 package com.cf.tcg.model.battle.card;
 
-import com.cf.tcg.model.battle.card.BattleCard;
-import com.cf.tcg.battle.FlipResult;
-import com.cf.tcg.battle.focus.FocusRule;
-import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;
-import com.cf.tcg.battle.focus.ScrapSinglePipsFocusRule;
-import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -70,22 +59,26 @@ public class BattleCardTest {
     }
 
     @Test
-    public void testCardsWithNoNameAreEqualAreEqualIfSamePips() {
+    public void testCardWithNoNameIsEqualToNamedIfSamePips() {
         BattleCard battleCard1 = BattleCard.BASHING_SHIELD;
         BattleCard battleCard2 = BattleCard.ORANGE_GREEN;
 
-        assertEquals(battleCard1, battleCard2);
+        assertTrue(battleCard1.equalsIgnoreName(battleCard2));
     }
 
     @Test
-    public void testMapGetOperationsFindsCardsWithoutNameButMatchingPips() {
-        BattleCard bashingShield = BattleCard.BASHING_SHIELD;
-        BattleCard orangeGreen = BattleCard.ORANGE_GREEN;
+    public void testCardsWithNoNameAreNotEqualIfDifferentPips() {
+        BattleCard battleCard1 = BattleCard.SINGLE_ORANGE;
+        BattleCard battleCard2 = BattleCard.ORANGE_GREEN;
 
-        Set<BattleCard> battleCards = new HashSet<>();
-        battleCards.add(bashingShield);
-
-        assertTrue(battleCards.contains(orangeGreen));
+        assertFalse(battleCard1.equalsIgnoreName(battleCard2));
     }
 
+    @Test
+    public void testCardsWithNoNamesAreEqualIfSamePips() {
+        BattleCard battleCard1 = BattleCard.ORANGE_GREEN;
+        BattleCard battleCard2 = BattleCard.ORANGE_GREEN;
+
+        assertTrue(battleCard1.equalsIgnoreName(battleCard2));
+    }
 }

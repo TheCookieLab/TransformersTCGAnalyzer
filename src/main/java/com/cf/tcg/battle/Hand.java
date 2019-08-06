@@ -37,7 +37,9 @@ public class Hand {
     public Integer getNumberOf(BattleCard desiredCard) {
         int count = 0;
         for (BattleCard battleCard : this.cardsInHand) {
-            if (battleCard.equals(desiredCard)) {
+            if (desiredCard.name == null && battleCard.equalsIgnoreName(desiredCard)) {
+                count++;
+            } else if (desiredCard.name != null && battleCard.equals(desiredCard)) {
                 count++;
             }
         }

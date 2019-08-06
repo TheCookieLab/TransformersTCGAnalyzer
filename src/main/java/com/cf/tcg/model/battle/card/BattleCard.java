@@ -50,7 +50,7 @@ public class BattleCard {
 
         hash = 89 * hash + Objects.hashCode(this.pips);
         return hash;
-    }        
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -68,13 +68,25 @@ public class BattleCard {
         if (!Objects.equals(this.pips, other.pips)) {
             return false;
         }
-        
-        if (this.name == null || other.name == null) {
-            return true; // TODO: Refactor Issue #1
-        }
 
-        if (this.name != null && other.name != null) {
-            return Objects.equals(this.name, other.name);
+        return Objects.equals(this.name, other.name);
+
+    }
+
+    public boolean equalsIgnoreName(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final BattleCard other = (BattleCard) obj;
+
+        if (!Objects.equals(this.pips, other.pips)) {
+            return false;
         }
 
         return true;
