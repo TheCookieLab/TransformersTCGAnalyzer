@@ -15,7 +15,7 @@ import org.junit.jupiter.api.TestMethodOrder;
  * @author David
  */
 @TestMethodOrder(OrderAnnotation.class)
-public class BlurLionizerProwlDeckTester implements DeckTester {
+public class BlurrLionizerProwlDeckTester implements DeckTester {
 
     private final Logger LOG = LogManager.getLogger();
 
@@ -23,61 +23,61 @@ public class BlurLionizerProwlDeckTester implements DeckTester {
     private final static int BOLD = 4;
     private final static int TOUGH = 0;
 
-    public BlurLionizerProwlDeckTester() {
+    public BlurrLionizerProwlDeckTester() {
     }
 
     @Test
     @Order(1)
     public void getAttackStatsForLionizer() {
-        new BlurLionizerProwlDeckTester().runAttackSimulation(BOLD);
+        new BlurrLionizerProwlDeckTester().runAttackSimulation(BOLD);
     }
 
     @Test
     @Order(2)
     public void getAttackStatsForBlurWithSaberAndProwlAbility() {
-        new BlurLionizerProwlDeckTester().runAttackSimulation(MAX_BOLD);
+        new BlurrLionizerProwlDeckTester().runAttackSimulation(MAX_BOLD);
     }
 
     @Test
     @Order(3)
     public void getDefenseStats() {
-        new BlurLionizerProwlDeckTester().runDefenseSimulation(TOUGH);
+        new BlurrLionizerProwlDeckTester().runDefenseSimulation(TOUGH);
     }
 
     @Test
     @Order(4)
     public void getChancesOfHavingWayToConvertLionizerOnTurn2() {
-        new BlurLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(2, BOLD, TOUGH, BattleCard.ONE_SHALL_STAND_ONE_SHALL_FALL, BattleCard.PEACE_THROUGH_TYRANNY);
+        new BlurrLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(2, BOLD, TOUGH, BattleCard.ONE_SHALL_STAND_ONE_SHALL_FALL, BattleCard.PEACE_THROUGH_TYRANNY);
     }
 
     @Test
     @Order(5)
     public void getChancesOfHavingUpgradeOnTurn2() {
-        new BlurLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(2, BOLD, TOUGH, BattleCard.FORCE_FIELD, BattleCard.TURBO_BOOSTERS, BattleCard.MATRIX_OF_LEADERSHIP);
+        new BlurrLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(2, BOLD, TOUGH, BattleCard.FORCE_FIELD, BattleCard.TURBO_BOOSTERS, BattleCard.MATRIX_OF_LEADERSHIP);
     }
 
     @Test
     @Order(6)
     public void getChancesOfHavingUntapOnTurn3() {
-        new BlurLionizerProwlDeckTester().getChancesOfHavingAllCardsOnTurn(3, BOLD, TOUGH, BattleCard.START_YOUR_ENGINES, BattleCard.TURBO_BOOSTERS);
+        new BlurrLionizerProwlDeckTester().getChancesOfHavingAllCardsOnTurn(3, BOLD, TOUGH, BattleCard.START_YOUR_ENGINES, BattleCard.TURBO_BOOSTERS);
     }
 
     @Test
     @Order(7)
     public void getChancesOfHavingDamageBoostActionOnTurn3() {
-        new BlurLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(3, BOLD, TOUGH, BattleCard.PRESS_THE_ADVANTAGE, BattleCard.RECKLESS_CHARGE);
+        new BlurrLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(3, BOLD, TOUGH, BattleCard.PRESS_THE_ADVANTAGE, BattleCard.RECKLESS_CHARGE);
     }
 
     @Test
     @Order(8)
     public void getChancesOfHavingAlmostIdealHandTurn3() {
-        new BlurLionizerProwlDeckTester().getChancesOfHavingAllCardsOnTurn(3, BOLD, TOUGH, BattleCard.START_YOUR_ENGINES, BattleCard.MATRIX_OF_LEADERSHIP);
+        new BlurrLionizerProwlDeckTester().getChancesOfHavingAllCardsOnTurn(3, BOLD, TOUGH, BattleCard.START_YOUR_ENGINES, BattleCard.MATRIX_OF_LEADERSHIP);
     }
 
     @Test
     @Order(9)
     public void getChancesOfHavingIdealHandTurn3() {
-        new BlurLionizerProwlDeckTester().getChancesOfHavingAllCardsOnTurn(3, BOLD, TOUGH, BattleCard.TURBO_BOOSTERS, BattleCard.PRESS_THE_ADVANTAGE);
+        new BlurrLionizerProwlDeckTester().getChancesOfHavingAllCardsOnTurn(3, BOLD, TOUGH, BattleCard.TURBO_BOOSTERS, BattleCard.PRESS_THE_ADVANTAGE);
     }
 
     @Override

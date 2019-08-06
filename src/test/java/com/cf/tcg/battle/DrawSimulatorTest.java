@@ -1,7 +1,7 @@
 package com.cf.tcg.battle;
 
 import com.cf.tcg.model.Deck;
-import deck.testers.BlurLionizerProwlDeckTester;
+import deck.testers.BlurrLionizerProwlDeckTester;
 import org.apache.logging.log4j.LogManager;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,7 +14,7 @@ public class DrawSimulatorTest {
 
     @Test
     public void testSimulateReturnsCorrectHandResults() {
-        Deck deck = new BlurLionizerProwlDeckTester().buildDeck();
+        Deck deck = new BlurrLionizerProwlDeckTester().buildDeck();
         int iterations = 10;
         DrawSimulator drawSimulator = new DrawSimulator(deck, iterations);
 

@@ -2,7 +2,7 @@ package com.cf.tcg.battle;
 
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
-import deck.testers.BlurLionizerProwlDeckTester;
+import deck.testers.BlurrLionizerProwlDeckTester;
 import java.util.LinkedList;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,7 +15,7 @@ public class HandResultInterpreterTest {
 
     @Test
     public void testGetChanceOfHaving3OfCardInOpeningHand() {
-        Deck deck = new BlurLionizerProwlDeckTester().buildDeck();
+        Deck deck = new BlurrLionizerProwlDeckTester().buildDeck();
         int iterations = 100;
         DrawSimulator drawSimulator = new DrawSimulator(deck, iterations);
 
