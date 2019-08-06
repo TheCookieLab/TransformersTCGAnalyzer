@@ -12,10 +12,12 @@ public class ScrapOffColorFocusRule implements FocusRule {
         this.focus = focus;
     }
 
+    @Override
     public void setAttacking() {
         this.isAttacking = true;
     }
 
+    @Override
     public void setDefending() {
         this.isAttacking = false;
     }
@@ -32,5 +34,10 @@ public class ScrapOffColorFocusRule implements FocusRule {
         } else {
             return !battleCard.pips.contains(Pip.BLUE);
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + " " + this.focus;
     }
 }

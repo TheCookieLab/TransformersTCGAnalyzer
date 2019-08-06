@@ -1,7 +1,6 @@
 package com.cf.tcg.battle.focus;
 
 import com.cf.tcg.model.BattleCard;
-import com.cf.tcg.model.Pip;
 
 public class NoOpFocusRule implements FocusRule {
 
@@ -9,9 +8,11 @@ public class NoOpFocusRule implements FocusRule {
     public NoOpFocusRule() {
     }
 
+    @Override
     public void setAttacking() {
     }
 
+    @Override
     public void setDefending() {
     }
 
@@ -23,5 +24,10 @@ public class NoOpFocusRule implements FocusRule {
     @Override
     public boolean shouldScrap(BattleCard battleCard) {
         return false;
+    }
+    
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
     }
 }

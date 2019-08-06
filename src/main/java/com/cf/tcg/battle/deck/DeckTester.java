@@ -1,4 +1,3 @@
-
 package com.cf.tcg.battle.deck;
 
 import com.cf.tcg.battle.*;
@@ -13,22 +12,25 @@ import java.util.Locale;
 
 import org.apache.logging.log4j.Logger;
 
-
 /**
  * @author David
  */
 public interface DeckTester {
-    public default void runAttackSimulation() {
+
+    public default void runAttackSimulation(int bold) {
+        this.runAttackSimulation(bold, new NoOpFocusRule());
+    }
+
+    public default void runAttackSimulation(int bold, FocusRule focusRule) {
         Deck deck = buildDeck();
-        getLogger().info("Running Offensive Stats for deck: {}", deck);
+        getLogger().info("Running offensive stats simulation for Bold {}, {} Focus rule, and deck: {}", bold, focusRule, deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
 
-        FocusRule focusRule = getFocusRule();
         focusRule.setAttacking();
 
-        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
+        List<FlipResult> flipResults = simulator.simulate(bold, focusRule);
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
@@ -42,17 +44,19 @@ public interface DeckTester {
         getLogger().info("Average Pierce Bonus: {}", interpreter.getAveragePierceBonus());
     }
 
-    public default void runDefenseSimulation() {
+    public default void runDefenseSimulation(int tough) {
+        this.runDefenseSimulation(tough, new NoOpFocusRule());
+    }
+
+    public default void runDefenseSimulation(int tough, FocusRule focusRule) {
         Deck deck = buildDeck();
-        getLogger().info("Running Defensive Stats for deck: {}", deck);
+        getLogger().info("Running offensive stats simulation for Tough {}, {} Focus rule, and deck: {}", tough, focusRule, deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
-
-        FocusRule focusRule = getFocusRule();
         focusRule.setDefending();
 
-        List<FlipResult> flipResults = simulator.simulate(getTough(), focusRule);
+        List<FlipResult> flipResults = simulator.simulate(tough, focusRule);
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
@@ -63,41 +67,46 @@ public interface DeckTester {
         getLogger().info("Chance of adding more than 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusGreaterThan(2)));
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
-    
-    public default void getChancesOfFlippingPips(Pip...pips) {
+
+    public default void getChancesOfFlippingPips(int bold, Pip... pips) {
+        this.getChancesOfFlippingPips(bold, new NoOpFocusRule(), pips);
+    }
+
+    public default void getChancesOfFlippingPips(int bold, FocusRule focusRule, Pip... pips) {
         Deck deck = buildDeck();
-        getLogger().info("Running chances of flipping {} with deck: {}", pips, deck);
+        getLogger().info("Running chances of flipping {} with focus rule {} and deck: {}", pips, focusRule, deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
-
-        FocusRule focusRule = getFocusRule();
         focusRule.setAttacking();
 
-        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
+        List<FlipResult> flipResults = simulator.simulate(bold, focusRule);
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
         getLogger().info("Chance of flipping {}: {}", pips, numberFormat.format(interpreter.getChanceOfFlippingPips(pips)));
     }
-    
-    public default void runMetroplexAbilityOdds() {
+
+    public default void runMetroplexAbilityOdds(int bold) {
+        this.runMetroplexAbilityOdds(bold, new NoOpFocusRule());
+    }
+
+    public default void runMetroplexAbilityOdds(int bold, FocusRule focusRule) {
         Deck deck = buildDeck();
         getLogger().info("Running chances of triggering Metroplex Bot-mode ability for deck: {}", deck);
         deck.shuffleDeck();
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
 
-        FocusRule focusRule = getFocusRule();
         focusRule.setAttacking();
 
-        List<FlipResult> flipResults = simulator.simulate(getBold(), focusRule);
+        List<FlipResult> flipResults = simulator.simulate(bold, focusRule);
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
         getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
     }
-    
+
     public default void runInitialDrawOdds(int numberOfTurns) {
         Deck deck = buildDeck();
         getLogger().info("Running chances of drawing each card in deck: {}", deck);
@@ -112,17 +121,4 @@ public interface DeckTester {
     public Logger getLogger();
 
     public Deck buildDeck();
-
-    public default FocusRule getFocusRule() {
-        return new NoOpFocusRule();
-    }
-
-    public default int getBold() {
-        return 0;
-    }
-
-    public default int getTough() {
-        return 0;
-    }
-
 }

@@ -29,13 +29,18 @@ public class BlurLionizerProwlDeckTester implements DeckTester {
     }
 
     @Test
-    public void getAttackStats() {
-        new BlurLionizerProwlDeckTester().runAttackSimulation();
+    public void getAttackStatsForLionizer() {
+        new BlurLionizerProwlDeckTester().runAttackSimulation(4);
+    }
+
+    @Test
+    public void getAttackStatsForBlurWithSaberAndProwlAbility() {
+        new BlurLionizerProwlDeckTester().runAttackSimulation(6);
     }
 
     @Test
     public void getDefenseStats() {
-        new BlurLionizerProwlDeckTester().runDefenseSimulation();
+        new BlurLionizerProwlDeckTester().runDefenseSimulation(0);
     }
 
     @Override
@@ -66,15 +71,5 @@ public class BlurLionizerProwlDeckTester implements DeckTester {
                 .build();
 
         return new Deck(deckComp);
-    }
-
-    @Override
-    public int getBold() {
-        return 6;
-    }
-
-    @Override
-    public int getTough() {
-        return 0;
     }
 }

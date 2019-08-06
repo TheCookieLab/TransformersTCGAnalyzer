@@ -12,10 +12,12 @@ public class ScrapSinglePipsKeepWhiteFocusRule implements FocusRule {
         this.focus = focus;
     }
 
+    @Override
     public void setAttacking() {
         this.isAttacking = true;
     }
 
+    @Override
     public void setDefending() {
         this.isAttacking = false;
     }
@@ -32,5 +34,10 @@ public class ScrapSinglePipsKeepWhiteFocusRule implements FocusRule {
         } else {
             return !(battleCard.getPipCount(Pip.BLUE) > 1) || !battleCard.pips.contains(Pip.WHITE);
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + " " + this.focus;
     }
 }

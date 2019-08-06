@@ -6,8 +6,6 @@ import com.cf.tcg.model.Pip;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -16,42 +14,34 @@ import org.junit.Test;
  */
 public class BalancedPipDeckTester implements DeckTester {
 
-    private final Logger LOG = LogManager.getLogger();
+    private final Logger LOG = LogManager.getLogger();    
 
     public BalancedPipDeckTester() {
     }
 
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
     @Test
     public void getAttackStats() {
-        new BalancedPipDeckTester().runAttackSimulation();
+        new BalancedPipDeckTester().runAttackSimulation(0);
     }
 
     @Test
     public void getDefenseStats() {
-        new BalancedPipDeckTester().runDefenseSimulation();
+        new BalancedPipDeckTester().runDefenseSimulation(0);
     }
     
     @Test
     public void getChancesOfTriggeringDragstripDrawAbility() {
-        new BalancedPipDeckTester().getChancesOfFlippingPips(Pip.ORANGE, Pip.BLUE);
+        new BalancedPipDeckTester().getChancesOfFlippingPips(0, Pip.ORANGE, Pip.BLUE);
     }
     
     @Test
     public void getChancesOfTriggeringMetroplexAbility1() {
-        new BalancedPipDeckTester().getChancesOfFlippingPips(Pip.ORANGE, Pip.ORANGE, Pip.BLUE, Pip.BLUE, Pip.WHITE, Pip.WHITE);
+        new BalancedPipDeckTester().getChancesOfFlippingPips(0, Pip.ORANGE, Pip.ORANGE, Pip.BLUE, Pip.BLUE, Pip.WHITE, Pip.WHITE);
     }
     
     @Test
     public void getChancesOfTriggeringMetroplexAbilityOriginal() {
-        new BalancedPipDeckTester().runMetroplexAbilityOdds();
+        new BalancedPipDeckTester().runMetroplexAbilityOdds(0);
     }
     
 
@@ -72,15 +62,5 @@ public class BalancedPipDeckTester implements DeckTester {
                 .build();
 
         return new Deck(deckComp);
-    }
-
-    @Override
-    public int getBold() {
-        return 0;
-    }
-
-    @Override
-    public int getTough() {
-        return 0;
     }
 }

@@ -5,8 +5,6 @@ import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -20,22 +18,14 @@ public class InsecticonOrangeDeckTester implements DeckTester {
     public InsecticonOrangeDeckTester() {
     }
 
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
     @Test
     public void getAttackStats() {
-        new InsecticonOrangeDeckTester().runAttackSimulation();
+        new InsecticonOrangeDeckTester().runAttackSimulation(0);
     }
 
     @Test
     public void getDefenseStats() {
-        new InsecticonOrangeDeckTester().runDefenseSimulation();
+        new InsecticonOrangeDeckTester().runDefenseSimulation(0);
     }
 
     @Override

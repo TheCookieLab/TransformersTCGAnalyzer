@@ -5,8 +5,6 @@ import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -20,17 +18,9 @@ public class BinxyOrangeAggroDeckTester implements DeckTester {
     public BinxyOrangeAggroDeckTester() {
     }
 
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
     @Test
-    public void getAttackStats() {
-        new BinxyOrangeAggroDeckTester().runAttackSimulation();
+    public void getAttackStatsForLionizer() {
+        new BinxyOrangeAggroDeckTester().runAttackSimulation(5);
     }
 
     @Override
@@ -40,13 +30,6 @@ public class BinxyOrangeAggroDeckTester implements DeckTester {
 
     @Override
     public Deck buildDeck() {
-//        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
-//                .withDoubleOrangeCards(7)
-//                .withSingleOrangeCards(21)
-//                .withOrangeGreenCards(9)
-//                .withSingleWhiteCards(3)
-//                .build();
-        
                 DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
                 .withDoubleOrangeCards(7)
                 .withSingleOrangeCards(21)
@@ -55,15 +38,5 @@ public class BinxyOrangeAggroDeckTester implements DeckTester {
                 .build();
 
         return new Deck(deckComp);
-    }
-
-    @Override
-    public int getBold() {
-        return 5;
-    }
-
-    @Override
-    public int getTough() {
-        return 1;
     }
 }

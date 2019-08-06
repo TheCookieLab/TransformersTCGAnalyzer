@@ -6,8 +6,6 @@ import com.cf.tcg.model.Pip;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -21,27 +19,19 @@ public class VSNewGenOp3WideDeckTester implements DeckTester {
     public VSNewGenOp3WideDeckTester() {
     }
 
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
     @Test
     public void getAttackStats() {
-        new VSNewGenOp3WideDeckTester().runAttackSimulation();
+        new VSNewGenOp3WideDeckTester().runAttackSimulation(1);
     }
 
     @Test
     public void getDefenseStats() {
-        new VSNewGenOp3WideDeckTester().runDefenseSimulation();
+        new VSNewGenOp3WideDeckTester().runDefenseSimulation(1);
     }
     
     @Test
     public void getChancesOfTriggeringDragstripDrawAbility() {
-        new VSNewGenOp3WideDeckTester().getChancesOfFlippingPips(Pip.ORANGE, Pip.BLUE);
+        new VSNewGenOp3WideDeckTester().getChancesOfFlippingPips(1, Pip.ORANGE, Pip.BLUE);
     }
 
     @Override
@@ -62,15 +52,5 @@ public class VSNewGenOp3WideDeckTester implements DeckTester {
                 .build();
 
         return new Deck(deckComp);
-    }
-
-    @Override
-    public int getBold() {
-        return 3;
-    }
-
-    @Override
-    public int getTough() {
-        return 1;
     }
 }
