@@ -1,7 +1,7 @@
 package deck.testers;
 
 import com.cf.tcg.battle.deck.DeckTester;
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
@@ -41,6 +41,11 @@ public class BlurLionizerProwlDeckTester implements DeckTester {
     @Test
     public void getDefenseStats() {
         new BlurLionizerProwlDeckTester().runDefenseSimulation(0);
+    }
+
+    @Test
+    public void getChancesOfHavingWayToConvertLionizerOnTurn2() {
+        new BlurLionizerProwlDeckTester().getChancesOfHavingCardsOnTurn(2, BattleCard.I_STILL_FUNCTION);
     }
 
     @Override

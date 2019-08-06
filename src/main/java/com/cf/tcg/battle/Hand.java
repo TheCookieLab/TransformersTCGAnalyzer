@@ -1,11 +1,12 @@
 package com.cf.tcg.battle;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.google.gson.Gson;
 
 import java.util.*;
 
 public class Hand {
+
     public final List<BattleCard> cardsInHand;
 
     public Hand(List<BattleCard> cardsInHand) {
@@ -44,18 +45,28 @@ public class Hand {
         return count;
     }
 
-    public boolean containsBattleCard(BattleCard battleCard) {
+    public boolean contains(BattleCard battleCard) {
         return this.getNumberOf(battleCard) > 0;
     }
-    
-    public boolean containsBattleCards(BattleCard... battleCards) {
+
+    public boolean containsAll(BattleCard... battleCards) {
         for (BattleCard battleCard : battleCards) {
-            if (this.containsBattleCard(battleCard) == false) {
+            if (this.contains(battleCard) == false) {
                 return false;
             }
         }
-        
+
         return true;
+    }
+
+    public boolean containsAny(BattleCard... battleCards) {
+        for (BattleCard battleCard : battleCards) {
+            if (this.contains(battleCard)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public Integer getCount() {

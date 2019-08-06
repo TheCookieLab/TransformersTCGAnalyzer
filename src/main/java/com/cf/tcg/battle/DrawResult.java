@@ -1,6 +1,6 @@
 package com.cf.tcg.battle;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

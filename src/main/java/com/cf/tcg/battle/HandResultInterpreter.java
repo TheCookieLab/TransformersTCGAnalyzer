@@ -1,6 +1,6 @@
 package com.cf.tcg.battle;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 
 import java.util.HashMap;
@@ -27,11 +27,23 @@ public class HandResultInterpreter {
         return occurrenceMap.getOrDefault(battleCard, 0d) / this.getCount();
     }
 
-    public Double getChanceOfHavingCards(BattleCard... battleCards) {
+    public Double getChanceOfHavingAllCards(BattleCard... battleCards) {
         int count = 0;
 
         for (Hand hand : this.hands) {
-            if (hand.containsBattleCards(battleCards)) {
+            if (hand.containsAll(battleCards)) {
+                count++;
+            }
+        }
+
+        return count / this.getCount().doubleValue();
+    }
+
+    public Double getChanceOfHavingAnyOfCards(BattleCard... battleCards) {
+        int count = 0;
+
+        for (Hand hand : this.hands) {
+            if (hand.containsAll(battleCards)) {
                 count++;
             }
         }
@@ -44,7 +56,7 @@ public class HandResultInterpreter {
             this.battleCardOccurrences = new HashMap<>();
 
             for (BattleCard battleCard : this.deckList.keySet()) {
-                long count = this.hands.stream().filter(hand -> hand.containsBattleCard(battleCard)).count();
+                long count = this.hands.stream().filter(hand -> hand.contains(battleCard)).count();
                 this.battleCardOccurrences.put(battleCard, (double) count);
             }
         }

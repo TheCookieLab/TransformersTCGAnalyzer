@@ -1,6 +1,6 @@
 package com.cf.tcg.model.meta;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 
 import java.util.LinkedList;

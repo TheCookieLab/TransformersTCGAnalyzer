@@ -1,6 +1,6 @@
 package com.cf.tcg.battle.focus;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Pip;
 
 public class ScrapOffColorFocusRule implements FocusRule {

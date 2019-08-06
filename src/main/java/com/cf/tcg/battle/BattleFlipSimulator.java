@@ -1,7 +1,7 @@
 package com.cf.tcg.battle;
 
 import com.cf.tcg.battle.focus.FocusRule;
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 import org.apache.logging.log4j.LogManager;
 

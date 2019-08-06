@@ -1,5 +1,6 @@
-package com.cf.tcg.model;
+package com.cf.tcg.model.battle.card;
 
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;

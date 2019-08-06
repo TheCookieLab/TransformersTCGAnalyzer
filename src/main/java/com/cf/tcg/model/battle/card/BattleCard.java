@@ -1,5 +1,6 @@
-package com.cf.tcg.model;
+package com.cf.tcg.model.battle.card;
 
+import com.cf.tcg.model.Pip;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class BattleCard {
 
         hash = 89 * hash + Objects.hashCode(this.pips);
         return hash;
-    }
+    }        
 
     @Override
     public boolean equals(Object obj) {
@@ -67,9 +68,13 @@ public class BattleCard {
         if (!Objects.equals(this.pips, other.pips)) {
             return false;
         }
+        
+        if (this.name == null || other.name == null) {
+            return true; // TODO: Refactor Issue #1
+        }
 
-        if (this.name != null && other.name != null && !Objects.equals(this.name, other.name)) {
-            return false;
+        if (this.name != null && other.name != null) {
+            return Objects.equals(this.name, other.name);
         }
 
         return true;
@@ -127,6 +132,5 @@ public class BattleCard {
     public static BattleCard RECKLESS_CHARGE = new BattleCard("Reckless Charge", Pip.ORANGE);
 
     public static BattleCard START_YOUR_ENGINES = new BattleCard("Start Your Engines", Pip.BLUE);
-
 
 }

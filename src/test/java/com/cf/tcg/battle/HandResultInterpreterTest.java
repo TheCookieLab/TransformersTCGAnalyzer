@@ -1,6 +1,6 @@
 package com.cf.tcg.battle;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 import deck.testers.BlurLionizerProwlDeckTester;
 import org.junit.After;

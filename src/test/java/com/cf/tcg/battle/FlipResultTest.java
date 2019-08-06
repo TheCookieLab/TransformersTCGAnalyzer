@@ -1,6 +1,6 @@
 package com.cf.tcg.battle;
 
-import com.cf.tcg.model.BattleCard;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Pip;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
