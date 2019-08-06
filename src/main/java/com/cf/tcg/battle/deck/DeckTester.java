@@ -36,7 +36,7 @@ public interface DeckTester {
     public default void runAttackSimulation(int bold, FocusRule focusRule) {
         Deck deck = buildDeck();
         deck.shuffleDeck();
-        
+
         getLogger().debug("Running offensive stats simulation for Bold {}, {} Focus rule, and deck: {}", bold, focusRule, deck);
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
@@ -158,20 +158,72 @@ public interface DeckTester {
         getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
     }
 
-    public default void getChancesOfHavingCardsOnTurn(int turn, BattleCard... battleCards) {
+    /**
+     * *
+     *
+     * @param turn
+     * @param battleCards
+     */
+    public default void getChancesOfHavingAllCardsOnTurn(int turn, BattleCard... battleCards) {
+        this.getChancesOfHavingAllCardsOnTurn(turn, 0, 0, battleCards);
+    }
+
+    /**
+     * *
+     *
+     * @param turn
+     * @param bold
+     * @param tough
+     * @param battleCards
+     */
+    public default void getChancesOfHavingAllCardsOnTurn(int turn, int bold, int tough, BattleCard... battleCards) {
         Deck deck = buildDeck();
         deck.shuffleDeck();
 
-        getLogger().debug("Running chances of having {} in hand on turn {} for deck {}", battleCards, turn, deck);
-        
+        getLogger().debug("Running chances of having all {} in hand on turn {} for deck {}", battleCards, turn, deck);
+
         DrawSimulator drawSimulator = new DrawSimulator(deck);
-        List<Hand> hands = drawSimulator.simulate(turn);
-        
+        List<Hand> hands = drawSimulator.simulate(turn, bold, tough);
+
         HandResultInterpreter interpreter = new HandResultInterpreter(deck, hands);
         Double probability = interpreter.getChanceOfHavingAllCards(battleCards);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
-        getLogger().info("Probability of having {} in hand on turn {} for deck {} is: {}", battleCards, turn, deck, numberFormat.format(probability));        
+        getLogger().info("Probability of having all of {} in hand on turn {} is: {}", battleCards, turn, numberFormat.format(probability));
+    }
+
+    /**
+     * *
+     *
+     * @param turn
+     * @param battleCards
+     */
+    public default void getChancesOfHavingAnyCardsOnTurn(int turn, BattleCard... battleCards) {
+        this.getChancesOfHavingAnyCardsOnTurn(turn, 0, 0, battleCards);
+    }
+
+    /**
+     * *
+     *
+     * @param turn
+     * @param bold
+     * @param tough
+     * @param battleCards
+     */
+    public default void getChancesOfHavingAnyCardsOnTurn(int turn, int bold, int tough, BattleCard... battleCards) {
+        Deck deck = buildDeck();
+        deck.shuffleDeck();
+
+        getLogger().debug("Running chances of having any {} in hand on turn {} for deck {}", battleCards, turn, deck);
+
+        DrawSimulator drawSimulator = new DrawSimulator(deck);
+        List<Hand> hands = drawSimulator.simulate(turn, bold, tough);
+
+        HandResultInterpreter interpreter = new HandResultInterpreter(deck, hands);
+        Double probability = interpreter.getChanceOfHavingAnyOfCards(battleCards);
+
+        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        getLogger().info("Probability of having any of {} in hand on turn {} is: {}", battleCards, turn, numberFormat.format(probability));
     }
 
     public Logger getLogger();

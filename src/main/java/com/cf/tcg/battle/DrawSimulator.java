@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DrawSimulator {
+
     public final Deck deck;
     public final int iterations;
-
 
     public DrawSimulator(Deck deck, int iterations) {
         this.deck = deck;
@@ -23,9 +23,9 @@ public class DrawSimulator {
         return this.simulate(1);
     }
 
-    public List<Hand> simulate(int numberOfTurns) {
+    public List<Hand> simulate(int numberOfTurns, int bold, int tough) {
         List<Hand> results = new ArrayList<>();
-        
+
         this.deck.shuffleDeck();
 
         for (int i = 0; i < this.iterations; i++) {
@@ -35,14 +35,18 @@ public class DrawSimulator {
 
             for (int j = 0; j < numberOfTurns; j++) {
                 hand.addCards(this.deck.flipCards(1).flippedCards); // Draw for turn
-                this.deck.flipCards(2, true); // Attack
-                this.deck.flipCards(2, true); // Defense
+                this.deck.flipCards(2 + bold, true); // Attack
+                this.deck.flipCards(2 + tough, true); // Defense
             }
 
             results.add(hand);
         }
 
         return results;
+    }
+
+    public List<Hand> simulate(int numberOfTurns) {
+        return this.simulate(numberOfTurns, 0, 0);
     }
 
     public FlipResult getInitialDraw() {
