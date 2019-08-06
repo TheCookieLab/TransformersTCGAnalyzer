@@ -5,7 +5,7 @@ import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -30,7 +30,7 @@ public class BinxyOrangeAggroDeckTester implements DeckTester {
 
     @Override
     public Deck buildDeck() {
-                DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
+        DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
                 .withDoubleOrangeCards(7)
                 .withSingleOrangeCards(21)
                 .withOrangeGreenCards(8)

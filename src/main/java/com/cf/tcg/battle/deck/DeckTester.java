@@ -48,13 +48,11 @@ public interface DeckTester {
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
 
-        getLogger().info("Average Damage Bonus: {}", interpreter.getAverageDamageBonus());
+        getLogger().info("Average Damage Bonus (Bold {}): {}", bold, interpreter.getAverageDamageBonus());
         getLogger().info("Chance of adding less than or equal to 1 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusIsLessThanOrEqualTo(1)));
         getLogger().info("Chance of adding less than or equal to 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusIsLessThanOrEqualTo(2)));
         getLogger().info("Chance of adding more than 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusGreaterThan(2)));
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
-
-        getLogger().info("Average Pierce Bonus: {}", interpreter.getAveragePierceBonus());
     }
 
     /**
@@ -76,7 +74,7 @@ public interface DeckTester {
         Deck deck = buildDeck();
         deck.shuffleDeck();
 
-        getLogger().debug("Running offensive stats simulation for Tough {}, {} Focus rule, and deck: {}", tough, focusRule, deck);
+        getLogger().debug("Running defensive stats simulation for Tough {}, {} Focus rule, and deck: {}", tough, focusRule, deck);
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
         focusRule.setDefending();
@@ -86,7 +84,7 @@ public interface DeckTester {
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
 
-        getLogger().info("Average Armor Bonus: {}", interpreter.getAverageArmorBonus());
+        getLogger().info("Average Armor Bonus (Tough {}): {}", tough, interpreter.getAverageArmorBonus());
         getLogger().info("Chance of adding less than or equal to 1 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusIsLessThanOrEqualTo(1)));
         getLogger().info("Chance of adding less than or equal to 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusIsLessThanOrEqualTo(2)));
         getLogger().info("Chance of adding more than 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusGreaterThan(2)));
