@@ -2,12 +2,10 @@ package com.cf.tcg.battle;
 
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Pip;
-import org.junit.After;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -16,14 +14,6 @@ import org.junit.Test;
 public class FlipResultTest {
 
     public FlipResultTest() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test
@@ -52,17 +42,17 @@ public class FlipResultTest {
 
         assertTrue(subject.containsPips(Pip.BLACK));
         assertFalse(subject.containsPips(Pip.GREEN));
-        
+
         assertTrue(subject.containsPips(Pip.BLACK, Pip.ORANGE));
         assertFalse(subject.containsPips(Pip.BLACK, Pip.BLACK, Pip.BLACK));
     }
-    
+
     @Test
     public void containsPipsNegativeTests() {
         BattleCard battleCard1 = new BattleCard(Pip.BLACK, Pip.BLUE, Pip.WHITE);
 
         FlipResult subject = new FlipResult(battleCard1);
-        
+
         assertFalse(subject.containsPips(Pip.BLACK, Pip.ORANGE));
         assertFalse(subject.containsPips(Pip.BLACK, Pip.BLUE, Pip.WHITE, Pip.GREEN));
     }

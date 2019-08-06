@@ -3,25 +3,14 @@ package com.cf.tcg.battle;
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Deck;
 import deck.testers.BlurLionizerProwlDeckTester;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.LinkedList;
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class HandResultInterpreterTest {
+
     public HandResultInterpreterTest() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test
@@ -69,6 +58,5 @@ public class HandResultInterpreterTest {
         Double chanceOfHavingOrangeGreenCard = interpreter.getChanceOfHavingCard(BattleCard.ORANGE_GREEN);
         assertEquals(1, chanceOfHavingOrangeGreenCard, 0.001);
     }
-
 
 }
