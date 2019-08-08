@@ -53,26 +53,25 @@ DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
         return new Deck(deckComp);
 ```
 
-### Creating a Deck Tester For Your Deck
-Create a new class that implements the DeckTester interface:
+### Simply create a new class that implements the DeckTester interface...
 
 ```java
 public class JetBlueDeckTester implements DeckTester 
 ```
 
-### Running the Simulator and Getting Defense Results!
+### ...And Invoke One of Many Default Simulations!
 ```java
 int tough = 1;
 new JetBlueDeckTester().runDefenseSimulation(tough);
 ```
 
-### Running the Simulator and Getting Offense Results!
+### Here's One For Attack Stats!
 ```java
 int bold = 0;
 new JetBlueDeckTester().runAttackSimulation(bold);
 ```
 
-### Finding Probabilities of Having Specific Battle Cards In Hand On a Specific Turn
+### Finding Probabilities of Having Specific Battle Cards In Hand On a Specific Turn!
 ```java
 int turn = 2;
 int bold = 4;
