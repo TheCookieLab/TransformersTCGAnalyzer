@@ -6,26 +6,38 @@ import com.cf.tcg.model.Deck;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 /**
- *
  * @author David
  */
 public class GenOPPrivateArceeFlamewarBalancedDeckTester implements DeckTester {
 
     private final Logger LOG = LogManager.getLogger();
 
+    @AfterEach
+    public void afterEach() {
+        ThreadContext.clearAll();
+    }
+
     public GenOPPrivateArceeFlamewarBalancedDeckTester() {
     }
 
     @Test
-    public void getAttackStats() {
+    @Order(1)
+    public void getAttackStats(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new GenOPPrivateArceeFlamewarBalancedDeckTester().runAttackSimulation(1, new ScrapOffColorFocusRule(1));
     }
 
     @Test
-    public void getDefenseStats() {
+    @Order(2)
+    public void getDefenseStats(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new GenOPPrivateArceeFlamewarBalancedDeckTester().runDefenseSimulation(2, new ScrapOffColorFocusRule(1));
     }
 

@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/JetBlueDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandResultInterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandResultInterpreterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/BlurrLionizerProwlDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/BlurrLionizerProwlDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/GenOPPrivateArceeFlamewarBalancedDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/GenOPPrivateArceeFlamewarBalancedDeckTester.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BlurrLionizerProwlDeckTester">
+  <component name="RunManager" selected="JUnit.GenOPPrivateArceeFlamewarBalancedDeckTester">
     <configuration name="BlurrLionizerProwlDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
@@ -109,16 +98,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenOPPrivateArceeFlamewarBalancedDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandTest" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.GenOPPrivateArceeFlamewarBalancedDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GenOPPrivateArceeFlamewarBalancedDeckTester" />
         <item itemvalue="JUnit.BlurrLionizerProwlDeckTester" />
         <item itemvalue="JUnit.JetBlueDeckTester" />
         <item itemvalue="JUnit.JetBlueDeckTester.getDefenseStatsForAimless" />
         <item itemvalue="JUnit.BlurrLionizerProwlDeckTester.getChancesOfHavingIdealHandTurn3WithTurboBoostersUntap" />
-        <item itemvalue="JUnit.HandTest" />
       </list>
     </recent_temporary>
   </component>

@@ -50,7 +50,7 @@ public interface DeckTester {
         double averageDamageBonus = interpreter.getAverageDamageBonus();
         getLogger().info("Average Damage Bonus (Bold {}): {}", bold, averageDamageBonus);
 
-        for (int i = 0; i < Math.ceil(averageDamageBonus); i++) {
+        for (int i = 0; i <= Math.ceil(averageDamageBonus); i++) {
             double chance = interpreter.getChanceDamageBonusIsLessThanOrEqualTo(i);
 
             if (chance >= 0.01) {
@@ -90,10 +90,10 @@ public interface DeckTester {
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
 
-        double averageArmorBonus = Math.ceil(interpreter.getAverageArmorBonus());
-        getLogger().info("Average Armor Bonus (Tough {}): {}", tough, interpreter.getAverageArmorBonus());
+        double averageArmorBonus = interpreter.getAverageArmorBonus();
+        getLogger().info("Average Armor Bonus (Tough {}): {}", tough, averageArmorBonus);
 
-        for (int i = 0; i < averageArmorBonus; i++) {
+        for (int i = 0; i <= Math.ceil(averageArmorBonus); i++) {
             double chance = interpreter.getChanceArmorBonusIsLessThanOrEqualTo(i);
 
             if (chance >= 0.01) {
