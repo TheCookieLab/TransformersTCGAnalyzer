@@ -47,11 +47,17 @@ public interface DeckTester {
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        double averageDamageBonus = interpreter.getAverageDamageBonus();
+        getLogger().info("Average Damage Bonus (Bold {}): {}", bold, averageDamageBonus);
 
-        getLogger().info("Average Damage Bonus (Bold {}): {}", bold, interpreter.getAverageDamageBonus());
-        getLogger().info("Chance of adding less than or equal to 1 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusIsLessThanOrEqualTo(1)));
-        getLogger().info("Chance of adding less than or equal to 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusIsLessThanOrEqualTo(2)));
-        getLogger().info("Chance of adding more than 2 damage: {}", numberFormat.format(interpreter.getChanceDamageBonusGreaterThan(2)));
+        for (int i = 0; i < Math.ceil(averageDamageBonus); i++) {
+            double chance = interpreter.getChanceDamageBonusIsLessThanOrEqualTo(i);
+
+            if (chance >= 0.01) {
+                getLogger().info("Chance of adding less than or equal to {} damage: {}", i, numberFormat.format(chance));
+            }
+        }
+
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
 
@@ -84,10 +90,17 @@ public interface DeckTester {
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
 
+        double averageArmorBonus = Math.ceil(interpreter.getAverageArmorBonus());
         getLogger().info("Average Armor Bonus (Tough {}): {}", tough, interpreter.getAverageArmorBonus());
-        getLogger().info("Chance of adding less than or equal to 1 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusIsLessThanOrEqualTo(1)));
-        getLogger().info("Chance of adding less than or equal to 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusIsLessThanOrEqualTo(2)));
-        getLogger().info("Chance of adding more than 2 armor: {}", numberFormat.format(interpreter.getChanceArmorBonusGreaterThan(2)));
+
+        for (int i = 0; i < averageArmorBonus; i++) {
+            double chance = interpreter.getChanceArmorBonusIsLessThanOrEqualTo(i);
+
+            if (chance >= 0.01) {
+                getLogger().info("Chance of adding less than or equal to {} armor: {}", i, numberFormat.format(chance));
+            }
+        }
+
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
 
@@ -222,6 +235,22 @@ public interface DeckTester {
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
         getLogger().info("Probability of having any of {} in hand on turn {} is: {}", battleCards, turn, numberFormat.format(probability));
+    }
+
+    public default void getChanceOfHavingCombinationCardsOnTurn(int turn, int bold, int tough, List<BattleCard> allOfBattleCards, List<BattleCard> anyOfBattleCards) {
+        Deck deck = buildDeck();
+        deck.shuffleDeck();
+
+        getLogger().debug("Running chances of having all of {} and any of {} in hand on turn {} for deck {}", allOfBattleCards, anyOfBattleCards, turn, deck);
+
+        DrawSimulator drawSimulator = new DrawSimulator(deck);
+        List<Hand> hands = drawSimulator.simulate(turn, bold, tough);
+
+        HandResultInterpreter interpreter = new HandResultInterpreter(deck, hands);
+        Double probability = interpreter.getChanceOfHavingCombinationOfCards(allOfBattleCards, anyOfBattleCards);
+
+        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        getLogger().info("Running chances of having all of {} and any of {} in hand on turn {} for deck {}", allOfBattleCards, anyOfBattleCards, turn, numberFormat.format(probability));
     }
 
     public Logger getLogger();

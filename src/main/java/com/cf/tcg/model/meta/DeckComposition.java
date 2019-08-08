@@ -231,6 +231,17 @@ public class DeckComposition {
             return this;
         }
 
+        public DeckCompositionBuilder withBattleCard(BattleCard battleCard) {
+            return this.withBattleCard(battleCard, 1);
+        }
+
+        public DeckCompositionBuilder withBattleCard(BattleCard battleCard, int count) {
+            for (int i = 0; i < count; i++) {
+                this.battleCards.add(battleCard);
+            }
+            return this;
+        }
+
         public DeckComposition build() {
             int totalCards = blank + doubleOrange + singleOrange
                     + orangeGreen + doubleBlue + singleBlue

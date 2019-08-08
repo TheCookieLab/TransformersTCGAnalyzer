@@ -52,6 +52,10 @@ public class Hand {
     }
 
     public boolean containsAll(BattleCard... battleCards) {
+        if (battleCards == null || battleCards.length < 1) {
+            return false;
+        }
+
         for (BattleCard battleCard : battleCards) {
             if (this.contains(battleCard) == false) {
                 return false;
@@ -62,9 +66,11 @@ public class Hand {
     }
 
     public boolean containsAny(BattleCard... battleCards) {
-        for (BattleCard battleCard : battleCards) {
-            if (this.contains(battleCard)) {
-                return true;
+        if (battleCards != null && battleCards.length > 0) {
+            for (BattleCard battleCard : battleCards) {
+                if (this.contains(battleCard)) {
+                    return true;
+                }
             }
         }
 

@@ -87,8 +87,63 @@ public class HandTest {
         assertTrue(hand.containsAny(BattleCard.BASHING_SHIELD, BattleCard.PRESS_THE_ADVANTAGE, BattleCard.FORCE_FIELD));
         assertTrue(hand.containsAny(BattleCard.PRESS_THE_ADVANTAGE));
 
-        // TODO: Refactor Issue #1
-        //assertFalse(hand.containsAny(BattleCard.IMPROVISED_SHIELD));
+        assertFalse(hand.containsAny(BattleCard.IMPROVISED_SHIELD));
         assertFalse(hand.containsAny(BattleCard.I_STILL_FUNCTION, BattleCard.MATRIX_OF_LEADERSHIP));
+    }
+
+    @Test
+    public void testContainsAnyOfBattleCardsWhenEmptyList() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.BASHING_SHIELD);
+        battleCards.push(BattleCard.PRESS_THE_ADVANTAGE);
+        battleCards.push(BattleCard.FORCE_FIELD);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+
+        Hand hand = new Hand(battleCards);
+
+        assertFalse(hand.containsAny());
+    }
+
+    @Test
+    public void testContainsAnyOfBattleCardsWhenListIsNull() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.BASHING_SHIELD);
+        battleCards.push(BattleCard.PRESS_THE_ADVANTAGE);
+        battleCards.push(BattleCard.FORCE_FIELD);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+
+        Hand hand = new Hand(battleCards);
+
+        assertFalse(hand.containsAny(null));
+    }
+
+    @Test
+    public void testContainsAllOfBattleCardsWhenEmptyList() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.BASHING_SHIELD);
+        battleCards.push(BattleCard.PRESS_THE_ADVANTAGE);
+        battleCards.push(BattleCard.FORCE_FIELD);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+
+        Hand hand = new Hand(battleCards);
+
+        assertFalse(hand.containsAll());
+    }
+
+    @Test
+    public void testContainsAllOfBattleCardsWhenListIsNull() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.BASHING_SHIELD);
+        battleCards.push(BattleCard.PRESS_THE_ADVANTAGE);
+        battleCards.push(BattleCard.FORCE_FIELD);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+
+        Hand hand = new Hand(battleCards);
+
+        assertFalse(hand.containsAll(null));
     }
 }

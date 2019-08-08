@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandResultInterpreterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/BattleCardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/JetBlueDeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/FlipResultInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/Hand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/BattleCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandResultInterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandResultInterpreterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/battle/HandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/BlurrLionizerProwlDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/BlurrLionizerProwlDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,9 +58,9 @@
       <recent name="com.cf.tcg.battle" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="deck.testers" />
       <recent name="com.cf.tcg.model" />
       <recent name="com.cf.tcg.battle" />
-      <recent name="deck.testers" />
       <recent name="com.cf.tcg.battle.deck" />
       <recent name="com.cf.tcg.battle.focus" />
     </key>
@@ -71,39 +77,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HandResultInterpreterTest.testChanceOfHavingCardIs100">
-    <configuration name="BattleCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BlurrLionizerProwlDeckTester">
+    <configuration name="BlurrLionizerProwlDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.BattleCardTest" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.BlurrLionizerProwlDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BattleCardTest.testMapGetOperationsFindsCardsWithoutNameButMatchingPips" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BlurrLionizerProwlDeckTester.getChancesOfHavingIdealHandTurn3WithTurboBoostersUntap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.BattleCardTest" />
-      <option name="METHOD_NAME" value="testMapGetOperationsFindsCardsWithoutNameButMatchingPips" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.BlurrLionizerProwlDeckTester" />
+      <option name="METHOD_NAME" value="getChancesOfHavingIdealHandTurn3WithTurboBoostersUntap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HandResultInterpreterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -112,39 +118,38 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandResultInterpreterTest" />
+      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HandResultInterpreterTest.testChanceOfHavingCardIs100" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JetBlueDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandResultInterpreterTest" />
-      <option name="METHOD_NAME" value="testChanceOfHavingCardIs100" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.JetBlueDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HandResultInterpreterTest.testSimulateReturnsCorrectHandResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JetBlueDeckTester.getDefenseStatsForAimless" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.battle.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.battle" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.battle.HandResultInterpreterTest" />
-      <option name="METHOD_NAME" value="testSimulateReturnsCorrectHandResults" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.JetBlueDeckTester" />
+      <option name="METHOD_NAME" value="getDefenseStatsForAimless(org.junit.jupiter.api.TestInfo)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HandResultInterpreterTest.testChanceOfHavingCardIs100" />
-        <item itemvalue="JUnit.BattleCardTest.testMapGetOperationsFindsCardsWithoutNameButMatchingPips" />
-        <item itemvalue="JUnit.BattleCardTest" />
-        <item itemvalue="JUnit.HandResultInterpreterTest.testSimulateReturnsCorrectHandResults" />
-        <item itemvalue="JUnit.HandResultInterpreterTest" />
+        <item itemvalue="JUnit.BlurrLionizerProwlDeckTester" />
+        <item itemvalue="JUnit.JetBlueDeckTester" />
+        <item itemvalue="JUnit.JetBlueDeckTester.getDefenseStatsForAimless" />
+        <item itemvalue="JUnit.BlurrLionizerProwlDeckTester.getChancesOfHavingIdealHandTurn3WithTurboBoostersUntap" />
+        <item itemvalue="JUnit.HandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,5 +190,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

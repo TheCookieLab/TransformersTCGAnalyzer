@@ -55,6 +55,19 @@ public class HandResultInterpreter {
         return count / this.getCount().doubleValue();
     }
 
+    public Double getChanceOfHavingCombinationOfCards(List<BattleCard> allOfBattleCards, List<BattleCard> anyOfBattleCards) {
+        int count = 0;
+
+        for (Hand hand : this.hands) {
+            if (hand.containsAny(anyOfBattleCards.stream().toArray(BattleCard[]::new)) && hand.containsAll(allOfBattleCards.stream().toArray(BattleCard[]::new))) {
+                count++;
+            }
+        }
+
+        return count / this.getCount().doubleValue();
+    }
+
+
     public Integer getCount() {
         return this.hands.size();
     }
