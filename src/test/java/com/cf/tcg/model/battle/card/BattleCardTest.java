@@ -82,8 +82,10 @@ public class BattleCardTest {
         assertTrue(battleCard1.containsAllPips(Pip.ORANGE, Pip.GREEN));
         assertFalse(battleCard1.containsAllPips(Pip.ORANGE, Pip.GREEN, Pip.BLACK));
         assertFalse(battleCard1.containsAllPips(Pip.ORANGE, Pip.ORANGE, Pip.GREEN));
-        assertFalse(battleCard1.containsAllPips());
-        assertFalse(battleCard1.containsAllPips(null));
+        assertTrue(battleCard1.containsAllPips());
+        
+        Pip[] requiredPips = null;
+        assertTrue(battleCard1.containsAllPips(requiredPips));
     }
 
     @Test
@@ -94,7 +96,9 @@ public class BattleCardTest {
         assertTrue(battleCard1.containsAnyOfPips(Pip.GREEN));
 
         assertFalse(battleCard1.containsAnyOfPips(Pip.BLACK, Pip.BLUE, Pip.WHITE));
-        assertFalse(battleCard1.containsAnyOfPips());
-        assertFalse(battleCard1.containsAnyOfPips(null));
+        assertTrue(battleCard1.containsAnyOfPips());
+        
+        Pip[] requiredPips = null;
+        assertTrue(battleCard1.containsAnyOfPips(requiredPips));
     }
 }

@@ -5,7 +5,10 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
 
 /**
@@ -33,15 +36,37 @@ public class BattleCard {
         this(null, Arrays.asList(pips));
     }
 
-    public Boolean containsAllPips(Pip... pips) {
-        if (pips.length > 0 && this.pips.isEmpty()) {
-            return false;
+    public Boolean containsAllPips(Pip... requiredPips) {
+        if (requiredPips == null || this.pips.isEmpty()) {
+            return true;
         }
 
-        return this.pips.containsAll(Arrays.asList(pips));
+        Map<Pip, Integer> requiredPipCount = new HashMap<>();
+        for (Pip requiredPip : requiredPips) {
+            Integer count = requiredPipCount.getOrDefault(requiredPip, 0);
+            requiredPipCount.put(requiredPip, ++count);
+        }
+
+        for (Entry<Pip, Integer> entry : requiredPipCount.entrySet()) {
+            if (this.getPipCount(entry.getKey()).equals(entry.getValue()) == false) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
-    public Boolean containsAnyOfPips(Pip... pips) {
+    public Boolean containsAnyOfPips(Pip... anyOfPips) {
+        if (anyOfPips == null || anyOfPips.length == 0) {
+            return true;
+        }
+
+        for (Pip pip : anyOfPips) {
+            if (this.pips.contains(pip)) {
+                return true;
+            }
+        }
+
         return false;
     }
 
@@ -135,7 +160,6 @@ public class BattleCard {
     public static BattleCard BLANK = new BattleCard();
 
     // Named Battle Cards
-
     // Actions
     public static BattleCard CONFIDENCE = new BattleCard("Confidence", Pip.ORANGE);
 
@@ -165,7 +189,6 @@ public class BattleCard {
 
     public static BattleCard NOBLES_BLASTER = new BattleCard("Noble's Blaster", Pip.BLUE, Pip.GREEN);
 
-
     // Upgrade - Armor
     public static BattleCard BASHING_SHIELD = new BattleCard("Bashing Shield", Pip.ORANGE, Pip.GREEN);
     public static BattleCard FORCE_FIELD = new BattleCard("Force Field", Pip.WHITE);
@@ -175,7 +198,6 @@ public class BattleCard {
     public static BattleCard REINFORCED_PLATING = new BattleCard("Reinforced Plating", Pip.BLUE);
     public static BattleCard SUPERIOR_PLATING = new BattleCard("Superior Plating", Pip.BLUE);
 
-
     // Upgrade - Utilities
     public static BattleCard BRAVERY = new BattleCard("Bravery", Pip.BLUE);
 
@@ -184,6 +206,5 @@ public class BattleCard {
     public static BattleCard SPARE_PARTS = new BattleCard("Spare Parts", Pip.WHITE, Pip.GREEN);
     public static BattleCard SUPERIOR_JETPACK = new BattleCard("Superior Jetpack", Pip.WHITE);
     public static BattleCard TURBO_BOOSTERS = new BattleCard("Turbo Boosters", Pip.ORANGE);
-
 
 }

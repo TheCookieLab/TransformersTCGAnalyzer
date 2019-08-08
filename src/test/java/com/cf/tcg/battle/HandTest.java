@@ -102,7 +102,7 @@ public class HandTest {
 
         Hand hand = new Hand(battleCards);
 
-        assertFalse(hand.containsAny());
+        assertTrue(hand.containsAny());
     }
 
     @Test
@@ -115,8 +115,9 @@ public class HandTest {
         battleCards.push(BattleCard.DOUBLE_ORANGE);
 
         Hand hand = new Hand(battleCards);
+        BattleCard[] anyBattleCards = null;
 
-        assertFalse(hand.containsAny(null));
+        assertTrue(hand.containsAny(anyBattleCards));
     }
 
     @Test
@@ -130,7 +131,7 @@ public class HandTest {
 
         Hand hand = new Hand(battleCards);
 
-        assertFalse(hand.containsAll());
+        assertTrue(hand.containsAll());
     }
 
     @Test
@@ -143,7 +144,8 @@ public class HandTest {
         battleCards.push(BattleCard.DOUBLE_ORANGE);
 
         Hand hand = new Hand(battleCards);
+        BattleCard[] requiredBattleCards = null;
 
-        assertFalse(hand.containsAll(null));
+        assertTrue(hand.containsAll(requiredBattleCards));
     }
 }
