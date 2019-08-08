@@ -81,4 +81,44 @@ int tough = 0;
 new BlurrLionizerProwlDeckTester().getChancesOfHavingAnyCardsOnTurn(turn, bold, tough, BattleCard.FORCE_FIELD, BattleCard.TURBO_BOOSTERS, BattleCard.MATRIX_OF_LEADERSHIP);
 ```
 
+### Example Console Output
+```
+Running deck.testers.BlurrLionizerProwlDeckTester
+2019-08-08 19:04:03,650 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Average Damage Bonus (Bold 4): 6.1171
+2019-08-08 19:04:03,653 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Chance of adding less than or equal to 3 damage: 3%
+2019-08-08 19:04:03,653 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Chance of adding less than or equal to 4 damage: 13%
+2019-08-08 19:04:03,653 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Chance of adding less than or equal to 5 damage: 34%
+2019-08-08 19:04:03,653 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Chance of adding less than or equal to 6 damage: 60%
+2019-08-08 19:04:03,653 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Chance of adding less than or equal to 7 damage: 83%
+2019-08-08 19:04:03,653 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateLionizer] INFO - Chance of flipping more than 1 white: 9%
+
+2019-08-08 19:04:03,703 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateFiredrive] INFO - Average Damage Bonus (Bold 0): 2.0660999999999996
+2019-08-08 19:04:03,704 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateFiredrive] INFO - Chance of adding less than or equal to 0 damage: 3%
+2019-08-08 19:04:03,704 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateFiredrive] INFO - Chance of adding less than or equal to 1 damage: 25%
+2019-08-08 19:04:03,704 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateFiredrive] INFO - Chance of adding less than or equal to 2 damage: 71%
+2019-08-08 19:04:03,704 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateFiredrive] INFO - Chance of adding less than or equal to 3 damage: 95%
+2019-08-08 19:04:03,704 BlurrLionizerProwlDeckTester [getAttackStatsForPrivateFiredrive] INFO - Chance of flipping more than 1 white: 2%
+
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Average Damage Bonus (Bold 6): 8.099399999999997
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Chance of adding less than or equal to 5 damage: 5%
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Chance of adding less than or equal to 6 damage: 16%
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Chance of adding less than or equal to 7 damage: 36%
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Chance of adding less than or equal to 8 damage: 60%
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Chance of adding less than or equal to 9 damage: 81%
+2019-08-08 19:04:03,789 BlurrLionizerProwlDeckTester [getAttackStatsForBlurWithSaberAndProwlAbility] INFO - Chance of flipping more than 1 white: 15%
+
+2019-08-08 19:04:03,818 BlurrLionizerProwlDeckTester [getDefenseStats] INFO - Average Armor Bonus (Tough 0): 0.3415000000000001
+2019-08-08 19:04:03,818 BlurrLionizerProwlDeckTester [getDefenseStats] INFO - Chance of adding less than or equal to 0 armor: 69%
+2019-08-08 19:04:03,818 BlurrLionizerProwlDeckTester [getDefenseStats] INFO - Chance of adding less than or equal to 1 armor: 97%
+2019-08-08 19:04:03,818 BlurrLionizerProwlDeckTester [getDefenseStats] INFO - Chance of flipping more than 1 white: 2%
+
+2019-08-08 19:04:03,905 BlurrLionizerProwlDeckTester [getChancesOfHavingWayToConvertLionizerOnTurn2] INFO - Probability of having any of [{"name":"One Shall Stand, One Shall Fall","pips":[]}, {"name":"Peace Through Tyranny","pips":["ORANGE","ORANGE"]}] in hand on turn 2 is: 50%
+2019-08-08 19:04:03,953 BlurrLionizerProwlDeckTester [getChancesOfHavingUpgradeOnTurn2] INFO - Probability of having any of [{"name":"Force Field","pips":["WHITE"]}, {"name":"Turbo Boosters","pips":["ORANGE"]}, {"name":"Matrix of Leadership","pips":["ORANGE","BLUE"]}] in hand on turn 2 is: 73%
+2019-08-08 19:04:04,046 BlurrLionizerProwlDeckTester [getChancesOfHavingUntapOnTurn3] INFO - Probability of having all of [{"name":"Start Your Engines","pips":["BLUE"]}, {"name":"Turbo Boosters","pips":["ORANGE"]}] in hand on turn 3 is: 14%
+2019-08-08 19:04:04,097 BlurrLionizerProwlDeckTester [getChancesOfHavingDamageBoostActionOnTurn3] INFO - Probability of having any of [{"name":"Press The Advantage","pips":["ORANGE","GREEN"]}, {"name":"Reckless Charge","pips":["ORANGE"]}] in hand on turn 3 is: 64%
+2019-08-08 19:04:04,146 BlurrLionizerProwlDeckTester [getChancesOfHavingAlmostIdealHandTurn3] INFO - Probability of having all of [{"name":"Start Your Engines","pips":["BLUE"]}, {"name":"Matrix of Leadership","pips":["ORANGE","BLUE"]}] in hand on turn 3 is: 13%
+2019-08-08 19:04:04,207 BlurrLionizerProwlDeckTester [getChancesOfHavingIdealHandTurn3WithTurboBoostersUntap] INFO - Running chances of having all of [{"name":"Turbo Boosters","pips":["ORANGE"]}] and any of [{"name":"Reckless Charge","pips":["ORANGE"]}, {"name":"Press The Advantage","pips":["ORANGE","GREEN"]}] in hand on turn 3 for deck 23%
+```
+
+
 ### And More!
