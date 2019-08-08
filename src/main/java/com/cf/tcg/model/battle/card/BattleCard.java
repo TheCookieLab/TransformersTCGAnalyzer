@@ -33,6 +33,18 @@ public class BattleCard {
         this(null, Arrays.asList(pips));
     }
 
+    public Boolean containsAllPips(Pip... pips) {
+        if (pips.length > 0 && this.pips.isEmpty()) {
+            return false;
+        }
+
+        return this.pips.containsAll(Arrays.asList(pips));
+    }
+
+    public Boolean containsAnyOfPips(Pip... pips) {
+        return false;
+    }
+
     public Integer getPipCount(Pip pip) {
         int count = 0;
         for (Pip p : this.pips) {

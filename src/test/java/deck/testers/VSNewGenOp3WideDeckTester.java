@@ -6,12 +6,13 @@ import com.cf.tcg.model.Pip;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.api.Test;
+import org.apache.logging.log4j.ThreadContext;
+import org.junit.jupiter.api.*;
 
 /**
- *
  * @author David
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class VSNewGenOp3WideDeckTester implements DeckTester {
 
     private final Logger LOG = LogManager.getLogger();
@@ -19,18 +20,36 @@ public class VSNewGenOp3WideDeckTester implements DeckTester {
     public VSNewGenOp3WideDeckTester() {
     }
 
+    @AfterEach
+    public void afterEach() {
+        ThreadContext.clearAll();
+    }
+
     @Test
-    public void getAttackStats() {
+    @Order(1)
+    public void getAttackStats(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new VSNewGenOp3WideDeckTester().runAttackSimulation(1);
     }
 
     @Test
-    public void getDefenseStats() {
+    @Order(2)
+    public void getDefenseStats(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new VSNewGenOp3WideDeckTester().runDefenseSimulation(1);
     }
 
     @Test
-    public void getChancesOfTriggeringDragstripDrawAbility() {
+    @Order(3)
+    public void getChancesOfTriggeringDragstripDrawAbility(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
+        new VSNewGenOp3WideDeckTester().getChancesOfFlippingPips(0, Pip.ORANGE, Pip.BLUE);
+    }
+
+    @Test
+    @Order(4)
+    public void getChancesOfTriggeringDragstripDrawAbilityWithBold1(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new VSNewGenOp3WideDeckTester().getChancesOfFlippingPips(1, Pip.ORANGE, Pip.BLUE);
     }
 

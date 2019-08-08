@@ -1,5 +1,6 @@
 package com.cf.tcg.model.battle.card;
 
+import com.cf.tcg.model.Pip;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -72,5 +73,28 @@ public class BattleCardTest {
         BattleCard battleCard2 = BattleCard.ORANGE_GREEN;
 
         assertTrue(battleCard1.equalsIgnoreName(battleCard2));
+    }
+
+    @Test
+    public void testContainsAllPips() {
+        BattleCard battleCard1 = BattleCard.ORANGE_GREEN;
+
+        assertTrue(battleCard1.containsAllPips(Pip.ORANGE, Pip.GREEN));
+        assertFalse(battleCard1.containsAllPips(Pip.ORANGE, Pip.GREEN, Pip.BLACK));
+        assertFalse(battleCard1.containsAllPips(Pip.ORANGE, Pip.ORANGE, Pip.GREEN));
+        assertFalse(battleCard1.containsAllPips());
+        assertFalse(battleCard1.containsAllPips(null));
+    }
+
+    @Test
+    public void testContainsAnyOfPips1() {
+        BattleCard battleCard1 = BattleCard.ORANGE_GREEN;
+
+        assertTrue(battleCard1.containsAnyOfPips(Pip.ORANGE));
+        assertTrue(battleCard1.containsAnyOfPips(Pip.GREEN));
+
+        assertFalse(battleCard1.containsAnyOfPips(Pip.BLACK, Pip.BLUE, Pip.WHITE));
+        assertFalse(battleCard1.containsAnyOfPips());
+        assertFalse(battleCard1.containsAnyOfPips(null));
     }
 }

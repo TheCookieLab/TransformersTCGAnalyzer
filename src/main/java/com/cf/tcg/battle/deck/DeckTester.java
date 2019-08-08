@@ -125,7 +125,7 @@ public interface DeckTester {
         Deck deck = buildDeck();
         deck.shuffleDeck();
 
-        getLogger().debug("Running chances of flipping {} with focus rule {} and deck: {}", pips, focusRule, deck);
+        getLogger().debug("Running chances of flipping {} with Bold {}, focus rule {} and deck: {}", pips, bold, focusRule, deck);
 
         BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
         focusRule.setAttacking();
@@ -134,7 +134,7 @@ public interface DeckTester {
         FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
-        getLogger().info("Chance of flipping {}: {}", pips, numberFormat.format(interpreter.getChanceOfFlippingPips(pips)));
+        getLogger().info("Chance of flipping {} with Bold {}, and focus rule {} : {}", pips, bold, focusRule, numberFormat.format(interpreter.getChanceOfFlippingPips(pips)));
     }
 
     /**
