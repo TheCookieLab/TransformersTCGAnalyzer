@@ -29,24 +29,21 @@ Deck deck = new Deck(deckComp);
 ```java
 DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
                 .withBattleCards(
-                        BattleCard.HANDHELD_BLASTER, BattleCard.HANDHELD_BLASTER, BattleCard.HANDHELD_BLASTER,
-                        BattleCard.ARMED_HOVERCRAFT, BattleCard.ARMED_HOVERCRAFT, BattleCard.ARMED_HOVERCRAFT,
-                        BattleCard.NOBLES_BLASTER,
-                        BattleCard.REINFORCED_PLATING, BattleCard.REINFORCED_PLATING, BattleCard.REINFORCED_PLATING,
-                        BattleCard.SUPERIOR_PLATING, BattleCard.SUPERIOR_PLATING, BattleCard.SUPERIOR_PLATING,
-                        BattleCard.BASHING_SHIELD,
-                        BattleCard.FORCE_FIELD, BattleCard.FORCE_FIELD,
-                        BattleCard.SUPERIOR_JETPACK, BattleCard.SUPERIOR_JETPACK,
-                        BattleCard.SPARE_PARTS,
-                        BattleCard.BRAVERY, BattleCard.BRAVERY,
-                        BattleCard.SECURITY_CHECKPOINT, BattleCard.SECURITY_CHECKPOINT, BattleCard.SECURITY_CHECKPOINT,
-                        BattleCard.INSPIRING_LEADERSHIP, BattleCard.INSPIRING_LEADERSHIP, BattleCard.INSPIRING_LEADERSHIP,
-                        BattleCard.THE_BIGGER_THEY_ARE, BattleCard.THE_BIGGER_THEY_ARE, BattleCard.THE_BIGGER_THEY_ARE,
-                        BattleCard.QUARTERMASTER, BattleCard.QUARTERMASTER, BattleCard.QUARTERMASTER,
-                        BattleCard.MARKSMANSHIP, BattleCard.MARKSMANSHIP, BattleCard.MARKSMANSHIP,
-                        BattleCard.TECH_RESEARCH,
-                        BattleCard.VAPORIZE, BattleCard.VAPORIZE,
-                        BattleCard.SMELT
+                        BattleCard.BASHING_SHIELD, BattleCard.BASHING_SHIELD,
+                        BattleCard.CONFIDENCE, BattleCard.CONFIDENCE, BattleCard.CONFIDENCE,
+                        BattleCard.ERRATIC_LIGHTNING, BattleCard.ERRATIC_LIGHTNING, BattleCard.ERRATIC_LIGHTNING,
+                        BattleCard.GRENADE_LAUNCHER, BattleCard.GRENADE_LAUNCHER, BattleCard.GRENADE_LAUNCHER,
+                        BattleCard.ONE_SHALL_STAND_ONE_SHALL_FALL, BattleCard.ONE_SHALL_STAND_ONE_SHALL_FALL,
+                        BattleCard.I_STILL_FUNCTION, BattleCard.I_STILL_FUNCTION,
+                        BattleCard.IMPROVISED_SHIELD, BattleCard.IMPROVISED_SHIELD, BattleCard.IMPROVISED_SHIELD,
+                        BattleCard.PEACE_THROUGH_TYRANNY, BattleCard.PEACE_THROUGH_TYRANNY, BattleCard.PEACE_THROUGH_TYRANNY,
+                        BattleCard.RECKLESS_CHARGE, BattleCard.RECKLESS_CHARGE, BattleCard.RECKLESS_CHARGE,
+                        BattleCard.TURBO_BOOSTERS, BattleCard.TURBO_BOOSTERS, BattleCard.TURBO_BOOSTERS,
+                        BattleCard.RAMMING_SPEED,
+                        BattleCard.PRESS_THE_ADVANTAGE, BattleCard.PRESS_THE_ADVANTAGE, BattleCard.PRESS_THE_ADVANTAGE,
+                        BattleCard.START_YOUR_ENGINES, BattleCard.START_YOUR_ENGINES, BattleCard.START_YOUR_ENGINES,
+                        BattleCard.FORCE_FIELD, BattleCard.FORCE_FIELD, BattleCard.FORCE_FIELD,
+                        BattleCard.MATRIX_OF_LEADERSHIP, BattleCard.MATRIX_OF_LEADERSHIP, BattleCard.MATRIX_OF_LEADERSHIP
                 )
                 .build();
 
@@ -56,19 +53,19 @@ DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
 ### Simply create a new class that implements the DeckTester interface...
 
 ```java
-public class JetBlueDeckTester implements DeckTester 
+public class BlurrLionizerProwlDeckTester implements DeckTester
 ```
 
 ### ...And Invoke One of Many Default Simulations!
 ```java
 int tough = 1;
-new JetBlueDeckTester().runDefenseSimulation(tough);
+new BlurrLionizerProwlDeckTester().runDefenseSimulation(tough);
 ```
 
 ### Here's One For Attack Stats!
 ```java
-int bold = 0;
-new JetBlueDeckTester().runAttackSimulation(bold);
+int bold = 4;
+new BlurrLionizerProwlDeckTester().runAttackSimulation(bold);
 ```
 
 ### Finding Probabilities of Having Specific Battle Cards In Hand On a Specific Turn!
