@@ -2,6 +2,7 @@ package com.cf.tcg.character;
 
 import com.cf.tcg.CardRarity;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class CharacterCard {
@@ -25,17 +26,56 @@ public class CharacterCard {
     }
 
     public static class CharacterCardBuilder {
-        private String name;
-        private Integer stars;
-        private String subName;
-        private CardRarity rarity;
-        private Integer cardNumber;
-        private String wave;
+        private String name = null;
+        private Integer stars = null;
+        private String subName = null;
+        private CardRarity rarity = null;
+        private Integer cardNumber = null;
+        private String wave = null;
 
-        private Map<CharacterMode, CharacterModeDetail> modes;
+        private Map<CharacterMode, CharacterModeDetail> modes = new HashMap<>();
 
-        
+        public CharacterCardBuilder() {
+        }
 
+        public CharacterCardBuilder withName(String name) {
+            this.name = name;
+            return this;
+        }
 
-   }
+        public CharacterCardBuilder withStars(Integer stars) {
+            this.stars = stars;
+            return this;
+        }
+
+        public CharacterCardBuilder withSubName(String subName) {
+            this.subName = subName;
+            return this;
+        }
+
+        public CharacterCardBuilder withRarity(CardRarity rarity) {
+            this.rarity = rarity;
+            return this;
+        }
+
+        public CharacterCardBuilder withCardNumber(Integer cardNumber) {
+            this.cardNumber = cardNumber;
+            return this;
+        }
+
+        public CharacterCardBuilder withWave(String wave) {
+            this.wave = wave;
+            return this;
+        }
+
+        public CharacterCardBuilder withMode(CharacterMode modeName, CharacterModeDetail modeDetail) {
+            this.modes.put(modeName, modeDetail);
+            return this;
+        }
+
+        public CharacterCard build() {
+            return new CharacterCard(name, stars, subName, rarity, cardNumber, wave, modes);
+        }
+
+    }
 }
