@@ -58,6 +58,9 @@ public interface DeckTester {
             }
         }
 
+        double averagePierceBonus = interpreter.getAveragePierceBonus();
+        getLogger().info("Average Pierce Bonus (Bold {}): {}", bold, averagePierceBonus);
+
         getLogger().info("Chance of flipping more than 1 white: {}", numberFormat.format(interpreter.getChanceOfFlippingMoreThanOneWhite()));
     }
 

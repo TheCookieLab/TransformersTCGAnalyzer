@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/focus/ScrapSpecificPips.java" afterDir="false" />
+    <list default="true" id="9bcf6277-69e5-4e82-883c-073fe4279d55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/ConstructiconPierceDeckTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/TrypticonDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/battle/card/BattleCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/battle/card/BattleCardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/InsecticonOrangeDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/InsecticonOrangeDeckTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/VSNewGenOp3WideDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/VSNewGenOp3WideDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/BalancedPipDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/BalancedPipDeckTester.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,77 +26,30 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="10" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1OmFKTefWnNvoVEhNDTBfhmHKbn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="1R4enNferBWQc5CRPb8adyYy5RU" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.cf.tcg.battle.deck" />
-      <recent name="com.cf.tcg.battle" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cf.tcg.battle.focus" />
       <recent name="deck.testers" />
-      <recent name="com.cf.tcg.model" />
-      <recent name="com.cf.tcg.battle" />
-      <recent name="com.cf.tcg.battle.deck" />
+      <recent name="com.cf.tcg.battle.focus" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.BattleCardTest.testContainsAllPips">
-    <configuration name="BattleCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.battle.card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model.battle.card" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.battle.card.BattleCardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BattleCardTest.testContainsAllPips" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.battle.card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model.battle.card" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.battle.card.BattleCardTest" />
-      <option name="METHOD_NAME" value="testContainsAllPips" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GenOPPrivateArceeFlamewarBalancedDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TrypticonDeckTester">
+    <configuration name="BalancedPipDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -113,13 +58,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.GenOPPrivateArceeFlamewarBalancedDeckTester" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.BalancedPipDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsecticonOrangeDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrypticonDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -128,22 +73,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.InsecticonOrangeDeckTester" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VSNewGenOp3WideDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="deck.testers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.VSNewGenOp3WideDeckTester" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.TrypticonDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,24 +81,30 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BattleCardTest.testContainsAllPips" />
-        <item itemvalue="JUnit.BattleCardTest" />
-        <item itemvalue="JUnit.VSNewGenOp3WideDeckTester" />
-        <item itemvalue="JUnit.InsecticonOrangeDeckTester" />
-        <item itemvalue="JUnit.GenOPPrivateArceeFlamewarBalancedDeckTester" />
+        <item itemvalue="JUnit.TrypticonDeckTester" />
+        <item itemvalue="JUnit.BalancedPipDeckTester" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a750c13-d223-4a72-8ed8-9961c834eaff" name="Default Changelist" comment="" />
-      <created>1563374132776</created>
+      <changelist id="9bcf6277-69e5-4e82-883c-073fe4279d55" name="Default Changelist" comment="" />
+      <created>1568930962250</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1563374132776</updated>
+      <updated>1568930962250</updated>
     </task>
     <servers />
   </component>
@@ -185,15 +121,26 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/HandResultInterpreter.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state width="2061" height="333" key="GridCell.Tab.0.bottom" timestamp="1577636777460">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state width="2061" height="333" key="GridCell.Tab.0.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1577636777460" />
+    <state width="2061" height="333" key="GridCell.Tab.0.center" timestamp="1577636777459">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state width="2061" height="333" key="GridCell.Tab.0.center/0.23.2560.1367@0.23.2560.1367" timestamp="1577636777459" />
+    <state width="2061" height="333" key="GridCell.Tab.0.left" timestamp="1577636777458">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state width="2061" height="333" key="GridCell.Tab.0.left/0.23.2560.1367@0.23.2560.1367" timestamp="1577636777458" />
+    <state width="2061" height="333" key="GridCell.Tab.0.right" timestamp="1577636777459">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state width="2061" height="333" key="GridCell.Tab.0.right/0.23.2560.1367@0.23.2560.1367" timestamp="1577636777459" />
+    <state x="959" y="538" key="com.intellij.ide.util.TipDialog" timestamp="1577568198603">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state x="959" y="538" key="com.intellij.ide.util.TipDialog/0.23.2560.1367@0.23.2560.1367" timestamp="1577568198603" />
   </component>
 </project>

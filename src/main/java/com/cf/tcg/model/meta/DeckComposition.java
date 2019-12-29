@@ -23,6 +23,7 @@ public class DeckComposition {
     public final Integer singleBlue;
     public final Integer blueGreen;
 
+    public final Integer tripleBlack;
     public final Integer doubleBlack;
     public final Integer singleBlack;
 
@@ -48,6 +49,7 @@ public class DeckComposition {
         this.singleBlue = this.getCountMatchingPips(deck, BattleCard.SINGLE_BLUE.pips);
         this.blueGreen = this.getCountMatchingPips(deck, BattleCard.BLUE_GREEN.pips);
 
+        this.tripleBlack = this.getCountMatchingPips(deck, BattleCard.TRIPLE_BLACK.pips);
         this.doubleBlack = this.getCountMatchingPips(deck, BattleCard.DOUBLE_BLACK.pips);
         this.singleBlack = this.getCountMatchingPips(deck, BattleCard.SINGLE_BLACK.pips);
 
@@ -68,7 +70,7 @@ public class DeckComposition {
     }
 
     private DeckComposition(Integer blank, Integer doubleOrange, Integer singleOrange, Integer orangeGreen,
-                            Integer doubleBlue, Integer singleBlue, Integer blueGreen, Integer doubleBlack,
+                            Integer doubleBlue, Integer singleBlue, Integer blueGreen, Integer tripleBlack, Integer doubleBlack,
                             Integer singleBlack, Integer white, Integer whiteGreen, Integer whiteOrangeBlue,
                             Integer green, Integer blueOrange, Integer blueBlack, Integer orangeBlack,
                             Integer totalCards, List<BattleCard> battleCards) {
@@ -79,6 +81,7 @@ public class DeckComposition {
         this.doubleBlue = doubleBlue;
         this.singleBlue = singleBlue;
         this.blueGreen = blueGreen;
+        this.tripleBlack = tripleBlack;
         this.doubleBlack = doubleBlack;
         this.singleBlack = singleBlack;
         this.white = white;
@@ -128,6 +131,7 @@ public class DeckComposition {
         private int singleBlue;
         private int blueGreen;
 
+        private int tripleBlack;
         private int doubleBlack;
         private int singleBlack;
 
@@ -148,6 +152,11 @@ public class DeckComposition {
 
         public DeckCompositionBuilder withBlankCards(int blank) {
             this.blank = blank;
+            return this;
+        }
+
+        public DeckCompositionBuilder withSingleGreenCards(int singleGreen) {
+            this.green = green;
             return this;
         }
 
@@ -178,6 +187,11 @@ public class DeckComposition {
 
         public DeckCompositionBuilder withOrangeGreenCards(int orangeGreen) {
             this.orangeGreen = orangeGreen;
+            return this;
+        }
+
+        public DeckCompositionBuilder withTripleBlackCards(int tripleBlack) {
+            this.tripleBlack = tripleBlack;
             return this;
         }
 
@@ -245,14 +259,14 @@ public class DeckComposition {
         public DeckComposition build() {
             int totalCards = blank + doubleOrange + singleOrange
                     + orangeGreen + doubleBlue + singleBlue
-                    + blueGreen + doubleBlack + singleBlack
+                    + blueGreen + tripleBlack + doubleBlack + singleBlack
                     + white + whiteGreen + whiteOrangeBlue
                     + green + blueOrange + blueBlack
                     + orangeBlack + battleCards.size();
 
             DeckComposition deckComposition = new DeckComposition(blank, doubleOrange, singleOrange,
                     orangeGreen, doubleBlue, singleBlue,
-                    blueGreen, doubleBlack, singleBlack,
+                    blueGreen, tripleBlack, doubleBlack, singleBlack,
                     white, whiteGreen, whiteOrangeBlue,
                     green, blueOrange, blueBlack,
                     orangeBlack, totalCards, battleCards);
