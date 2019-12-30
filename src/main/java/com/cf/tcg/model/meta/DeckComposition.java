@@ -155,11 +155,6 @@ public class DeckComposition {
             return this;
         }
 
-        public DeckCompositionBuilder withSingleGreenCards(int singleGreen) {
-            this.green = green;
-            return this;
-        }
-
         public DeckCompositionBuilder withDoubleOrangeCards(int doubleOrange) {
             this.doubleOrange = doubleOrange;
             return this;

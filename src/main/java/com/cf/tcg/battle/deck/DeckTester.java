@@ -18,6 +18,8 @@ import org.apache.logging.log4j.Logger;
  */
 public interface DeckTester {
 
+    public final static int STANDARD_DECK_SIZE = 40;
+
     /**
      * *
      *
@@ -35,6 +37,7 @@ public interface DeckTester {
      */
     public default void runAttackSimulation(int bold, FocusRule focusRule) {
         Deck deck = buildDeck();
+        verifyDeck(deck);
         deck.shuffleDeck();
 
         getLogger().debug("Running offensive stats simulation for Bold {}, {} Focus rule, and deck: {}", bold, focusRule, deck);
@@ -81,6 +84,7 @@ public interface DeckTester {
      */
     public default void runDefenseSimulation(int tough, FocusRule focusRule) {
         Deck deck = buildDeck();
+        verifyDeck(deck);
         deck.shuffleDeck();
 
         getLogger().debug("Running defensive stats simulation for Tough {}, {} Focus rule, and deck: {}", tough, focusRule, deck);
@@ -126,6 +130,7 @@ public interface DeckTester {
      */
     public default void getChancesOfFlippingPips(int bold, FocusRule focusRule, Pip... pips) {
         Deck deck = buildDeck();
+        verifyDeck(deck);
         deck.shuffleDeck();
 
         getLogger().debug("Running chances of flipping {} with Bold {}, focus rule {} and deck: {}", pips, bold, focusRule, deck);
@@ -157,6 +162,7 @@ public interface DeckTester {
      */
     public default void runMetroplexAbilityOdds(int bold, FocusRule focusRule) {
         Deck deck = buildDeck();
+        verifyDeck(deck);
         deck.shuffleDeck();
 
         getLogger().debug("Running chances of triggering Metroplex Bot-mode ability for deck: {}", deck);
@@ -192,6 +198,7 @@ public interface DeckTester {
      */
     public default void getChancesOfHavingAllCardsOnTurn(int turn, int bold, int tough, BattleCard... battleCards) {
         Deck deck = buildDeck();
+        verifyDeck(deck);
         deck.shuffleDeck();
 
         getLogger().debug("Running chances of having all {} in hand on turn {} for deck {}", battleCards, turn, deck);
@@ -226,6 +233,7 @@ public interface DeckTester {
      */
     public default void getChancesOfHavingAnyCardsOnTurn(int turn, int bold, int tough, BattleCard... battleCards) {
         Deck deck = buildDeck();
+        verifyDeck(deck);
         deck.shuffleDeck();
 
         getLogger().debug("Running chances of having any {} in hand on turn {} for deck {}", battleCards, turn, deck);
@@ -259,4 +267,10 @@ public interface DeckTester {
     public Logger getLogger();
 
     public Deck buildDeck();
+
+    public default void verifyDeck(Deck deck) {
+        if (deck.battleCards.size() != STANDARD_DECK_SIZE) {
+            getLogger().warn("Expecting deck with {} cards but found {}", STANDARD_DECK_SIZE, deck.battleCards.size());
+        }
+    }
 }

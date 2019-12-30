@@ -54,7 +54,7 @@ public class DeckCompositionTest {
     }
 
     @Test
-    public void hello() {
+    public void testToString() {
         Deck deck = this.buildDeck();
 
         DeckComposition deckStats = new DeckComposition(deck);
@@ -65,5 +65,34 @@ public class DeckCompositionTest {
         assertEquals(40, deckStats.totalCards.intValue());
 
         LogManager.getLogger().info(deckStats);
+    }
+
+    @Test
+    public void testWithThreeBattleCards() {
+
+        int expectedCardCount = 3;
+        DeckComposition deckComposition = new DeckComposition.DeckCompositionBuilder()
+                .withBattleCard(BattleCard.GRENADE_LAUNCHER, expectedCardCount)
+                .build();
+
+        assertEquals(expectedCardCount, deckComposition.battleCards.size());
+    }
+
+    @Test
+    public void testWithOneBattleCard() {
+        DeckComposition deckComposition = new DeckComposition.DeckCompositionBuilder()
+                .withBattleCard(BattleCard.GRENADE_LAUNCHER)
+                .build();
+
+        assertEquals(1, deckComposition.battleCards.size());
+    }
+
+    @Test
+    public void testWithNamedBattleCards() {
+        DeckComposition deckComposition = new DeckComposition.DeckCompositionBuilder()
+                .withBattleCards(BattleCard.GRENADE_LAUNCHER, BattleCard.BASHING_SHIELD, BattleCard.FORCE_FIELD)
+                .build();
+
+        assertEquals(3, deckComposition.battleCards.size());
     }
 }

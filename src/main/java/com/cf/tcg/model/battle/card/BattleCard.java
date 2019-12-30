@@ -166,9 +166,11 @@ public class BattleCard {
     public static BattleCard BATTLEFIELD_INCURSION = new BattleCard("BattleField Incursion", Pip.GREEN);
     public static BattleCard CONFIDENCE = new BattleCard("Confidence", Pip.ORANGE);
     public static BattleCard CALCULATED_STRIKE = new BattleCard("Calculated Strike", Pip.BLACK);
+    public static BattleCard CONSTRUCTICON_ENIGMA = new BattleCard("Constructicon Enigma", Pip.GREEN);
     public static BattleCard DESIGNATED_TARGET = new BattleCard("Designated Target", Pip.BLACK, Pip.BLACK);
 
     public static BattleCard FIGHT_FOR_POSITION = new BattleCard("Fight For Position", Pip.ORANGE, Pip.BLACK);
+    public static BattleCard HEAT_OF_BATTLE = new BattleCard("Heat of Battle", Pip.WHITE);
     public static BattleCard HIDING_SPOT = new BattleCard("Hiding Spot", Pip.BLACK);
 
     public static BattleCard INSPIRING_LEADERSHIP = new BattleCard("Inspiring Leadership", Pip.BLUE);
@@ -207,9 +209,11 @@ public class BattleCard {
     public static BattleCard ERRATIC_LIGHTNING = new BattleCard("Erratic Lightning", Pip.ORANGE);
     public static BattleCard GRENADE_LAUNCHER = new BattleCard("Grenade Launcher", Pip.ORANGE);
     public static BattleCard HANDHELD_BLASTER = new BattleCard("Handheld Blaster", Pip.BLUE, Pip.BLUE);
+    public static BattleCard HV_ELECTRON_BREACHER = new BattleCard("HV Electron Breacher", Pip.BLACK);
 
     public static BattleCard NOBLES_BLASTER = new BattleCard("Noble's Blaster", Pip.BLUE, Pip.GREEN);
-
+    public static BattleCard RR_DISRUPTOR_BLADE = new BattleCard("RR Disruptor Blade", Pip.BLACK);
+    public static BattleCard SMOKETHROWER = new BattleCard("Smokethrower", Pip.BLACK);
     public static BattleCard STURDY_JAVELIN = new BattleCard("Sturdy Javelin", Pip.WHITE);
 
     // Upgrade - Armor
@@ -227,13 +231,16 @@ public class BattleCard {
 
     // Upgrade - Utilities
     public static BattleCard BRAVERY = new BattleCard("Bravery", Pip.BLUE);
-    public static BattleCard ERRATIC_ENERGY_GRENADE = new BattleCard("Erratic Energy Grenade", Pip.BLACK);
+
     public static BattleCard COMPOSITE_ARMOR = new BattleCard("Composite Armor", Pip.BLACK, Pip.ORANGE);
+    public static BattleCard DATA_BANK = new BattleCard("Data Bank", Pip.WHITE);
+    public static BattleCard ERRATIC_ENERGY_GRENADE = new BattleCard("Erratic Energy Grenade", Pip.BLACK);
+    public static BattleCard IMMERSED_IN_SHADOW = new BattleCard("Immersed In Shadow", Pip.ORANGE, Pip.BLACK);
 
     public static BattleCard MATRIX_OF_LEADERSHIP = new BattleCard("Matrix of Leadership", Pip.ORANGE, Pip.BLUE);
-
+    public static BattleCard MINOR_MEDIC_KIT = new BattleCard("Minor Medic Kit", Pip.BLACK, Pip.BLACK);
     public static BattleCard PERSONAL_TARGETING_DRONE = new BattleCard("Personal Targeting Drone", Pip.WHITE, Pip.GREEN);
-
+    public static BattleCard POCKET_PROCESSOR = new BattleCard("Pocket Processor", Pip.GREEN);
     public static BattleCard SPARE_PARTS = new BattleCard("Spare Parts", Pip.WHITE, Pip.GREEN);
     public static BattleCard SUPERIOR_JETPACK = new BattleCard("Superior Jetpack", Pip.WHITE);
     public static BattleCard TURBO_BOOSTERS = new BattleCard("Turbo Boosters", Pip.ORANGE);
