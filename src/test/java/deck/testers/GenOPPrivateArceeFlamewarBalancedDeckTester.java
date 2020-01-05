@@ -1,8 +1,10 @@
 package deck.testers;
 
 import com.cf.tcg.battle.deck.DeckTester;
+import com.cf.tcg.battle.focus.NoOpFocusRule;
 import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;
 import com.cf.tcg.model.Deck;
+import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,12 +33,26 @@ public class GenOPPrivateArceeFlamewarBalancedDeckTester implements DeckTester {
     @Order(1)
     public void getAttackStats(TestInfo testInfo) {
         ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
-        new GenOPPrivateArceeFlamewarBalancedDeckTester().runAttackSimulation(1, new ScrapOffColorFocusRule(1));
+        new GenOPPrivateArceeFlamewarBalancedDeckTester().runAttackSimulation(1);
     }
 
     @Test
     @Order(2)
+    public void getAttackStatsWithFocus(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
+        new GenOPPrivateArceeFlamewarBalancedDeckTester().runAttackSimulation(1, new ScrapOffColorFocusRule(1));
+    }
+
+    @Test
+    @Order(3)
     public void getDefenseStats(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
+        new GenOPPrivateArceeFlamewarBalancedDeckTester().runDefenseSimulation(2);
+    }
+
+    @Test
+    @Order(4)
+    public void getDefenseStatsWithFocus(TestInfo testInfo) {
         ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new GenOPPrivateArceeFlamewarBalancedDeckTester().runDefenseSimulation(2, new ScrapOffColorFocusRule(1));
     }
@@ -48,17 +64,26 @@ public class GenOPPrivateArceeFlamewarBalancedDeckTester implements DeckTester {
 
     @Override
     public Deck buildDeck() {
-
         DeckComposition deckComp = new DeckComposition.DeckCompositionBuilder()
-                .withDoubleOrangeCards(6)
-                .withDoubleBlueCards(6)
-                .withSingleOrangeCards(3)
-                .withBlueGreenCards(3)
-                .withOrangeGreenCards(4)
-                .withSingleBlueCards(10)
-                .withSingleWhiteCards(1)
-                .withBlueOrangeCards(6)
-                .withWhiteOrangeBlueCards(1)
+                .withBattleCard(BattleCard.FUEL_CACHE)
+                .withBattleCard(BattleCard.HANDHELD_BLASTER,3)
+                .withBattleCard(BattleCard.SECURITY_CHECKPOINT,3)
+                .withBattleCard(BattleCard.THE_BIGGER_THEY_ARE,3)
+                .withBattleCard(BattleCard.MARKSMANSHIP,3)
+                .withBattleCard(BattleCard.VAPORIZE,2)
+                .withBattleCard(BattleCard.SMELT,1)
+                .withBattleCard(BattleCard.ION_BLASTER_OF_OPTIMUS_PRIME,2)
+                .withBattleCard(BattleCard.NOBLES_BLASTER,1)
+                .withBattleCard(BattleCard.SCOUNDRELS_BLASTER,1)
+                .withBattleCard(BattleCard.PEACE_THROUGH_TYRANNY,3)
+                .withBattleCard(BattleCard.IMPROVISED_SHIELD,3)
+                .withBattleCard(BattleCard.GRENADE_LAUNCHER,3)
+//                .withBattleCard(BattleCard.RAMMING_SPEED,1)
+                .withBattleCard(BattleCard.WORK_OVERTIME,1)
+                .withBattleCard(BattleCard.SPARRING_GEAR,3)
+                .withBattleCard(BattleCard.MATRIX_OF_LEADERSHIP,3)
+                .withBattleCard(BattleCard.ROLL_OUT,3)
+                .withBattleCard(BattleCard.FORCE_FIELD,1)
                 .build();
 
         return new Deck(deckComp);

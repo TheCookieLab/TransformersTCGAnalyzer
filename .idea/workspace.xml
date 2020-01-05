@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bcf6277-69e5-4e82-883c-073fe4279d55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/ConstructiconBlackOrangeDeckTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/SportsCarPatrolDeckTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/WindbladeOverwhelmingAdvantageDeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/battle/deck/DeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/meta/DeckComposition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/meta/DeckCompositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cf/tcg/model/meta/DeckCompositionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/ConstructiconPierceDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/SoundwaveBlueBlackDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/GenOPPrivateArceeFlamewarBalancedDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/GenOPPrivateArceeFlamewarBalancedDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/TrypticonDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/TrypticonDeckTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -43,8 +46,8 @@
       <recent name="com.cf.tcg.battle.focus" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConstructiconBlackOrangeDeckTester.getAttackStats">
-    <configuration name="ConstructiconBlackOrangeDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WindbladeOverwhelmingAdvantageDeckTester">
+    <configuration name="GenOPPrivateArceeFlamewarBalancedDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -53,13 +56,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.ConstructiconBlackOrangeDeckTester" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.GenOPPrivateArceeFlamewarBalancedDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructiconBlackOrangeDeckTester.getAttackStats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SoundwaveBlueBlackDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
@@ -68,68 +71,64 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.ConstructiconBlackOrangeDeckTester" />
-      <option name="METHOD_NAME" value="getAttackStats" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.SoundwaveBlueBlackDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckCompositionTest.testWithBattleCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SportsCarPatrolDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.meta.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model.meta" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.meta.DeckCompositionTest" />
-      <option name="METHOD_NAME" value="testWithBattleCard" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.SportsCarPatrolDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckCompositionTest.testWithNamedBattleCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrypticonDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.meta.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model.meta" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.meta.DeckCompositionTest" />
-      <option name="METHOD_NAME" value="testWithNamedBattleCards" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.TrypticonDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckCompositionTest.testWithOneBattleCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WindbladeOverwhelmingAdvantageDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cf.tcg.model.meta.*" />
+          <option name="PATTERN" value="deck.testers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cf.tcg.model.meta" />
-      <option name="MAIN_CLASS_NAME" value="com.cf.tcg.model.meta.DeckCompositionTest" />
-      <option name="METHOD_NAME" value="testWithOneBattleCard" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.WindbladeOverwhelmingAdvantageDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConstructiconBlackOrangeDeckTester.getAttackStats" />
-        <item itemvalue="JUnit.ConstructiconBlackOrangeDeckTester" />
-        <item itemvalue="JUnit.DeckCompositionTest.testWithNamedBattleCards" />
-        <item itemvalue="JUnit.DeckCompositionTest.testWithOneBattleCard" />
-        <item itemvalue="JUnit.DeckCompositionTest.testWithBattleCard" />
+        <item itemvalue="JUnit.WindbladeOverwhelmingAdvantageDeckTester" />
+        <item itemvalue="JUnit.GenOPPrivateArceeFlamewarBalancedDeckTester" />
+        <item itemvalue="JUnit.SportsCarPatrolDeckTester" />
+        <item itemvalue="JUnit.SoundwaveBlueBlackDeckTester" />
+        <item itemvalue="JUnit.TrypticonDeckTester" />
       </list>
     </recent_temporary>
   </component>
@@ -169,22 +168,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="2061" height="333" key="GridCell.Tab.0.bottom" timestamp="1577672328023">
+    <state width="2061" height="502" key="GridCell.Tab.0.bottom" timestamp="1578200078322">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="333" key="GridCell.Tab.0.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1577672328023" />
-    <state width="2061" height="333" key="GridCell.Tab.0.center" timestamp="1577672328021">
+    <state width="2061" height="502" key="GridCell.Tab.0.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078322" />
+    <state width="2061" height="502" key="GridCell.Tab.0.center" timestamp="1578200078320">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="333" key="GridCell.Tab.0.center/0.23.2560.1367@0.23.2560.1367" timestamp="1577672328021" />
-    <state width="2061" height="333" key="GridCell.Tab.0.left" timestamp="1577672328020">
+    <state width="2061" height="502" key="GridCell.Tab.0.center/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078320" />
+    <state width="2061" height="502" key="GridCell.Tab.0.left" timestamp="1578200078317">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="333" key="GridCell.Tab.0.left/0.23.2560.1367@0.23.2560.1367" timestamp="1577672328020" />
-    <state width="2061" height="333" key="GridCell.Tab.0.right" timestamp="1577672328022">
+    <state width="2061" height="502" key="GridCell.Tab.0.left/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078317" />
+    <state width="2061" height="502" key="GridCell.Tab.0.right" timestamp="1578200078321">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="333" key="GridCell.Tab.0.right/0.23.2560.1367@0.23.2560.1367" timestamp="1577672328022" />
+    <state width="2061" height="502" key="GridCell.Tab.0.right/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078321" />
     <state width="2061" height="410" key="GridCell.Tab.1.bottom" timestamp="1577662913649">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
