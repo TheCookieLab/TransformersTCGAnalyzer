@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bcf6277-69e5-4e82-883c-073fe4279d55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/SportsCarPatrolDeckTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/deck/testers/WindbladeOverwhelmingAdvantageDeckTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCardType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cf/tcg/model/battle/card/BattleCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/ConstructiconPierceDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/SoundwaveBlueBlackDeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/GenOPPrivateArceeFlamewarBalancedDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/GenOPPrivateArceeFlamewarBalancedDeckTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/TrypticonDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/TrypticonDeckTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deck/testers/VSNewGenOp3WideDeckTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deck/testers/GalaxyPrimeDeckTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,7 +29,7 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
-        <option name="jdkForImporter" value="10" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -38,6 +44,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +55,22 @@
       <recent name="com.cf.tcg.battle.focus" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WindbladeOverwhelmingAdvantageDeckTester">
+  <component name="RunManager" selected="JUnit.GalaxyPrimeDeckTester">
+    <configuration name="GalaxyPrimeDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TransformersTCGAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="deck.testers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="deck.testers" />
+      <option name="MAIN_CLASS_NAME" value="deck.testers.GalaxyPrimeDeckTester" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GenOPPrivateArceeFlamewarBalancedDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TransformersTCGAnalyzer" />
       <extension name="coverage">
@@ -57,21 +81,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="deck.testers" />
       <option name="MAIN_CLASS_NAME" value="deck.testers.GenOPPrivateArceeFlamewarBalancedDeckTester" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SoundwaveBlueBlackDeckTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TransformersTCGAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="deck.testers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="deck.testers" />
-      <option name="MAIN_CLASS_NAME" value="deck.testers.SoundwaveBlueBlackDeckTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WindbladeOverwhelmingAdvantageDeckTester" />
-        <item itemvalue="JUnit.GenOPPrivateArceeFlamewarBalancedDeckTester" />
-        <item itemvalue="JUnit.SportsCarPatrolDeckTester" />
-        <item itemvalue="JUnit.SoundwaveBlueBlackDeckTester" />
+        <item itemvalue="JUnit.GalaxyPrimeDeckTester" />
         <item itemvalue="JUnit.TrypticonDeckTester" />
+        <item itemvalue="JUnit.GenOPPrivateArceeFlamewarBalancedDeckTester" />
+        <item itemvalue="JUnit.WindbladeOverwhelmingAdvantageDeckTester" />
+        <item itemvalue="JUnit.SportsCarPatrolDeckTester" />
       </list>
     </recent_temporary>
   </component>
@@ -168,41 +177,57 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="2061" height="502" key="GridCell.Tab.0.bottom" timestamp="1578200078322">
+    <state x="735" y="332" key="#Project_Structure" timestamp="1578788184444">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="502" key="GridCell.Tab.0.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078322" />
-    <state width="2061" height="502" key="GridCell.Tab.0.center" timestamp="1578200078320">
+    <state x="735" y="332" key="#Project_Structure/0.23.2560.1367@0.23.2560.1367" timestamp="1578788184444" />
+    <state x="873" y="363" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1578787920564">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="502" key="GridCell.Tab.0.center/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078320" />
-    <state width="2061" height="502" key="GridCell.Tab.0.left" timestamp="1578200078317">
+    <state x="873" y="363" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.2560.1367@0.23.2560.1367" timestamp="1578787920564" />
+    <state x="986" y="563" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578788190803">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="502" key="GridCell.Tab.0.left/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078317" />
-    <state width="2061" height="502" key="GridCell.Tab.0.right" timestamp="1578200078321">
+    <state x="986" y="563" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.2560.1367@0.23.2560.1367" timestamp="1578788190803" />
+    <state width="1720" height="502" key="GridCell.Tab.0.bottom" timestamp="1578798317714">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="502" key="GridCell.Tab.0.right/0.23.2560.1367@0.23.2560.1367" timestamp="1578200078321" />
-    <state width="2061" height="410" key="GridCell.Tab.1.bottom" timestamp="1577662913649">
+    <state width="1720" height="502" key="GridCell.Tab.0.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1578798317714" />
+    <state width="1720" height="502" key="GridCell.Tab.0.center" timestamp="1578798317713">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="410" key="GridCell.Tab.1.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1577662913649" />
-    <state width="2061" height="410" key="GridCell.Tab.1.center" timestamp="1577662913648">
+    <state width="1720" height="502" key="GridCell.Tab.0.center/0.23.2560.1367@0.23.2560.1367" timestamp="1578798317713" />
+    <state width="1720" height="502" key="GridCell.Tab.0.left" timestamp="1578798317712">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="410" key="GridCell.Tab.1.center/0.23.2560.1367@0.23.2560.1367" timestamp="1577662913648" />
-    <state width="2061" height="410" key="GridCell.Tab.1.left" timestamp="1577662913647">
+    <state width="1720" height="502" key="GridCell.Tab.0.left/0.23.2560.1367@0.23.2560.1367" timestamp="1578798317712" />
+    <state width="1720" height="502" key="GridCell.Tab.0.right" timestamp="1578798317713">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="410" key="GridCell.Tab.1.left/0.23.2560.1367@0.23.2560.1367" timestamp="1577662913647" />
-    <state width="2061" height="410" key="GridCell.Tab.1.right" timestamp="1577662913648">
+    <state width="1720" height="502" key="GridCell.Tab.0.right/0.23.2560.1367@0.23.2560.1367" timestamp="1578798317713" />
+    <state width="2061" height="410" key="GridCell.Tab.1.bottom" timestamp="1578612732807">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state width="2061" height="410" key="GridCell.Tab.1.right/0.23.2560.1367@0.23.2560.1367" timestamp="1577662913648" />
-    <state x="959" y="538" key="com.intellij.ide.util.TipDialog" timestamp="1577568198603">
+    <state width="2061" height="410" key="GridCell.Tab.1.bottom/0.23.2560.1367@0.23.2560.1367" timestamp="1578612732807" />
+    <state width="2061" height="410" key="GridCell.Tab.1.center" timestamp="1578612732805">
       <screen x="0" y="23" width="2560" height="1367" />
     </state>
-    <state x="959" y="538" key="com.intellij.ide.util.TipDialog/0.23.2560.1367@0.23.2560.1367" timestamp="1577568198603" />
+    <state width="2061" height="410" key="GridCell.Tab.1.center/0.23.2560.1367@0.23.2560.1367" timestamp="1578612732805" />
+    <state width="2061" height="410" key="GridCell.Tab.1.left" timestamp="1578612732805">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state width="2061" height="410" key="GridCell.Tab.1.left/0.23.2560.1367@0.23.2560.1367" timestamp="1578612732805" />
+    <state width="2061" height="410" key="GridCell.Tab.1.right" timestamp="1578612732806">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state width="2061" height="410" key="GridCell.Tab.1.right/0.23.2560.1367@0.23.2560.1367" timestamp="1578612732806" />
+    <state x="644" y="306" key="SettingsEditor" timestamp="1578788045107">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state x="644" y="306" key="SettingsEditor/0.23.2560.1367@0.23.2560.1367" timestamp="1578788045107" />
+    <state x="959" y="538" key="com.intellij.ide.util.TipDialog" timestamp="1578788148645">
+      <screen x="0" y="23" width="2560" height="1367" />
+    </state>
+    <state x="959" y="538" key="com.intellij.ide.util.TipDialog/0.23.2560.1367@0.23.2560.1367" timestamp="1578788148645" />
   </component>
 </project>
