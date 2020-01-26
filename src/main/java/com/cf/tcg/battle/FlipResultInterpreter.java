@@ -1,6 +1,7 @@
 package com.cf.tcg.battle;
 
 import com.cf.tcg.model.Pip;
+import com.cf.tcg.model.battle.card.BattleCardType;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import java.util.List;
@@ -73,6 +74,18 @@ public class FlipResultInterpreter {
             }
         }
         
+        return occurrence / this.flipResults.size();
+    }
+
+    public double getChanceOfFlippingBattleCardType(BattleCardType battleCardType) {
+        double occurrence = 0;
+
+        for (FlipResult flipResult : this.flipResults) {
+            if (flipResult.containsBattleCardType(battleCardType)) {
+                occurrence++;
+            }
+        }
+
         return occurrence / this.flipResults.size();
     }
 

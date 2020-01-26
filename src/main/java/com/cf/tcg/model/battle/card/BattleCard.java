@@ -38,6 +38,10 @@ public class BattleCard {
         this(name, battleCardType, Arrays.asList(pips));
     }
 
+    public BattleCard(BattleCardType battleCardType) {
+        this(null, battleCardType, Arrays.asList());
+    }
+
     public BattleCard(String name, Pip... pips) {
         this(name, null, Arrays.asList(pips));
     }

@@ -2,6 +2,8 @@ package com.cf.tcg.battle;
 
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.Pip;
+import com.cf.tcg.model.battle.card.BattleCardType;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -58,6 +60,16 @@ public class FlipResult {
         }
 
         return true;
+    }
+
+    public boolean containsBattleCardType(BattleCardType battleCardType) {
+        for (BattleCard battleCard : this.flippedCards) {
+            if (battleCard.battleCardType == battleCardType) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public Integer getTotalAttackBonus() {

@@ -1,8 +1,9 @@
 package deck.testers;
 
 import com.cf.tcg.battle.deck.DeckTester;
-import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;
+import com.cf.tcg.battle.focus.NoOpFocusRule;
 import com.cf.tcg.model.Deck;
+import com.cf.tcg.model.Pip;
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
@@ -36,10 +37,19 @@ public class WindbladeOverwhelmingAdvantageDeckTester implements DeckTester {
     }
 
     @Test
-    @Order(3)
+    @Order(2)
     public void getDefenseStats(TestInfo testInfo) {
         ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
         new WindbladeOverwhelmingAdvantageDeckTester().runDefenseSimulation(0);
+    }
+
+    @Test
+    @Order(3)
+    public void getChanceOfFlippingOnePipOfEachColor(TestInfo testInfo) {
+        ThreadContext.put("identity", testInfo.getTestMethod().get().getName());
+        new WindbladeOverwhelmingAdvantageDeckTester().getChancesOfFlippingPips(2,
+    new NoOpFocusRule(),
+            Pip.WHITE, Pip.ORANGE, Pip.BLACK, Pip.BLUE, Pip.GREEN);
     }
 
     @Override
@@ -70,6 +80,11 @@ public class WindbladeOverwhelmingAdvantageDeckTester implements DeckTester {
                 .withBattleCard(BattleCard.WEDGE_FORMATION,3)
                 .build();
 
-        return new Deck(deckComp);
+        Deck deck = new Deck(deckComp);
+
+        getLogger().info("Pip breakdown: {}", deck.getDeckPipBreakdown());
+        getLogger().info("BattleCard breakdown: {}", deck.getDeckCardTypeBreakdown());
+
+        return deck;
     }
 }

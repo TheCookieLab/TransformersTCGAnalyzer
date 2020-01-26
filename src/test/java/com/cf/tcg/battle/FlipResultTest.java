@@ -5,6 +5,8 @@ import com.cf.tcg.model.Pip;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.cf.tcg.model.battle.card.BattleCardType;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -55,6 +57,20 @@ public class FlipResultTest {
 
         assertFalse(subject.containsPips(Pip.BLACK, Pip.ORANGE));
         assertFalse(subject.containsPips(Pip.BLACK, Pip.BLUE, Pip.WHITE, Pip.GREEN));
+    }
+
+    @Test
+    public void containsBattleCardType() {
+        BattleCard battleCard1 = new BattleCard(BattleCardType.ACTION);
+        BattleCard battleCard2 = new BattleCard(BattleCardType.ACTION);
+
+        FlipResult subject = new FlipResult(battleCard1, battleCard2);
+
+        assertTrue(subject.containsBattleCardType(BattleCardType.ACTION));
+        assertFalse(subject.containsBattleCardType(BattleCardType.UPGRADE_ARMOR));
+        assertFalse(subject.containsBattleCardType(BattleCardType.UPGRADE_UTILITY));
+        assertFalse(subject.containsBattleCardType(BattleCardType.UPGRADE_WEAPON));
+        assertFalse(subject.containsBattleCardType(BattleCardType.SECRET_ACTION));
     }
 
 }

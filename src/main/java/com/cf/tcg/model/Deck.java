@@ -3,13 +3,13 @@ package com.cf.tcg.model;
 import com.cf.tcg.model.battle.card.BattleCard;
 import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.battle.focus.FocusRule;
+import com.cf.tcg.model.battle.card.BattleCardType;
 import com.cf.tcg.model.meta.DeckComposition;
 import com.google.gson.Gson;
 
 import java.util.*;
 
 /**
- *
  * @author David
  */
 public class Deck {
@@ -216,10 +216,44 @@ public class Deck {
 
         for (BattleCard battleCard : allBattleCards) {
             Integer count = results.getOrDefault(battleCard, 0);
-            results.put(battleCard, count++);
+            results.put(battleCard, ++count);
         }
 
         return results;
+    }
+
+    public Map<Pip, Integer> getDeckPipBreakdown() {
+        List<BattleCard> allBattleCards = this.collectAllCards();
+        Map<Pip, Integer> pipCount = new HashMap<>();
+
+        for (BattleCard battleCard : allBattleCards) {
+            for (Pip pip : battleCard.pips) {
+                Integer count = pipCount.getOrDefault(pip, 0);
+                pipCount.put(pip, ++count);
+            }
+        }
+
+        for (Pip pip : Pip.values()) {
+            pipCount.putIfAbsent(pip, 0);
+        }
+
+        return pipCount;
+    }
+
+    public Map<BattleCardType, Integer> getDeckCardTypeBreakdown() {
+        List<BattleCard> allBattleCards = this.collectAllCards();
+        Map<BattleCardType, Integer> battleCardTypes = new HashMap<>();
+
+        for (BattleCard battleCard : allBattleCards) {
+            Integer count = battleCardTypes.getOrDefault(battleCard.battleCardType, 0);
+            battleCardTypes.put(battleCard.battleCardType, ++count);
+        }
+
+        for (BattleCardType battleCardType : BattleCardType.values()) {
+            battleCardTypes.putIfAbsent(battleCardType, 0);
+        }
+
+        return battleCardTypes;
     }
 
     @Override

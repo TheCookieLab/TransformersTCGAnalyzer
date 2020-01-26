@@ -11,6 +11,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
+import com.cf.tcg.model.battle.card.BattleCardType;
 import org.apache.logging.log4j.Logger;
 
 /**
@@ -176,6 +177,22 @@ public interface DeckTester {
 
         NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
         getLogger().info("Chance of triggering Metroplex bot-mode ability: {}", numberFormat.format(interpreter.getChanceOfTriggeringMetroplexBotAbility()));
+    }
+
+    public default void getChancesOfFlippingBattleCardType(int boldOrTough, BattleCardType battleCardType) {
+        Deck deck = buildDeck();
+        verifyDeck(deck);
+        deck.shuffleDeck();
+
+        getLogger().debug("Running chances of flipping {} for deck {}", battleCardType, deck);
+
+        BattleFlipSimulator simulator = new BattleFlipSimulator(deck);
+
+        List<FlipResult> flipResults = simulator.simulate(boldOrTough, new NoOpFocusRule());
+        FlipResultInterpreter interpreter = new FlipResultInterpreter(flipResults);
+
+        NumberFormat numberFormat = NumberFormat.getPercentInstance(Locale.US);
+        getLogger().info("Chance of flipping {} with Bold/Tough {}: {}", battleCardType, boldOrTough, numberFormat.format(interpreter.getChanceOfFlippingBattleCardType(battleCardType)));
     }
 
     /**

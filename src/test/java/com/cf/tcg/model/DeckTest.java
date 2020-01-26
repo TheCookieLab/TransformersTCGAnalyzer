@@ -5,6 +5,7 @@ import com.cf.tcg.battle.FlipResult;
 import com.cf.tcg.battle.focus.FocusRule;
 import com.cf.tcg.battle.focus.ScrapOffColorFocusRule;
 import com.cf.tcg.battle.focus.ScrapSinglePipsFocusRule;
+import com.cf.tcg.model.battle.card.BattleCardType;
 import com.cf.tcg.model.meta.DeckComposition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -299,5 +300,55 @@ public class DeckTest {
 
         Map<BattleCard, Integer> decklist = deck.getDecklist();
         assertEquals(3, decklist.size());
+    }
+
+    @Test
+    public void testGetDeckPipBreakdownReturnsCorrectPipCount() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.DOUBLE_ORANGE);
+        battleCards.push(BattleCard.SINGLE_BLUE);
+        battleCards.push(BattleCard.SINGLE_ORANGE);
+        battleCards.push(BattleCard.BLUE_ORANGE_WHITE);
+        battleCards.push(BattleCard.TRIPLE_BLACK);
+
+
+        Deck deck = new Deck(battleCards);
+
+        Map<Pip, Integer> pips = deck.getDeckPipBreakdown();
+        assertEquals(3, pips.get(Pip.BLUE));
+        assertEquals(6, pips.get(Pip.ORANGE));
+        assertEquals(0, pips.get(Pip.GREEN));
+        assertEquals(3, pips.get(Pip.BLACK));
+        assertEquals(1, pips.get(Pip.WHITE));
+     }
+
+    @Test
+    public void testGetDeckBattleCardTypeBreakdownReturnsCorrectCount() {
+        LinkedList<BattleCard> battleCards = new LinkedList<>();
+
+        battleCards.push(BattleCard.COVERT_ARMOR);
+        battleCards.push(BattleCard.BASHING_SHIELD);
+
+        battleCards.push(BattleCard.GRENADE_LAUNCHER);
+        battleCards.push(BattleCard.ENERGON_AXE);
+
+        battleCards.push(BattleCard.MATRIX_OF_LEADERSHIP);
+
+        battleCards.push(BattleCard.ONE_SHALL_STAND_ONE_SHALL_FALL);
+        battleCards.push(BattleCard.THE_BIGGER_THEY_ARE);
+
+        battleCards.push(BattleCard.SABOTAGED_ARMAMENTS);
+
+        Deck deck = new Deck(battleCards);
+
+        Map<BattleCardType, Integer> battleCardTypes = deck.getDeckCardTypeBreakdown();
+        assertEquals(2, battleCardTypes.get(BattleCardType.ACTION));
+        assertEquals(2, battleCardTypes.get(BattleCardType.UPGRADE_WEAPON));
+        assertEquals(2, battleCardTypes.get(BattleCardType.UPGRADE_ARMOR));
+        assertEquals(1, battleCardTypes.get(BattleCardType.UPGRADE_UTILITY));
+        assertEquals(1, battleCardTypes.get(BattleCardType.SECRET_ACTION));
     }
 }

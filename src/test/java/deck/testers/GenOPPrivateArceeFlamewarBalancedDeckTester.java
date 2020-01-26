@@ -70,20 +70,18 @@ public class GenOPPrivateArceeFlamewarBalancedDeckTester implements DeckTester {
                 .withBattleCard(BattleCard.SECURITY_CHECKPOINT,3)
                 .withBattleCard(BattleCard.THE_BIGGER_THEY_ARE,3)
                 .withBattleCard(BattleCard.MARKSMANSHIP,3)
-                .withBattleCard(BattleCard.VAPORIZE,2)
+                .withBattleCard(BattleCard.VAPORIZE,3)
                 .withBattleCard(BattleCard.SMELT,1)
                 .withBattleCard(BattleCard.ION_BLASTER_OF_OPTIMUS_PRIME,2)
                 .withBattleCard(BattleCard.NOBLES_BLASTER,1)
                 .withBattleCard(BattleCard.SCOUNDRELS_BLASTER,1)
                 .withBattleCard(BattleCard.PEACE_THROUGH_TYRANNY,3)
                 .withBattleCard(BattleCard.IMPROVISED_SHIELD,3)
-                .withBattleCard(BattleCard.GRENADE_LAUNCHER,1)
-                .withBattleCard(BattleCard.STURDY_JAVELIN,2)
-                .withBattleCard(BattleCard.RAMMING_SPEED,1)
+                .withBattleCard(BattleCard.GRENADE_LAUNCHER,3)
                 .withBattleCard(BattleCard.SPARRING_GEAR,3)
                 .withBattleCard(BattleCard.MATRIX_OF_LEADERSHIP,3)
                 .withBattleCard(BattleCard.ROLL_OUT,3)
-                .withBattleCard(BattleCard.FORCE_FIELD,1)
+                .withBattleCard(BattleCard.FORCE_FIELD,3)
                 .build();
 
         return new Deck(deckComp);
